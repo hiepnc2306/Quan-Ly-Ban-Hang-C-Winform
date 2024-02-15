@@ -31,7 +31,6 @@ namespace quanlybanhang
             try
             {
                 cnn.Open();
-                MessageBox.Show("Connection Open!");
             }
             catch (Exception ex)
             {
@@ -44,7 +43,6 @@ namespace quanlybanhang
             try
             {
                 cnn.Close();
-                MessageBox.Show("Connection Close!");
             }
             catch (Exception ex)
             {

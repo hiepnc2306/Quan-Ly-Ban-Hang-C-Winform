@@ -29,8 +29,9 @@ namespace quanlybanhang
         }
         private void FormThongTinNCC_Load(object sender, EventArgs e)
         {
-            tbArr = new TextBox[] { txbAddress, txbID, txbName, txbPhoneNumber };
+            tbArr = new TextBox[] { txbID, txbName, txbAddress, txbPhoneNumber };
             listNCC = NCCRepo.getAll();
+            dataGridView1.Columns["id"].DataPropertyName = "id";
             dataGridView1.Columns["Code"].DataPropertyName= "Code";
             dataGridView1.Columns["NCCName"].DataPropertyName = "Name";
             dataGridView1.Columns["Address"].DataPropertyName = "Address";
@@ -43,57 +44,87 @@ namespace quanlybanhang
         {
             for (int i =0; i < tbArr.Length; i++)
             {
-                if (tbArr[i] == null || tbArr[i].Text.Equals(" "))
-                {
-                    MessageBox.Show("Vui lòng nhập đủ thông tin");
-                    tbArr[i].Focus();
-                }
+                tbArr[i].Enabled = true;
             }
-            NhaCungCap ncc = new NhaCungCap(txbID.Text, txbName.Text, txbAddress.Text, txbPhoneNumber.Text);
-
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < tbArr.Length; i++)
+            foreach (TextBox tb in tbArr)
             {
-                tbArr[i].Text = "";
+                tb.ResetText();
+                tb.Enabled = false;
             }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            using (var save = new SaveFileDialog() { Filter = "|*.csv", FileName = "hien" })
-            {
-                if (save.ShowDialog() == DialogResult.OK)
+            bool valid = true;
+            foreach (TextBox tb in tbArr) {
+                if (tb.Text == null || tb.Text.Equals(""))
                 {
-                    using (var sw = new StreamWriter(save.FileName))
-                    {
-                        for (int i = 0; i < dataGridView1.RowCount - 1; i++)
-                        {
-                            sw.Write(dataGridView1.Rows[i].Cells[0].Value.ToString() + ",");
-                            sw.Write(dataGridView1.Rows[i].Cells[1].Value.ToString() + ",");
-                            sw.Write(dataGridView1.Rows[i].Cells[2].Value.ToString() + ",");
-                            sw.Write(dataGridView1.Rows[i].Cells[3].Value.ToString() + ",");
-                            sw.WriteLine();
-                        }
-                    }
+                    MessageBox.Show("Vui lòng nhập đủ thông tin");
+                    tb.Focus();
+                    valid = false;
+                    break;
                 }
             }
+            if (valid)
+            {
+                NhaCungCap check = NCCRepo.getByCode(txbID.Text);
+                if (check != null)
+                {
+                    MessageBox.Show("Nhà cung cấp đã tồn tại");
+                }
+                else
+                {
+                    NhaCungCap ncc = new NhaCungCap(txbID.Text, txbName.Text, txbAddress.Text, txbPhoneNumber.Text);
+                    NCCRepo.create(ncc);
+                    FormThongTinNCC_Load(sender, e);
+                    btnCancel_Click(sender, e);
+                }
+            }
+
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            bool valid = true;
+            foreach (TextBox tb in tbArr)
+            {
+                if (tb.Text == null || tb.Text.Equals(""))
+                {
+                    MessageBox.Show("Vui lòng nhập đủ thông tin");
+                    tb.Focus();
+                    valid = false;
+                    break;
+                }
+            }
+            if (valid)
+            {
+                NhaCungCap check = NCCRepo.getByCode(txbID.Text);
+                if (check == null)
+                {
+                    MessageBox.Show("Nhà cung cấp không tồn tại");
+                }
+                else
+                {
+                    NhaCungCap ncc = new NhaCungCap(check.Id, txbID.Text, txbName.Text, txbAddress.Text, txbPhoneNumber.Text);
+                    NCCRepo.update(ncc);
+                    FormThongTinNCC_Load(sender, e);
+                    btnCancel_Click(sender, e);
+                }
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                txbID.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                txbName.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                txbAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                txbPhoneNumber.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                txbID.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txbName.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txbAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                txbPhoneNumber.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             }
             catch (Exception)
             {
@@ -104,6 +135,35 @@ namespace quanlybanhang
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            NhaCungCap check = NCCRepo.getByCode(txbID.Text);
+            if (check == null)
+            {
+                MessageBox.Show("Nhà cung cấp không tồn tại");
+            }
+            else
+            {
+                NCCRepo.delete(check.Id);
+                FormThongTinNCC_Load(sender, e);
+                btnCancel_Click(sender, e);
+            }
+        }
+
+        private void txbPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Kiểm tra xem ký tự đang được nhập có phải là số hay không
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Hủy bỏ thao tác nhập
+            }
         }
     }
 }

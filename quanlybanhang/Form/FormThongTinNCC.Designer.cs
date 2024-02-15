@@ -49,6 +49,7 @@
             this.NCCName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -105,6 +106,7 @@
             // 
             // txbID
             // 
+            this.txbID.Enabled = false;
             this.txbID.Location = new System.Drawing.Point(449, 67);
             this.txbID.Name = "txbID";
             this.txbID.Size = new System.Drawing.Size(157, 20);
@@ -112,6 +114,7 @@
             // 
             // txbName
             // 
+            this.txbName.Enabled = false;
             this.txbName.Location = new System.Drawing.Point(449, 110);
             this.txbName.Name = "txbName";
             this.txbName.Size = new System.Drawing.Size(157, 20);
@@ -119,6 +122,7 @@
             // 
             // txbAddress
             // 
+            this.txbAddress.Enabled = false;
             this.txbAddress.Location = new System.Drawing.Point(449, 157);
             this.txbAddress.Name = "txbAddress";
             this.txbAddress.Size = new System.Drawing.Size(157, 20);
@@ -126,10 +130,12 @@
             // 
             // txbPhoneNumber
             // 
+            this.txbPhoneNumber.Enabled = false;
             this.txbPhoneNumber.Location = new System.Drawing.Point(449, 201);
             this.txbPhoneNumber.Name = "txbPhoneNumber";
             this.txbPhoneNumber.Size = new System.Drawing.Size(157, 20);
             this.txbPhoneNumber.TabIndex = 8;
+            this.txbPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbPhoneNumber_KeyPress);
             // 
             // btnInput
             // 
@@ -179,6 +185,7 @@
             this.btnDelete.TabIndex = 14;
             this.btnDelete.Text = "XÓA";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnExit
             // 
@@ -188,6 +195,7 @@
             this.btnExit.TabIndex = 15;
             this.btnExit.Text = "THOÁT";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // panel1
             // 
@@ -210,7 +218,8 @@
             this.Code,
             this.NCCName,
             this.Address,
-            this.Sdt});
+            this.Sdt,
+            this.id});
             this.dataGridView1.Location = new System.Drawing.Point(44, 247);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -244,6 +253,13 @@
             this.Sdt.HeaderText = "Dienthoai";
             this.Sdt.Name = "Sdt";
             this.Sdt.ReadOnly = true;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "Id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
             // 
             // FormThongTinNCC
             // 
@@ -296,5 +312,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NCCName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sdt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
     }
 }

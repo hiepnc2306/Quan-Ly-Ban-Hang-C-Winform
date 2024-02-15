@@ -36,17 +36,6 @@ namespace quanlybanhang
 
         private void nhàCungCấpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Connection connection = new Connection();
-            //OleDbConnection con = connection.conn();
-            //connection.connect(con);
-            //OleDbCommand command = new OleDbCommand("select * from khach_hang", con);
-            //OleDbDataReader oleDbData = command.ExecuteReader();
-            //int temp = 0;
-            //while (oleDbData.Read())
-            //{
-            //    MessageBox.Show(oleDbData[temp].ToString());
-            //    temp++;
-            //}
 
             for (int i = 0; i < listForm.Count; i++)
             {
