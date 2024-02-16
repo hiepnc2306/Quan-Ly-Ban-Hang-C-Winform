@@ -2,54 +2,38 @@
 using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace quanlybanhang.Reponsitory
 {
-     interface INhaCungCapRepo
+    internal interface IKhachHangRepo
     {
-        void create(NhaCungCap ncc);
-        void update(NhaCungCap ncc);
+        void create(KhachHang khachHang);
+        void update(KhachHang khachHang);
         void delete(int id);
-        List<NhaCungCap> getAll();
-        NhaCungCap get(int id);
-        NhaCungCap getByCode(String code);
+        List<KhachHang> getAll();
+        KhachHang get(int id);
+        KhachHang getByCode(String code);
     }
-    class NhaCungCapRepo : INhaCungCapRepo
+
+    class KhachHangRepo : IKhachHangRepo
     {
         Connection connection = new Connection();
-
-        [Obsolete]
-        public void create(NhaCungCap ncc)
+        public void create(KhachHang khachHang)
         {
             try
             {
                 OleDbConnection conn = connection.conn();
                 conn.Open();
-                String query = "insert into nha_cung_cap (supplier_code, supplier_name, address, sdt) values (@ma, @ten, @daichi, @sdt)";
+                String query = "insert into khach_hang (customer_code, customer_name, address, sdt) values (@ma, @ten, @daichi, @sdt)";
                 OleDbCommand command = new OleDbCommand(query, conn);
-                command.Parameters.Add("@ma", ncc.Code);
-                command.Parameters.Add("@ten", ncc.Name);
-                command.Parameters.Add("@diachi", ncc.Address);
-                command.Parameters.Add("@sdt", ncc.Sdt);
-                OleDbDataReader reader = command.ExecuteReader();
-                conn.Close();
-            } catch (Exception ex)
-            {
-                MessageBox.Show("Có lỗi xảy ra");
-            }
-            
-        }
-
-        public void delete(int id)
-        {
-            try
-            {
-                OleDbConnection conn = connection.conn();
-                conn.Open();
-                String query = "delete from nha_cung_cap where id = @id";
-                OleDbCommand command = new OleDbCommand(query, conn);
-                command.Parameters.Add("@id",id);
+                command.Parameters.Add("@ma", khachHang.code);
+                command.Parameters.Add("@ten", khachHang.name);
+                command.Parameters.Add("@diachi", khachHang.address);
+                command.Parameters.Add("@sdt", khachHang.phoneNumber);
                 OleDbDataReader reader = command.ExecuteReader();
                 conn.Close();
             }
@@ -59,50 +43,47 @@ namespace quanlybanhang.Reponsitory
             }
         }
 
-        public NhaCungCap get(int id)
+        public void delete(int id)
+        {
+            try
+            {
+                OleDbConnection conn = connection.conn();
+                conn.Open();
+                String query = "delete from khach_hang where id = @id";
+                OleDbCommand command = new OleDbCommand(query, conn);
+                command.Parameters.Add("@id", id);
+                OleDbDataReader reader = command.ExecuteReader();
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi xảy ra");
+            }
+        }
+
+        public KhachHang get(int id)
         {
             throw new NotImplementedException();
         }
 
-        public List<NhaCungCap> getAll()
+        public List<KhachHang> getAll()
         {
             try
             {
                 OleDbConnection conn = connection.conn();
                 conn.Open();
-                List<NhaCungCap> list = new List<NhaCungCap>();
-                String query = "select * from nha_cung_cap";
+                List<KhachHang> list = new List<KhachHang>();
+                String query = "select * from khach_hang";
                 OleDbCommand command = new OleDbCommand(query, conn);
                 OleDbDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    NhaCungCap nhaCungCap = new NhaCungCap(Int32.Parse(reader[0].ToString()), reader[1].ToString()
+                    KhachHang khach = new KhachHang(Int32.Parse(reader[0].ToString()), reader[1].ToString()
                         , reader[2].ToString(), reader[3].ToString(), reader[4].ToString());
-                    list.Add(nhaCungCap);
+                    list.Add(khach);
                 }
                 conn.Close();
                 return list;
-            } catch (Exception e)
-            {
-                return null;
-            }
-        }
-
-        public NhaCungCap getByCode(string code)
-        {
-            try
-            {
-                OleDbConnection conn = connection.conn();
-                conn.Open();
-                String query = "select * from nha_cung_cap where supplier_code = @code";
-                OleDbCommand command = new OleDbCommand(query, conn);
-                command.Parameters.Add("@code", code);
-                OleDbDataReader reader = command.ExecuteReader();
-                reader.Read();
-                NhaCungCap nhaCungCap = new NhaCungCap(Int32.Parse(reader[0].ToString()), reader[1].ToString()
-                        , reader[2].ToString(), reader[3].ToString(), reader[4].ToString());
-                conn.Close();
-                return nhaCungCap;
             }
             catch (Exception e)
             {
@@ -110,19 +91,41 @@ namespace quanlybanhang.Reponsitory
             }
         }
 
-        public void update(NhaCungCap ncc)
+        public KhachHang getByCode(string code)
         {
             try
             {
                 OleDbConnection conn = connection.conn();
                 conn.Open();
-                String query = "update nha_cung_cap set supplier_code = @ma, supplier_name = @ten, address = @daichi, sdt = @sdt where id = @id";
+                String query = "select * from khach_hang where customer_code = @code";
                 OleDbCommand command = new OleDbCommand(query, conn);
-                command.Parameters.Add("@ma", ncc.Code);
-                command.Parameters.Add("@ten", ncc.Name);
-                command.Parameters.Add("@diachi", ncc.Address);
-                command.Parameters.Add("@sdt", ncc.Sdt);
-                command.Parameters.Add("@id", ncc.Id);
+                command.Parameters.Add("@code", code);
+                OleDbDataReader reader = command.ExecuteReader();
+                reader.Read();
+                KhachHang kh = new KhachHang(Int32.Parse(reader[0].ToString()), reader[1].ToString()
+                        , reader[2].ToString(), reader[3].ToString(), reader[4].ToString());
+                conn.Close();
+                return kh;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+
+        public void update(KhachHang khachHang)
+        {
+            try
+            {
+                OleDbConnection conn = connection.conn();
+                conn.Open();
+                String query = "update khach_hang set customer_code = @ma, customer_name = @ten, address = @daichi, sdt = @sdt where id = @id";
+                OleDbCommand command = new OleDbCommand(query, conn);
+                command.Parameters.Add("@ma", khachHang.code);
+                command.Parameters.Add("@ten", khachHang.name);
+                command.Parameters.Add("@diachi", khachHang.address);
+                command.Parameters.Add("@sdt", khachHang.phoneNumber);
+                command.Parameters.Add("@id", khachHang.id);
                 OleDbDataReader reader = command.ExecuteReader();
                 conn.Close();
             }

@@ -38,10 +38,6 @@
             this.txbname = new System.Windows.Forms.TextBox();
             this.txbPhoneNumber = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnInput = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -49,6 +45,11 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -106,6 +107,7 @@
             // 
             // txbID
             // 
+            this.txbID.Enabled = false;
             this.txbID.Location = new System.Drawing.Point(159, 81);
             this.txbID.Name = "txbID";
             this.txbID.Size = new System.Drawing.Size(128, 32);
@@ -113,13 +115,16 @@
             // 
             // txbAddress
             // 
+            this.txbAddress.Enabled = false;
             this.txbAddress.Location = new System.Drawing.Point(159, 122);
             this.txbAddress.Name = "txbAddress";
             this.txbAddress.Size = new System.Drawing.Size(265, 32);
             this.txbAddress.TabIndex = 6;
+            this.txbAddress.TextChanged += new System.EventHandler(this.txbAddress_TextChanged);
             // 
             // txbname
             // 
+            this.txbname.Enabled = false;
             this.txbname.Location = new System.Drawing.Point(527, 75);
             this.txbname.Name = "txbname";
             this.txbname.Size = new System.Drawing.Size(224, 32);
@@ -127,6 +132,7 @@
             // 
             // txbPhoneNumber
             // 
+            this.txbPhoneNumber.Enabled = false;
             this.txbPhoneNumber.Location = new System.Drawing.Point(572, 127);
             this.txbPhoneNumber.Name = "txbPhoneNumber";
             this.txbPhoneNumber.Size = new System.Drawing.Size(179, 32);
@@ -137,34 +143,16 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
+            this.Code,
+            this.CName,
+            this.Address,
+            this.Sdt,
+            this.Id});
             this.dataGridView1.Location = new System.Drawing.Point(44, 200);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(743, 150);
             this.dataGridView1.TabIndex = 9;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "MaKH";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "TenKH";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Diachi";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Dienthoai";
-            this.Column4.Name = "Column4";
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cellClick);
             // 
             // btnInput
             // 
@@ -186,6 +174,7 @@
             this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "HUỶ";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
@@ -196,6 +185,7 @@
             this.btnSave.TabIndex = 12;
             this.btnSave.Text = "LƯU";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnEdit
             // 
@@ -206,6 +196,7 @@
             this.btnEdit.TabIndex = 13;
             this.btnEdit.Text = "SỬA";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -216,6 +207,7 @@
             this.btnDelete.TabIndex = 14;
             this.btnDelete.Text = "XÓA";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnExit
             // 
@@ -226,6 +218,7 @@
             this.btnExit.TabIndex = 15;
             this.btnExit.Text = "THOÁT";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // panel1
             // 
@@ -240,7 +233,33 @@
             this.panel1.Size = new System.Drawing.Size(764, 53);
             this.panel1.TabIndex = 16;
             // 
-            // Form3
+            // Code
+            // 
+            this.Code.HeaderText = "MaKH";
+            this.Code.Name = "Code";
+            // 
+            // CName
+            // 
+            this.CName.HeaderText = "TenKH";
+            this.CName.Name = "CName";
+            // 
+            // Address
+            // 
+            this.Address.HeaderText = "Diachi";
+            this.Address.Name = "Address";
+            // 
+            // Sdt
+            // 
+            this.Sdt.HeaderText = "Dienthoai";
+            this.Sdt.Name = "Sdt";
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
+            // 
+            // FormThongTinKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -259,8 +278,9 @@
             this.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.Name = "Form3";
+            this.Name = "FormThongTinKhachHang";
             this.Text = "Thông tin khách hàng";
+            this.Load += new System.EventHandler(this.FormThongTinKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -280,10 +300,6 @@
         private System.Windows.Forms.TextBox txbname;
         private System.Windows.Forms.TextBox txbPhoneNumber;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Button btnInput;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
@@ -291,5 +307,10 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sdt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
     }
 }

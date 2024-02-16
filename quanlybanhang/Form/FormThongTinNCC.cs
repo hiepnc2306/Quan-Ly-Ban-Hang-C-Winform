@@ -18,9 +18,7 @@ namespace quanlybanhang
     public partial class FormThongTinNCC : Form
     {
         TextBox[] tbArr;
-        List<List<string>> listData;
         List<NhaCungCap> listNCC;
-        Connection connection = new Connection();
         NhaCungCapRepo NCCRepo = new NhaCungCapRepo();
 
         public FormThongTinNCC()
@@ -82,6 +80,7 @@ namespace quanlybanhang
                     NCCRepo.create(ncc);
                     FormThongTinNCC_Load(sender, e);
                     btnCancel_Click(sender, e);
+                    MessageBox.Show("Lưu thành công");
                 }
             }
 
@@ -113,6 +112,7 @@ namespace quanlybanhang
                     NCCRepo.update(ncc);
                     FormThongTinNCC_Load(sender, e);
                     btnCancel_Click(sender, e);
+                    MessageBox.Show("Sửa thành công");
                 }
             }
         }
@@ -154,6 +154,7 @@ namespace quanlybanhang
                 NCCRepo.delete(check.Id);
                 FormThongTinNCC_Load(sender, e);
                 btnCancel_Click(sender, e);
+                MessageBox.Show("Xóa thành công");
             }
         }
 
