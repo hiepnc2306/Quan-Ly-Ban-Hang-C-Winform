@@ -34,6 +34,9 @@
             this.txbID = new System.Windows.Forms.TextBox();
             this.txbName = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnInput = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -41,9 +44,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -109,6 +109,22 @@
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // code
+            // 
+            this.code.HeaderText = "Mahang";
+            this.code.Name = "code";
+            // 
+            // name
+            // 
+            this.name.HeaderText = "Tenhang";
+            this.name.Name = "name";
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
+            // 
             // btnInput
             // 
             this.btnInput.Location = new System.Drawing.Point(9, 5);
@@ -135,7 +151,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(78, 40);
             this.btnSave.TabIndex = 8;
-            this.btnSave.Text = "LƯU";
+            this.btnSave.Text = "THÊM";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -145,7 +161,7 @@
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(78, 40);
             this.btnEdit.TabIndex = 9;
-            this.btnEdit.Text = "SỬA";
+            this.btnEdit.Text = "LƯU";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -181,22 +197,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(780, 50);
             this.panel1.TabIndex = 12;
-            // 
-            // code
-            // 
-            this.code.HeaderText = "Mahang";
-            this.code.Name = "code";
-            // 
-            // name
-            // 
-            this.name.HeaderText = "Tenhang";
-            this.name.Name = "name";
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.Visible = false;
             // 
             // FormThongTinMatHang
             // 

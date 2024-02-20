@@ -309,7 +309,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(84, 43);
             this.btnSave.TabIndex = 5;
-            this.btnSave.Text = "LƯU";
+            this.btnSave.Text = "THÊM";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
             // btnEdit
@@ -319,7 +319,7 @@
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(84, 43);
             this.btnEdit.TabIndex = 6;
-            this.btnEdit.Text = "SỬA";
+            this.btnEdit.Text = "LƯU";
             this.btnEdit.UseVisualStyleBackColor = true;
             // 
             // btnDelete
@@ -342,7 +342,7 @@
             this.btnExit.Text = "THOÁT";
             this.btnExit.UseVisualStyleBackColor = true;
             // 
-            // Form7
+            // FormThongTinBaoHanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -358,7 +358,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form7";
+            this.Name = "FormThongTinBaoHanh";
             this.Text = "Thông tin về bảo hành";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

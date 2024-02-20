@@ -38,6 +38,11 @@
             this.txbname = new System.Windows.Forms.TextBox();
             this.txbPhoneNumber = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnInput = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -45,11 +50,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -154,6 +154,32 @@
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cellClick);
             // 
+            // Code
+            // 
+            this.Code.HeaderText = "MaKH";
+            this.Code.Name = "Code";
+            // 
+            // CName
+            // 
+            this.CName.HeaderText = "TenKH";
+            this.CName.Name = "CName";
+            // 
+            // Address
+            // 
+            this.Address.HeaderText = "Diachi";
+            this.Address.Name = "Address";
+            // 
+            // Sdt
+            // 
+            this.Sdt.HeaderText = "Dienthoai";
+            this.Sdt.Name = "Sdt";
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
+            // 
             // btnInput
             // 
             this.btnInput.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -183,7 +209,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(81, 38);
             this.btnSave.TabIndex = 12;
-            this.btnSave.Text = "LƯU";
+            this.btnSave.Text = "THÊM";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -194,7 +220,7 @@
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(81, 38);
             this.btnEdit.TabIndex = 13;
-            this.btnEdit.Text = "SỬA";
+            this.btnEdit.Text = "LƯU";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -232,32 +258,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(764, 53);
             this.panel1.TabIndex = 16;
-            // 
-            // Code
-            // 
-            this.Code.HeaderText = "MaKH";
-            this.Code.Name = "Code";
-            // 
-            // CName
-            // 
-            this.CName.HeaderText = "TenKH";
-            this.CName.Name = "CName";
-            // 
-            // Address
-            // 
-            this.Address.HeaderText = "Diachi";
-            this.Address.Name = "Address";
-            // 
-            // Sdt
-            // 
-            this.Sdt.HeaderText = "Dienthoai";
-            this.Sdt.Name = "Sdt";
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.Visible = false;
             // 
             // FormThongTinKhachHang
             // 

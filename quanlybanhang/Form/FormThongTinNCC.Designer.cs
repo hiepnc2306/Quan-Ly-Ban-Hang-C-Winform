@@ -163,7 +163,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(79, 30);
             this.btnSave.TabIndex = 12;
-            this.btnSave.Text = "LƯU";
+            this.btnSave.Text = "THÊM";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -173,7 +173,7 @@
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(79, 30);
             this.btnEdit.TabIndex = 13;
-            this.btnEdit.Text = "SỬA";
+            this.btnEdit.Text = "LƯU";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 

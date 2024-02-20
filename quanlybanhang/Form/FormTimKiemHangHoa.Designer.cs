@@ -172,17 +172,17 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Tìm kiếm theo";
             // 
-            // Form8
+            // FormTimKiemHangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 485);
+            this.ClientSize = new System.Drawing.Size(800, 469);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form8";
+            this.Name = "FormTimKiemHangHoa";
             this.Text = "Tìm kiếm thông tin";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
