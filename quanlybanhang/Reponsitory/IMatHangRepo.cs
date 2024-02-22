@@ -42,6 +42,7 @@ namespace quanlybanhang.Reponsitory
             }
         }
 
+        [Obsolete]
         public void delete(int id)
         {
             try
@@ -90,6 +91,7 @@ namespace quanlybanhang.Reponsitory
             }
         }
 
+        [Obsolete]
         public MatHang getByCode(string code)
         {
             try
@@ -112,6 +114,7 @@ namespace quanlybanhang.Reponsitory
             }
         }
 
+        [Obsolete]
         public void update(MatHang mh)
         {
             try

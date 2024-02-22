@@ -30,29 +30,29 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.dtAppointmentDate = new System.Windows.Forms.DateTimePicker();
+            this.dtEndDate = new System.Windows.Forms.DateTimePicker();
+            this.dtStartDate = new System.Windows.Forms.DateTimePicker();
+            this.txtNumber = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtProdCode = new System.Windows.Forms.TextBox();
+            this.txtCusCode = new System.Windows.Forms.TextBox();
+            this.txtCode = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvList = new System.Windows.Forms.DataGridView();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CusCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProdCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AppointmentDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnInput = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -61,7 +61,7 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -76,17 +76,17 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.dtAppointmentDate);
+            this.panel1.Controls.Add(this.dtEndDate);
+            this.panel1.Controls.Add(this.dtStartDate);
+            this.panel1.Controls.Add(this.txtNumber);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox4);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtProdCode);
+            this.panel1.Controls.Add(this.txtCusCode);
+            this.panel1.Controls.Add(this.txtCode);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -95,13 +95,38 @@
             this.panel1.Size = new System.Drawing.Size(750, 157);
             this.panel1.TabIndex = 1;
             // 
-            // textBox7
+            // dtAppointmentDate
             // 
-            this.textBox7.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(536, 81);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(185, 25);
-            this.textBox7.TabIndex = 13;
+            this.dtAppointmentDate.Enabled = false;
+            this.dtAppointmentDate.Location = new System.Drawing.Point(536, 119);
+            this.dtAppointmentDate.Name = "dtAppointmentDate";
+            this.dtAppointmentDate.Size = new System.Drawing.Size(184, 20);
+            this.dtAppointmentDate.TabIndex = 14;
+            // 
+            // dtEndDate
+            // 
+            this.dtEndDate.Enabled = false;
+            this.dtEndDate.Location = new System.Drawing.Point(537, 51);
+            this.dtEndDate.Name = "dtEndDate";
+            this.dtEndDate.Size = new System.Drawing.Size(184, 20);
+            this.dtEndDate.TabIndex = 14;
+            // 
+            // dtStartDate
+            // 
+            this.dtStartDate.Enabled = false;
+            this.dtStartDate.Location = new System.Drawing.Point(536, 16);
+            this.dtStartDate.Name = "dtStartDate";
+            this.dtStartDate.Size = new System.Drawing.Size(184, 20);
+            this.dtStartDate.TabIndex = 14;
+            // 
+            // txtNumber
+            // 
+            this.txtNumber.Enabled = false;
+            this.txtNumber.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumber.Location = new System.Drawing.Point(536, 81);
+            this.txtNumber.Name = "txtNumber";
+            this.txtNumber.Size = new System.Drawing.Size(185, 25);
+            this.txtNumber.TabIndex = 13;
             // 
             // label8
             // 
@@ -112,30 +137,6 @@
             this.label8.Size = new System.Drawing.Size(44, 17);
             this.label8.TabIndex = 12;
             this.label8.Text = "Số lần";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(536, 114);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(185, 25);
-            this.textBox6.TabIndex = 11;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(536, 46);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(185, 25);
-            this.textBox5.TabIndex = 10;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(536, 11);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(185, 25);
-            this.textBox4.TabIndex = 9;
             // 
             // label7
             // 
@@ -168,29 +169,32 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Ngày bắt dầu";
             // 
-            // textBox3
+            // txtProdCode
             // 
-            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(143, 114);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(129, 25);
-            this.textBox3.TabIndex = 5;
+            this.txtProdCode.Enabled = false;
+            this.txtProdCode.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProdCode.Location = new System.Drawing.Point(143, 114);
+            this.txtProdCode.Name = "txtProdCode";
+            this.txtProdCode.Size = new System.Drawing.Size(129, 25);
+            this.txtProdCode.TabIndex = 5;
             // 
-            // textBox2
+            // txtCusCode
             // 
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(143, 68);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(129, 25);
-            this.textBox2.TabIndex = 4;
+            this.txtCusCode.Enabled = false;
+            this.txtCusCode.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCusCode.Location = new System.Drawing.Point(143, 68);
+            this.txtCusCode.Name = "txtCusCode";
+            this.txtCusCode.Size = new System.Drawing.Size(129, 25);
+            this.txtCusCode.TabIndex = 4;
             // 
-            // textBox1
+            // txtCode
             // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(143, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(129, 25);
-            this.textBox1.TabIndex = 3;
+            this.txtCode.Enabled = false;
+            this.txtCode.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCode.Location = new System.Drawing.Point(143, 19);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(129, 25);
+            this.txtCode.TabIndex = 3;
             // 
             // label4
             // 
@@ -224,63 +228,64 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.dgvList);
             this.panel2.Location = new System.Drawing.Point(22, 229);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(750, 202);
             this.panel2.TabIndex = 2;
             // 
-            // dataGridView1
+            // dgvList
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(747, 199);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Code,
+            this.CusCode,
+            this.ProdCode,
+            this.StartDate,
+            this.EndDate,
+            this.Number,
+            this.AppointmentDate});
+            this.dgvList.Location = new System.Drawing.Point(0, 0);
+            this.dgvList.Name = "dgvList";
+            this.dgvList.Size = new System.Drawing.Size(747, 199);
+            this.dgvList.TabIndex = 0;
+            this.dgvList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cellClick);
             // 
-            // Column1
+            // Code
             // 
-            this.Column1.HeaderText = "MaPhieu";
-            this.Column1.Name = "Column1";
+            this.Code.HeaderText = "MaPhieu";
+            this.Code.Name = "Code";
             // 
-            // Column2
+            // CusCode
             // 
-            this.Column2.HeaderText = "MaKH";
-            this.Column2.Name = "Column2";
+            this.CusCode.HeaderText = "MaKH";
+            this.CusCode.Name = "CusCode";
             // 
-            // Column3
+            // ProdCode
             // 
-            this.Column3.HeaderText = "Mahang";
-            this.Column3.Name = "Column3";
+            this.ProdCode.HeaderText = "Mahang";
+            this.ProdCode.Name = "ProdCode";
             // 
-            // Column4
+            // StartDate
             // 
-            this.Column4.HeaderText = "NgayBatDau";
-            this.Column4.Name = "Column4";
+            this.StartDate.HeaderText = "NgayBatDau";
+            this.StartDate.Name = "StartDate";
             // 
-            // Column5
+            // EndDate
             // 
-            this.Column5.HeaderText = "NgayKetThuc";
-            this.Column5.Name = "Column5";
+            this.EndDate.HeaderText = "NgayKetThuc";
+            this.EndDate.Name = "EndDate";
             // 
-            // Column6
+            // Number
             // 
-            this.Column6.HeaderText = "Solan";
-            this.Column6.Name = "Column6";
+            this.Number.HeaderText = "Solan";
+            this.Number.Name = "Number";
             // 
-            // Column7
+            // AppointmentDate
             // 
-            this.Column7.HeaderText = "NgayHen";
-            this.Column7.Name = "Column7";
+            this.AppointmentDate.HeaderText = "NgayHen";
+            this.AppointmentDate.Name = "AppointmentDate";
             // 
             // btnInput
             // 
@@ -291,6 +296,7 @@
             this.btnInput.TabIndex = 3;
             this.btnInput.Text = "NHẬP";
             this.btnInput.UseVisualStyleBackColor = true;
+            this.btnInput.Click += new System.EventHandler(this.btnInput_Click);
             // 
             // btnCancel
             // 
@@ -301,6 +307,7 @@
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "HỦY";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
@@ -311,6 +318,7 @@
             this.btnSave.TabIndex = 5;
             this.btnSave.Text = "THÊM";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnEdit
             // 
@@ -321,6 +329,7 @@
             this.btnEdit.TabIndex = 6;
             this.btnEdit.Text = "LƯU";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -331,6 +340,7 @@
             this.btnDelete.TabIndex = 7;
             this.btnDelete.Text = "XÓA";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnExit
             // 
@@ -341,6 +351,7 @@
             this.btnExit.TabIndex = 8;
             this.btnExit.Text = "THOÁT";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // FormThongTinBaoHanh
             // 
@@ -360,10 +371,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormThongTinBaoHanh";
             this.Text = "Thông tin về bảo hành";
+            this.Load += new System.EventHandler(this.FormThongTinBaoHanh_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -373,34 +385,34 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtProdCode;
+        private System.Windows.Forms.TextBox txtCusCode;
+        private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtNumber;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridView dgvList;
         private System.Windows.Forms.Button btnInput;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.DateTimePicker dtAppointmentDate;
+        private System.Windows.Forms.DateTimePicker dtEndDate;
+        private System.Windows.Forms.DateTimePicker dtStartDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CusCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProdCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StartDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EndDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AppointmentDate;
     }
 }
