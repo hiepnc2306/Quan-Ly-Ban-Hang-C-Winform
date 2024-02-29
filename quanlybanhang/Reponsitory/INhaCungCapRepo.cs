@@ -6,14 +6,9 @@ using System.Windows.Forms;
 
 namespace quanlybanhang.Reponsitory
 {
-     interface INhaCungCapRepo
+     interface INhaCungCapRepo : IBaseRepo<NhaCungCap>
     {
-        void create(NhaCungCap ncc);
-        void update(NhaCungCap ncc);
         void delete(int id);
-        List<NhaCungCap> getAll();
-        NhaCungCap get(int id);
-        NhaCungCap getByCode(String code);
     }
     class NhaCungCapRepo : INhaCungCapRepo
     {
@@ -57,6 +52,11 @@ namespace quanlybanhang.Reponsitory
             {
                 MessageBox.Show("Có lỗi xảy ra");
             }
+        }
+
+        public void delete(string id)
+        {
+            throw new NotImplementedException();
         }
 
         public NhaCungCap get(int id)

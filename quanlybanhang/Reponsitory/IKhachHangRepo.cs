@@ -9,14 +9,9 @@ using System.Windows.Forms;
 
 namespace quanlybanhang.Reponsitory
 {
-    internal interface IKhachHangRepo
+    internal interface IKhachHangRepo : IBaseRepo<KhachHang>
     {
-        void create(KhachHang khachHang);
-        void update(KhachHang khachHang);
         void delete(int id);
-        List<KhachHang> getAll();
-        KhachHang get(int id);
-        KhachHang getByCode(String code);
     }
 
     class KhachHangRepo : IKhachHangRepo
@@ -59,6 +54,11 @@ namespace quanlybanhang.Reponsitory
             {
                 MessageBox.Show("Có lỗi xảy ra");
             }
+        }
+
+        public void delete(string id)
+        {
+            throw new NotImplementedException();
         }
 
         public KhachHang get(int id)

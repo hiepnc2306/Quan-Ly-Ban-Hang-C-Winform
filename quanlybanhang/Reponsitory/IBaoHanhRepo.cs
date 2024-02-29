@@ -8,14 +8,9 @@ using System.Windows.Forms;
 
 namespace quanlybanhang.Reponsitory
 {
-    interface IBaoHanhRepo
+    interface IBaoHanhRepo : IBaseRepo<BaoHanh>
     {
-        void create(BaoHanh bh);
-        void update(BaoHanh bh);
-        void delete(string id);
-        List<BaoHanh> getAll();
-        BaoHanh get(int id);
-        BaoHanh getByCode(string code);
+
     }
     class BaoHanhRepo : IBaoHanhRepo
     {
@@ -28,15 +23,18 @@ namespace quanlybanhang.Reponsitory
             {
                 OleDbConnection conn = connection.conn();
                 conn.Open();
-                String query = "insert into thong_tin_bao_hanh (warranty_code , check_code, created, closed, times, appointed) values (@mabh, @mahdb, @ngaybd, @ngaykt, @solan, @ngayhen)";
-                OleDbCommand command = new OleDbCommand(query, conn);
-                command.Parameters.Add("@mabh", bh.code);
-                command.Parameters.Add("@mahdb", bh.checkCode);
-                command.Parameters.Add("@ngaybd", bh.startDate.ToString("MM/dd/yyyy"));
-                command.Parameters.Add("@ngaykt", bh.endDate.ToString("MM/dd/yyyy"));
-                command.Parameters.Add("@solan", bh.number);
-                command.Parameters.Add("@ngayhen", bh.appointmentDate.ToString("MM/dd/yyyy"));
-                OleDbDataReader reader = command.ExecuteReader();
+                String query = "insert into thong_tin_bao_hanh (warranty_code , hdb_code, created, closed, times, appointed) values (@mabh, @mahdb, @ngaybd, @ngaykt, @solan, @ngayhen)";
+                using (OleDbCommand command = new OleDbCommand(query, conn))
+                {
+                    command.Parameters.AddWithValue("@mabh", bh.code);
+                    command.Parameters.AddWithValue("@mahdb", bh.checkCode);
+                    command.Parameters.AddWithValue("@ngaybd", bh.startDate);
+                    command.Parameters.AddWithValue("@ngaykt", bh.endDate);
+                    command.Parameters.AddWithValue("@solan", bh.number);
+                    command.Parameters.AddWithValue("@ngayhen", bh.appointmentDate);
+                    int rowsAffected = command.ExecuteNonQuery();
+                    Console.WriteLine($"{rowsAffected} row(s) inserted.");
+                };
                 conn.Close();
             }
             catch (Exception)
@@ -125,7 +123,7 @@ namespace quanlybanhang.Reponsitory
         {
             OleDbConnection conn = connection.conn();
             conn.Open();
-            String query = "update mat_hang set warranty_code = @mabh,check_code = @mahdb, " +
+            String query = "update thong_tin_bao_hanh set warranty_code = @mabh, hdb_code = @mahdb, " +
                 " created = @ngaybd, closed = @ngaykt, times = @solan, appointed = @ngayhen where id = @id ";
             using (OleDbCommand command = new OleDbCommand(query, conn) ) {
                 command.Parameters.AddWithValue("@mabh", bh.code);

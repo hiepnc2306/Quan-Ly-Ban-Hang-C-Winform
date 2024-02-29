@@ -9,14 +9,9 @@ using System.Windows.Forms;
 
 namespace quanlybanhang.Reponsitory
 {
-    internal interface IMatHangRepo
+    internal interface IMatHangRepo : IBaseRepo<MatHang>
     {
-        void create(MatHang mh);
-        void update(MatHang mh);
         void delete(int id);
-        List<MatHang> getAll();
-        MatHang get(int id);
-        MatHang getByCode(String code);
     }
     class MatHangRepo : IMatHangRepo
     {
@@ -59,6 +54,11 @@ namespace quanlybanhang.Reponsitory
             {
                 MessageBox.Show("Có lỗi xảy ra");
             }
+        }
+
+        public void delete(string id)
+        {
+            throw new NotImplementedException();
         }
 
         public MatHang get(int id)

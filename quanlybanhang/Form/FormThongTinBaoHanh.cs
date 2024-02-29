@@ -35,7 +35,7 @@ namespace quanlybanhang
                 dgvList.Columns["EndDate"].DataPropertyName = "endDate";
                 dgvList.Columns["Number"].DataPropertyName = "number";
                 dgvList.Columns["AppointmentDate"].DataPropertyName = "appointmentDate";
-                dgvList.Columns["id"].DataPropertyName = "code";
+                dgvList.Columns["id"].DataPropertyName = "id";
                 dgvList.DataSource = list;
             } catch (Exception) { }
         }
@@ -171,6 +171,9 @@ namespace quanlybanhang
             else
             {
                 baoHanhRepo.delete(check.code);
+                FormThongTinBaoHanh_Load(sender, e);
+                btnCancel_Click(sender, e);
+                MessageBox.Show("Xóa thành công");
             }
         }
     }
