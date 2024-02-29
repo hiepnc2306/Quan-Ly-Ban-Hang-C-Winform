@@ -125,17 +125,19 @@ namespace quanlybanhang.Reponsitory
         {
             OleDbConnection conn = connection.conn();
             conn.Open();
-            String mabh = bh.code;
-            String mahdb = bh.checkCode;
-            DateTime ngaybd = bh.startDate;
-            DateTime ngaykt = bh.endDate;
-            int solan = bh.number;
-            DateTime ngayhen = bh.appointmentDate;
-            int id = bh.id;
-            String query = $"update mat_hang set warranty_code = {mabh},check_code = {mahdb}, " +
-                "created = #{ngaybd}#, closed = #{ngaykt}#, times = #{solan}#, appointed = #{ngayhen}# where id = #{id}# ";
-            OleDbCommand command = new OleDbCommand(query, conn);
-            OleDbDataReader reader = command.ExecuteReader();
+            String query = "update mat_hang set warranty_code = @mabh,check_code = @mahdb, " +
+                " created = @ngaybd, closed = @ngaykt, times = @solan, appointed = @ngayhen where id = @id ";
+            using (OleDbCommand command = new OleDbCommand(query, conn) ) {
+                command.Parameters.AddWithValue("@mabh", bh.code);
+                command.Parameters.AddWithValue("@mahdb", bh.checkCode);
+                command.Parameters.AddWithValue("@ngaybd",bh.startDate);
+                command.Parameters.AddWithValue("@ngaykt",bh.endDate);
+                command.Parameters.AddWithValue("@solan", bh.number);
+                command.Parameters.AddWithValue("@ngayhen", bh.appointmentDate);
+                command.Parameters.AddWithValue("@id", bh.id);
+                int rowsAffected = command.ExecuteNonQuery();
+                Console.WriteLine($"{rowsAffected} row(s) inserted.");
+            };
             conn.Close();
         }
     }

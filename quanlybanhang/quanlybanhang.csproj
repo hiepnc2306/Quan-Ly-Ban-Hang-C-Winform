@@ -178,6 +178,8 @@
       <DependentUpon>FormTimKiemNCC.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\BaoHanh.cs" />
+    <Compile Include="Model\Constant.cs" />
+    <Compile Include="Model\HoaDon.cs" />
     <Compile Include="Model\KhachHang.cs" />
     <Compile Include="Model\MatHang.cs" />
     <Compile Include="Model\NhaCungCap.cs" />
