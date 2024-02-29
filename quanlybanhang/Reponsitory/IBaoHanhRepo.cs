@@ -21,22 +21,21 @@ namespace quanlybanhang.Reponsitory
     {
         Connection connection = new Connection();
 
-        [Obsolete]
+
         public void create(BaoHanh bh)
         {
             try
             {
                 OleDbConnection conn = connection.conn();
                 conn.Open();
-                String query = "insert into thong_tin_bao_hanh (warranty_code ,customer_code, product_code, created, closed, times, appointed) values (@mabh, @makh, @masp, @ngaybd, @ngaykt, @solan, @ngayhen)";
+                String query = "insert into thong_tin_bao_hanh (warranty_code , check_code, created, closed, times, appointed) values (@mabh, @mahdb, @ngaybd, @ngaykt, @solan, @ngayhen)";
                 OleDbCommand command = new OleDbCommand(query, conn);
                 command.Parameters.Add("@mabh", bh.code);
-                command.Parameters.Add("@makh", bh.customerCode);
-                command.Parameters.Add("@masp", bh.productCode);
-                command.Parameters.Add("@ngaybd", bh.startDate);
-                command.Parameters.Add("@ngaykt", bh.endDate);
+                command.Parameters.Add("@mahdb", bh.checkCode);
+                command.Parameters.Add("@ngaybd", bh.startDate.ToString("MM/dd/yyyy"));
+                command.Parameters.Add("@ngaykt", bh.endDate.ToString("MM/dd/yyyy"));
                 command.Parameters.Add("@solan", bh.number);
-                command.Parameters.Add("@ngayhen", bh.appointmentDate);
+                command.Parameters.Add("@ngayhen", bh.appointmentDate.ToString("MM/dd/yyyy"));
                 OleDbDataReader reader = command.ExecuteReader();
                 conn.Close();
             }
@@ -46,7 +45,7 @@ namespace quanlybanhang.Reponsitory
             }
         }
 
-        [Obsolete]
+
         public void delete(string id)
         {
             try
@@ -82,21 +81,21 @@ namespace quanlybanhang.Reponsitory
                 OleDbDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    BaoHanh baoHanh = new BaoHanh(reader[0].ToString(), reader[1].ToString()
-                        , reader[2].ToString(), DateTime.Parse(reader[3].ToString()), DateTime.Parse(reader[4].ToString()), 
-                        Int32.Parse(reader[5].ToString()), DateTime.Parse(reader[6].ToString()));
+                    BaoHanh baoHanh = new BaoHanh(Int32.Parse(reader[0].ToString()), reader[1].ToString()
+                        , reader[2].ToString(), DateTime.Parse(reader[3].ToString()),
+                        DateTime.Parse(reader[4].ToString()), Int32.Parse(reader[5].ToString()),
+                        DateTime.Parse(reader[6].ToString()));
                     list.Add(baoHanh);
                 }
                 conn.Close();
                 return list;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return null;
             }
         }
 
-        [Obsolete]
         public BaoHanh getByCode(string code)
         {
             try
@@ -108,42 +107,36 @@ namespace quanlybanhang.Reponsitory
                 command.Parameters.Add("@code", code);
                 OleDbDataReader reader = command.ExecuteReader();
                 reader.Read();
-                BaoHanh baoHanh = new BaoHanh(reader[0].ToString(), reader[1].ToString()
-                        , reader[2].ToString(), DateTime.Parse(reader[3].ToString()), DateTime.Parse(reader[4].ToString()),
-                        Int32.Parse(reader[5].ToString()), DateTime.Parse(reader[6].ToString()));
+                BaoHanh baoHanh = new BaoHanh(Int32.Parse(reader[0].ToString()), reader[1].ToString()
+                        , reader[2].ToString(), DateTime.Parse(reader[3].ToString()),
+                        DateTime.Parse(reader[4].ToString()), Int32.Parse(reader[5].ToString()),
+                        DateTime.Parse(reader[6].ToString()));
                 conn.Close();
                 return baoHanh;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return null;
             }
         }
 
-        [Obsolete]
+
         public void update(BaoHanh bh)
         {
-            try
-            {
-                OleDbConnection conn = connection.conn();
-                conn.Open();
-                String query = "update mat_hang set warranty_code = @mabh,customer_code = @makh, product_code = @masp, " +
-                    "created = @ngaybd, closed = @ngaykt, times = @solan, appointed = @ngayhen where id = @id ";
-                OleDbCommand command = new OleDbCommand(query, conn);
-                command.Parameters.Add("@mabh", bh.code);
-                command.Parameters.Add("@makh", bh.customerCode);
-                command.Parameters.Add("@masp", bh.productCode);
-                command.Parameters.Add("@ngaybd", bh.startDate);
-                command.Parameters.Add("@ngaykt", bh.endDate);
-                command.Parameters.Add("@solan", bh.number);
-                command.Parameters.Add("@ngayhen", bh.appointmentDate);
-                OleDbDataReader reader = command.ExecuteReader();
-                conn.Close();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Có lỗi xảy ra");
-            }
+            OleDbConnection conn = connection.conn();
+            conn.Open();
+            String mabh = bh.code;
+            String mahdb = bh.checkCode;
+            DateTime ngaybd = bh.startDate;
+            DateTime ngaykt = bh.endDate;
+            int solan = bh.number;
+            DateTime ngayhen = bh.appointmentDate;
+            int id = bh.id;
+            String query = $"update mat_hang set warranty_code = {mabh},check_code = {mahdb}, " +
+                "created = #{ngaybd}#, closed = #{ngaykt}#, times = #{solan}#, appointed = #{ngayhen}# where id = #{id}# ";
+            OleDbCommand command = new OleDbCommand(query, conn);
+            OleDbDataReader reader = command.ExecuteReader();
+            conn.Close();
         }
     }
 }

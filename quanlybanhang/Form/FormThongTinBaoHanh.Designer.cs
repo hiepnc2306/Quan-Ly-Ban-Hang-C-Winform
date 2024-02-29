@@ -38,27 +38,25 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtProdCode = new System.Windows.Forms.TextBox();
-            this.txtCusCode = new System.Windows.Forms.TextBox();
+            this.txtCheckCode = new System.Windows.Forms.TextBox();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvList = new System.Windows.Forms.DataGridView();
-            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CusCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProdCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AppointmentDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnInput = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CheckCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AppointmentDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
@@ -84,11 +82,9 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.txtProdCode);
-            this.panel1.Controls.Add(this.txtCusCode);
+            this.panel1.Controls.Add(this.txtCheckCode);
             this.panel1.Controls.Add(this.txtCode);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(23, 56);
             this.panel1.Name = "panel1";
@@ -106,7 +102,7 @@
             // dtEndDate
             // 
             this.dtEndDate.Enabled = false;
-            this.dtEndDate.Location = new System.Drawing.Point(537, 51);
+            this.dtEndDate.Location = new System.Drawing.Point(536, 73);
             this.dtEndDate.Name = "dtEndDate";
             this.dtEndDate.Size = new System.Drawing.Size(184, 20);
             this.dtEndDate.TabIndex = 14;
@@ -114,7 +110,7 @@
             // dtStartDate
             // 
             this.dtStartDate.Enabled = false;
-            this.dtStartDate.Location = new System.Drawing.Point(536, 16);
+            this.dtStartDate.Location = new System.Drawing.Point(536, 24);
             this.dtStartDate.Name = "dtStartDate";
             this.dtStartDate.Size = new System.Drawing.Size(184, 20);
             this.dtStartDate.TabIndex = 14;
@@ -123,16 +119,16 @@
             // 
             this.txtNumber.Enabled = false;
             this.txtNumber.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumber.Location = new System.Drawing.Point(536, 81);
+            this.txtNumber.Location = new System.Drawing.Point(143, 119);
             this.txtNumber.Name = "txtNumber";
-            this.txtNumber.Size = new System.Drawing.Size(185, 25);
+            this.txtNumber.Size = new System.Drawing.Size(129, 25);
             this.txtNumber.TabIndex = 13;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(431, 89);
+            this.label8.Location = new System.Drawing.Point(38, 122);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 17);
             this.label8.TabIndex = 12;
@@ -152,7 +148,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(431, 54);
+            this.label6.Location = new System.Drawing.Point(431, 76);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 17);
             this.label6.TabIndex = 7;
@@ -163,29 +159,20 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(431, 19);
+            this.label5.Location = new System.Drawing.Point(431, 27);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 17);
             this.label5.TabIndex = 6;
             this.label5.Text = "Ngày bắt dầu";
             // 
-            // txtProdCode
+            // txtCheckCode
             // 
-            this.txtProdCode.Enabled = false;
-            this.txtProdCode.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProdCode.Location = new System.Drawing.Point(143, 114);
-            this.txtProdCode.Name = "txtProdCode";
-            this.txtProdCode.Size = new System.Drawing.Size(129, 25);
-            this.txtProdCode.TabIndex = 5;
-            // 
-            // txtCusCode
-            // 
-            this.txtCusCode.Enabled = false;
-            this.txtCusCode.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCusCode.Location = new System.Drawing.Point(143, 68);
-            this.txtCusCode.Name = "txtCusCode";
-            this.txtCusCode.Size = new System.Drawing.Size(129, 25);
-            this.txtCusCode.TabIndex = 4;
+            this.txtCheckCode.Enabled = false;
+            this.txtCheckCode.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCheckCode.Location = new System.Drawing.Point(143, 73);
+            this.txtCheckCode.Name = "txtCheckCode";
+            this.txtCheckCode.Size = new System.Drawing.Size(129, 25);
+            this.txtCheckCode.TabIndex = 5;
             // 
             // txtCode
             // 
@@ -200,21 +187,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(38, 122);
+            this.label4.Location = new System.Drawing.Point(38, 76);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 17);
+            this.label4.Size = new System.Drawing.Size(80, 17);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Mã mặt hàng";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(38, 76);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 17);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Mã khách hàng";
+            this.label4.Text = "Mã hóa đơn";
             // 
             // label2
             // 
@@ -240,52 +217,17 @@
             this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Code,
-            this.CusCode,
-            this.ProdCode,
+            this.CheckCode,
             this.StartDate,
             this.EndDate,
             this.Number,
-            this.AppointmentDate});
+            this.AppointmentDate,
+            this.id});
             this.dgvList.Location = new System.Drawing.Point(0, 0);
             this.dgvList.Name = "dgvList";
             this.dgvList.Size = new System.Drawing.Size(747, 199);
             this.dgvList.TabIndex = 0;
             this.dgvList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cellClick);
-            // 
-            // Code
-            // 
-            this.Code.HeaderText = "MaPhieu";
-            this.Code.Name = "Code";
-            // 
-            // CusCode
-            // 
-            this.CusCode.HeaderText = "MaKH";
-            this.CusCode.Name = "CusCode";
-            // 
-            // ProdCode
-            // 
-            this.ProdCode.HeaderText = "Mahang";
-            this.ProdCode.Name = "ProdCode";
-            // 
-            // StartDate
-            // 
-            this.StartDate.HeaderText = "NgayBatDau";
-            this.StartDate.Name = "StartDate";
-            // 
-            // EndDate
-            // 
-            this.EndDate.HeaderText = "NgayKetThuc";
-            this.EndDate.Name = "EndDate";
-            // 
-            // Number
-            // 
-            this.Number.HeaderText = "Solan";
-            this.Number.Name = "Number";
-            // 
-            // AppointmentDate
-            // 
-            this.AppointmentDate.HeaderText = "NgayHen";
-            this.AppointmentDate.Name = "AppointmentDate";
             // 
             // btnInput
             // 
@@ -353,6 +295,42 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // Code
+            // 
+            this.Code.HeaderText = "MaPhieu";
+            this.Code.Name = "Code";
+            // 
+            // CheckCode
+            // 
+            this.CheckCode.HeaderText = "MaHDB";
+            this.CheckCode.Name = "CheckCode";
+            // 
+            // StartDate
+            // 
+            this.StartDate.HeaderText = "NgayBatDau";
+            this.StartDate.Name = "StartDate";
+            // 
+            // EndDate
+            // 
+            this.EndDate.HeaderText = "NgayKetThuc";
+            this.EndDate.Name = "EndDate";
+            // 
+            // Number
+            // 
+            this.Number.HeaderText = "Solan";
+            this.Number.Name = "Number";
+            // 
+            // AppointmentDate
+            // 
+            this.AppointmentDate.HeaderText = "NgayHen";
+            this.AppointmentDate.Name = "AppointmentDate";
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.Visible = false;
+            // 
             // FormThongTinBaoHanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -388,11 +366,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtProdCode;
-        private System.Windows.Forms.TextBox txtCusCode;
+        private System.Windows.Forms.TextBox txtCheckCode;
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtNumber;
@@ -408,11 +384,11 @@
         private System.Windows.Forms.DateTimePicker dtEndDate;
         private System.Windows.Forms.DateTimePicker dtStartDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CusCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProdCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CheckCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn StartDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn EndDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn AppointmentDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
     }
 }

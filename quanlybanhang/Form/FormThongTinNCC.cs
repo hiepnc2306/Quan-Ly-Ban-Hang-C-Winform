@@ -19,7 +19,7 @@ namespace quanlybanhang
     {
         TextBox[] tbArr;
         List<NhaCungCap> listNCC;
-        NhaCungCapRepo NCCRepo = new NhaCungCapRepo();
+        INhaCungCapRepo NCCRepo = new NhaCungCapRepo();
 
         public FormThongTinNCC()
         {

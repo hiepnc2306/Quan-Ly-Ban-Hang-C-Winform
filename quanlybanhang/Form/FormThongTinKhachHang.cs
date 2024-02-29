@@ -18,7 +18,7 @@ namespace quanlybanhang
     {
         TextBox[] tbArr;
         List<KhachHang> list;
-        KhachHangRepo repo = new KhachHangRepo();
+        IKhachHangRepo repo = new KhachHangRepo();
         public FormThongTinKhachHang()
         {
             InitializeComponent();

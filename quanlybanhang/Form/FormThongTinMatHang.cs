@@ -15,7 +15,7 @@ namespace quanlybanhang
     public partial class FormThongTinMatHang : Form
     {
         TextBox[] tbArr;
-        MatHangRepo repo = new MatHangRepo();
+        IMatHangRepo repo = new MatHangRepo();
         List<MatHang> list = new List<MatHang>();
         public FormThongTinMatHang()
         {

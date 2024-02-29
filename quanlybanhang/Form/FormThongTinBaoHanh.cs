@@ -2,14 +2,7 @@
 using quanlybanhang.Reponsitory;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace quanlybanhang
 {
@@ -18,7 +11,7 @@ namespace quanlybanhang
         TextBox[] tbArr;
         DateTimePicker[] dtpArr;
         List<BaoHanh> list = new List<BaoHanh>();
-        BaoHanhRepo repo;
+        IBaoHanhRepo baoHanhRepo = new BaoHanhRepo();
         public FormThongTinBaoHanh()
         {
             InitializeComponent();
@@ -31,18 +24,18 @@ namespace quanlybanhang
 
         private void FormThongTinBaoHanh_Load(object sender, EventArgs e)
         {
-            tbArr = new TextBox[] { txtCode, txtCusCode, txtProdCode, txtNumber };
+            tbArr = new TextBox[] { txtCode, txtCheckCode, txtNumber };
             dtpArr = new DateTimePicker[] { dtStartDate, dtEndDate, dtAppointmentDate };
             try
             {
-                list = repo.getAll();
+                list = baoHanhRepo.getAll();
                 dgvList.Columns["Code"].DataPropertyName = "code";
-                dgvList.Columns["CusCode"].DataPropertyName = "customerCode";
-                dgvList.Columns["ProdCode"].DataPropertyName = "productCode";
+                dgvList.Columns["CheckCode"].DataPropertyName = "checkCode";
                 dgvList.Columns["StartDate"].DataPropertyName = "startDate";
                 dgvList.Columns["EndDate"].DataPropertyName = "endDate";
                 dgvList.Columns["Number"].DataPropertyName = "number";
                 dgvList.Columns["AppointmentDate"].DataPropertyName = "appointmentDate";
+                dgvList.Columns["id"].DataPropertyName = "code";
                 dgvList.DataSource = list;
             } catch (Exception) { }
         }
@@ -78,7 +71,6 @@ namespace quanlybanhang
             this.Hide();
         }
 
-        [Obsolete]
         private void btnSave_Click(object sender, EventArgs e)
         {
             bool valid = true;
@@ -94,16 +86,16 @@ namespace quanlybanhang
             }
             if (valid)
             {
-                BaoHanh check = repo.getByCode(txtCode.Text);
+                BaoHanh check = baoHanhRepo.getByCode(txtCode.Text);
                 if (check != null)
                 {
                     MessageBox.Show("Phiếu bảo hành đã tồn tại");
                 }
                 else
                 {
-                    BaoHanh ncc = new BaoHanh(txtCode.Text, txtCusCode.Text, txtProdCode.Text, dtStartDate.Text, 
-                        dtEndDate.Text, Int32.Parse(txtNumber.Text), dtAppointmentDate.Text);
-                    repo.create(ncc);
+                    BaoHanh ncc = new BaoHanh(txtCode.Text, txtCheckCode.Text, dtStartDate.Value, 
+                        dtEndDate.Value, Int32.Parse(txtNumber.Text), dtAppointmentDate.Value);
+                    baoHanhRepo.create(ncc);
                     FormThongTinBaoHanh_Load(sender, e);
                     btnCancel_Click(sender, e);
                     MessageBox.Show("Lưu thành công");
@@ -116,9 +108,8 @@ namespace quanlybanhang
         {
             try
             {
-                txtCode.Text = dgvList.Rows[e.RowIndex].Cells[0].Value.ToString();
-                txtCusCode.Text = dgvList.Rows[e.RowIndex].Cells[1].Value.ToString();
-                txtProdCode.Text = dgvList.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtCode.Text = dgvList.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtCheckCode.Text = dgvList.Rows[e.RowIndex].Cells[2].Value.ToString();
                 dtStartDate.Text = dgvList.Rows[e.RowIndex].Cells[3].Value.ToString();
                 dtEndDate.Text = dgvList.Rows[e.RowIndex].Cells[4].Value.ToString();
                 txtNumber.Text = dgvList.Rows[e.RowIndex].Cells[5].Value.ToString();
@@ -130,7 +121,6 @@ namespace quanlybanhang
             }
         }
 
-        [Obsolete]
         private void btnEdit_Click(object sender, EventArgs e)
         {
             bool valid = true;
@@ -146,34 +136,41 @@ namespace quanlybanhang
             }
             if (valid)
             {
-                BaoHanh check = repo.getByCode(txtCode.Text);
+                BaoHanh check = baoHanhRepo.getByCode(txtCode.Text);
                 if (check == null)
                 {
                     MessageBox.Show("Phiếu bảo hành không tồn tại");
                 }
                 else
                 {
-                    BaoHanh bh = new BaoHanh(txtCode.Text, txtCusCode.Text, txtProdCode.Text, dtStartDate.Text,
-                        dtEndDate.Text, Int32.Parse(txtNumber.Text), dtAppointmentDate.Text);
-                    repo.update(bh);
-                    FormThongTinBaoHanh_Load(sender, e);
-                    btnCancel_Click(sender, e);
-                    MessageBox.Show("Lưu thành công");
+                    try
+                    {
+                        BaoHanh bh = new BaoHanh(check.id, txtCode.Text, txtCheckCode.Text, dtStartDate.Value,
+                        dtEndDate.Value, Int32.Parse(txtNumber.Text), dtAppointmentDate.Value);
+                        baoHanhRepo.update(bh);
+                        FormThongTinBaoHanh_Load(sender, e);
+                        btnCancel_Click(sender, e);
+                        MessageBox.Show("Lưu thành công");
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Có lỗi xảy ra");
+                    }
                 }
             }
         }
 
-        [Obsolete]
+         
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            BaoHanh check = repo.getByCode(txtCode.Text);
+            BaoHanh check = baoHanhRepo.getByCode(txtCode.Text);
             if (check == null)
             {
                 MessageBox.Show("Phiếu bảo hành không tồn tại");
             }
             else
             {
-                repo.delete(check.code);
+                baoHanhRepo.delete(check.code);
             }
         }
     }

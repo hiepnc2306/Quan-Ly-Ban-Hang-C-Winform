@@ -8,19 +8,28 @@ namespace quanlybanhang.Model
 {
     internal class BaoHanh
     {
+        public int id { get; set; }
         public string code { set; get; }
-        public string customerCode { set; get; }
-        public string productCode { set; get; }
-        public string startDate { set; get; }
-        public string endDate { set; get; }
+        public string checkCode { set; get; }
+        public DateTime startDate { set; get; }
+        public DateTime endDate { set; get; }
         public int number {  set; get; }
-        public string appointmentDate {  set; get; }
+        public DateTime appointmentDate {  set; get; }
         public BaoHanh() { }
-        public BaoHanh(string code, string customerCode, string productCode, string startDate, string endDate, int number, string appointmentDate)
+        public BaoHanh(string code, string checkCode, DateTime startDate, DateTime endDate, int number, DateTime appointmentDate)
         {
             this.code = code;
-            this.customerCode = customerCode;
-            this.productCode = productCode;
+            this.checkCode = checkCode;
+            this.startDate = startDate;
+            this.endDate = endDate;
+            this.number = number;
+            this.appointmentDate = appointmentDate;
+        }
+        public BaoHanh(int id, string code, string checkCode, DateTime startDate, DateTime endDate, int number, DateTime appointmentDate)
+        {
+            this.id = id;
+            this.code = code;
+            this.checkCode = checkCode;
             this.startDate = startDate;
             this.endDate = endDate;
             this.number = number;

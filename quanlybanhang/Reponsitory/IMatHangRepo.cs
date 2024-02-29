@@ -91,7 +91,6 @@ namespace quanlybanhang.Reponsitory
             }
         }
 
-        [Obsolete]
         public MatHang getByCode(string code)
         {
             try
