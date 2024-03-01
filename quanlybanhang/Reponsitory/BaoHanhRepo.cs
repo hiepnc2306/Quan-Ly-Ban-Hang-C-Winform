@@ -8,11 +8,7 @@ using System.Windows.Forms;
 
 namespace quanlybanhang.Reponsitory
 {
-    interface IBaoHanhRepo : IBaseRepo<BaoHanh>
-    {
-
-    }
-    class BaoHanhRepo : IBaoHanhRepo
+    class BaoHanhRepo : IBaseRepo<BaoHanh>
     {
         Connection connection = new Connection();
 

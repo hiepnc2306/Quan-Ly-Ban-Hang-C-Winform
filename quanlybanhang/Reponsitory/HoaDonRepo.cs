@@ -7,11 +7,7 @@ using System.Threading.Tasks;
 
 namespace quanlybanhang.Reponsitory
 {
-    interface IHoaDonRepo : IBaseRepo<HoaDon>
-    {
-
-    }
-    class HoaDonRepo : IHoaDonRepo
+    class HoaDonRepo : IBaseRepo<HoaDon>
     {
         public void create(HoaDon o)
         {

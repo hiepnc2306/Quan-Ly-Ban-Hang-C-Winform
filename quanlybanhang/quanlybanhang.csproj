@@ -187,9 +187,9 @@
     <Compile Include="Model\UserInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reponsitory\IBaoHanhRepo.cs" />
+    <Compile Include="Reponsitory\BaoHanhRepo.cs" />
     <Compile Include="Reponsitory\IBaseRepo.cs" />
-    <Compile Include="Reponsitory\IHoaDonRepo.cs" />
+    <Compile Include="Reponsitory\HoaDonRepo.cs" />
     <Compile Include="Reponsitory\IKhachHangRepo.cs" />
     <Compile Include="Reponsitory\IMatHangRepo.cs" />
     <Compile Include="Reponsitory\INhaCungCapRepo.cs" />
