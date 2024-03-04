@@ -19,7 +19,8 @@ namespace quanlybanhang.Reponsitory
             {
                 OleDbConnection conn = connection.conn();
                 conn.Open();
-                String query = "insert into thong_tin_bao_hanh (warranty_code , hdb_code, created, closed, times, appointed) values (@mabh, @mahdb, @ngaybd, @ngaykt, @solan, @ngayhen)";
+                String query = "insert into thong_tin_bao_hanh (warranty_code , hdb_code, created, closed, times, appointed) " +
+                    " values (@mabh, @mahdb, @ngaybd, @ngaykt, @solan, @ngayhen)";
                 using (OleDbCommand command = new OleDbCommand(query, conn))
                 {
                     command.Parameters.AddWithValue("@mabh", bh.code);
