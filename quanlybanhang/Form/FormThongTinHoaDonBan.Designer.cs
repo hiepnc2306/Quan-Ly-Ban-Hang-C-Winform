@@ -30,25 +30,25 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbbCus = new System.Windows.Forms.ComboBox();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.InvoiceCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CustomerCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SaleDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtInvoiceCode = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cbbProd = new System.Windows.Forms.ComboBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.InvCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProdCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtNumber = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -78,10 +78,10 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cbbCus);
+            this.panel1.Controls.Add(this.dtpDate);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtInvoiceCode);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -90,54 +90,56 @@
             this.panel1.Size = new System.Drawing.Size(843, 179);
             this.panel1.TabIndex = 1;
             // 
+            // cbbCus
+            // 
+            this.cbbCus.FormattingEnabled = true;
+            this.cbbCus.Location = new System.Drawing.Point(124, 74);
+            this.cbbCus.Name = "cbbCus";
+            this.cbbCus.Size = new System.Drawing.Size(212, 29);
+            this.cbbCus.TabIndex = 8;
+            // 
+            // dtpDate
+            // 
+            this.dtpDate.Location = new System.Drawing.Point(124, 128);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(212, 29);
+            this.dtpDate.TabIndex = 7;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column2,
-            this.Column3,
-            this.Column4});
+            this.InvoiceCode,
+            this.CustomerCode,
+            this.SaleDate});
             this.dataGridView1.Location = new System.Drawing.Point(359, 20);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(469, 146);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cellClick);
             // 
-            // Column2
+            // InvoiceCode
             // 
-            this.Column2.HeaderText = "MaHDB";
-            this.Column2.Name = "Column2";
+            this.InvoiceCode.HeaderText = "MaHDB";
+            this.InvoiceCode.Name = "InvoiceCode";
             // 
-            // Column3
+            // CustomerCode
             // 
-            this.Column3.HeaderText = "MaKH";
-            this.Column3.Name = "Column3";
+            this.CustomerCode.HeaderText = "MaKH";
+            this.CustomerCode.Name = "CustomerCode";
             // 
-            // Column4
+            // SaleDate
             // 
-            this.Column4.HeaderText = "NgayBan";
-            this.Column4.Name = "Column4";
+            this.SaleDate.HeaderText = "NgayBan";
+            this.SaleDate.Name = "SaleDate";
             // 
-            // textBox3
+            // txtInvoiceCode
             // 
-            this.textBox3.Location = new System.Drawing.Point(124, 125);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(212, 29);
-            this.textBox3.TabIndex = 5;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(124, 68);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(212, 29);
-            this.textBox2.TabIndex = 4;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(124, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(212, 29);
-            this.textBox1.TabIndex = 3;
+            this.txtInvoiceCode.Location = new System.Drawing.Point(124, 20);
+            this.txtInvoiceCode.Name = "txtInvoiceCode";
+            this.txtInvoiceCode.Size = new System.Drawing.Size(212, 29);
+            this.txtInvoiceCode.TabIndex = 3;
             // 
             // label5
             // 
@@ -171,10 +173,10 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.cbbProd);
             this.panel2.Controls.Add(this.dataGridView2);
-            this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.txtPrice);
+            this.panel2.Controls.Add(this.txtNumber);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
@@ -183,63 +185,63 @@
             this.panel2.Size = new System.Drawing.Size(843, 197);
             this.panel2.TabIndex = 2;
             // 
+            // cbbProd
+            // 
+            this.cbbProd.FormattingEnabled = true;
+            this.cbbProd.Location = new System.Drawing.Point(124, 17);
+            this.cbbProd.Name = "cbbProd";
+            this.cbbProd.Size = new System.Drawing.Size(212, 29);
+            this.cbbProd.TabIndex = 8;
+            // 
             // dataGridView2
             // 
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.dataGridViewTextBoxColumn1,
-            this.SoLuong,
-            this.dataGridViewTextBoxColumn2});
+            this.InvCode,
+            this.ProdCode,
+            this.Number,
+            this.Price});
             this.dataGridView2.Location = new System.Drawing.Point(12, 71);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(816, 123);
             this.dataGridView2.TabIndex = 7;
             // 
-            // Column1
+            // InvCode
             // 
-            this.Column1.HeaderText = "MaHDB";
-            this.Column1.Name = "Column1";
+            this.InvCode.HeaderText = "MaHDB";
+            this.InvCode.Name = "InvCode";
             // 
-            // dataGridViewTextBoxColumn1
+            // ProdCode
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "MaKH";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.ProdCode.HeaderText = "MaMH";
+            this.ProdCode.Name = "ProdCode";
             // 
-            // SoLuong
+            // Number
             // 
-            this.SoLuong.HeaderText = "SoLuong";
-            this.SoLuong.Name = "SoLuong";
+            this.Number.HeaderText = "SoLuong";
+            this.Number.Name = "Number";
             // 
-            // dataGridViewTextBoxColumn2
+            // Price
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "DonGia";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.Price.HeaderText = "DonGia";
+            this.Price.Name = "Price";
             // 
-            // textBox6
+            // txtPrice
             // 
-            this.textBox6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(520, 40);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(170, 25);
-            this.textBox6.TabIndex = 6;
+            this.txtPrice.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.Location = new System.Drawing.Point(520, 40);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(170, 25);
+            this.txtPrice.TabIndex = 6;
             // 
-            // textBox5
+            // txtNumber
             // 
-            this.textBox5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(520, 9);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(170, 25);
-            this.textBox5.TabIndex = 5;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(126, 17);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(212, 26);
-            this.textBox4.TabIndex = 4;
+            this.txtNumber.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumber.Location = new System.Drawing.Point(520, 9);
+            this.txtNumber.Name = "txtNumber";
+            this.txtNumber.Size = new System.Drawing.Size(170, 25);
+            this.txtNumber.TabIndex = 5;
             // 
             // label9
             // 
@@ -288,6 +290,7 @@
             this.btnInput.TabIndex = 4;
             this.btnInput.Text = "NHẬP";
             this.btnInput.UseVisualStyleBackColor = true;
+            this.btnInput.Click += new System.EventHandler(this.btnInput_Click);
             // 
             // btnCancel
             // 
@@ -297,6 +300,7 @@
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "HỦY";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
@@ -364,6 +368,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormThongTinHoaDonBan";
             this.Text = "Cập nhật thông tin bán hàng";
+            this.Load += new System.EventHandler(this.FormThongTinHoaDonBan_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -381,9 +386,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtInvoiceCode;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -393,21 +396,23 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.TextBox txtNumber;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn InvoiceCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CustomerCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SaleDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn InvCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProdCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DateTimePicker dtpDate;
+        private System.Windows.Forms.ComboBox cbbCus;
+        private System.Windows.Forms.ComboBox cbbProd;
     }
 }

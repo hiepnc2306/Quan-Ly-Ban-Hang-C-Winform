@@ -8,7 +8,9 @@ namespace quanlybanhang.Model
 {
     internal class Constant
     {
-        public const string PURCHASE = "purchase_invoice";
-        public const string SALES = "sales_invoice";
+        private const string PURCHASE = "purchase_invoice";
+        private const string SALES = "sales_invoice";
+        public string purchase() { return PURCHASE; }
+        public string sales() { return SALES; }
     }
 }
