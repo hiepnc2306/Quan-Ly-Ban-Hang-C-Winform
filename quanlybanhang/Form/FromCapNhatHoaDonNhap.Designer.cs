@@ -45,6 +45,11 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txbProduct_code = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenMatHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -58,11 +63,6 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenMatHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -90,7 +90,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(19, 46);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(767, 159);
+            this.panel1.Size = new System.Drawing.Size(871, 159);
             this.panel1.TabIndex = 1;
             // 
             // dataGridView1
@@ -101,9 +101,9 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(361, 10);
+            this.dataGridView1.Location = new System.Drawing.Point(365, 9);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(384, 134);
+            this.dataGridView1.Size = new System.Drawing.Size(488, 134);
             this.dataGridView1.TabIndex = 6;
             // 
             // Column1
@@ -188,7 +188,7 @@
             this.panel2.Controls.Add(this.label7);
             this.panel2.Location = new System.Drawing.Point(20, 221);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(765, 221);
+            this.panel2.Size = new System.Drawing.Size(870, 221);
             this.panel2.TabIndex = 2;
             // 
             // textBox6
@@ -227,10 +227,35 @@
             this.TenMatHang,
             this.dataGridViewTextBoxColumn3,
             this.Column4});
-            this.dataGridView2.Location = new System.Drawing.Point(38, 92);
+            this.dataGridView2.Location = new System.Drawing.Point(29, 89);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(683, 129);
+            this.dataGridView2.Size = new System.Drawing.Size(814, 129);
             this.dataGridView2.TabIndex = 6;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "MaHDN";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "MaHang";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // TenMatHang
+            // 
+            this.TenMatHang.HeaderText = "TenMatHang";
+            this.TenMatHang.Name = "TenMatHang";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "SoLuong";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "DonGia";
+            this.Column4.Name = "Column4";
             // 
             // textBox5
             // 
@@ -301,7 +326,7 @@
             // btnInput
             // 
             this.btnInput.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInput.Location = new System.Drawing.Point(31, 448);
+            this.btnInput.Location = new System.Drawing.Point(65, 454);
             this.btnInput.Name = "btnInput";
             this.btnInput.Size = new System.Drawing.Size(99, 38);
             this.btnInput.TabIndex = 5;
@@ -311,7 +336,7 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(163, 448);
+            this.btnCancel.Location = new System.Drawing.Point(197, 454);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(99, 38);
             this.btnCancel.TabIndex = 6;
@@ -321,7 +346,7 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(287, 448);
+            this.btnSave.Location = new System.Drawing.Point(321, 454);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(99, 38);
             this.btnSave.TabIndex = 7;
@@ -331,7 +356,7 @@
             // btnEdit
             // 
             this.btnEdit.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(416, 448);
+            this.btnEdit.Location = new System.Drawing.Point(450, 454);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(99, 38);
             this.btnEdit.TabIndex = 8;
@@ -341,7 +366,7 @@
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(550, 448);
+            this.btnDelete.Location = new System.Drawing.Point(584, 454);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(99, 38);
             this.btnDelete.TabIndex = 9;
@@ -351,43 +376,19 @@
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(687, 448);
+            this.btnExit.Location = new System.Drawing.Point(721, 454);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(99, 38);
             this.btnExit.TabIndex = 10;
             this.btnExit.Text = "THOÁT";
             this.btnExit.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "MaHDN";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "MaHang";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // TenMatHang
-            // 
-            this.TenMatHang.HeaderText = "TenMatHang";
-            this.TenMatHang.Name = "TenMatHang";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "SoLuong";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "DonGia";
-            this.Column4.Name = "Column4";
-            // 
             // FromCapNhatHoaDonNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 504);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(902, 504);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);

@@ -93,12 +93,12 @@ namespace quanlybanhang
                 }
                 else
                 {
-                    BaoHanh ncc = new BaoHanh(txtCode.Text, txtCheckCode.Text, dtStartDate.Value, 
-                        dtEndDate.Value, Int32.Parse(txtNumber.Text), dtAppointmentDate.Value);
+                    BaoHanh ncc = new BaoHanh(txtCode.Text, txtCheckCode.Text, dtStartDate.Value.Date,
+                    dtEndDate.Value.Date, Int32.Parse(txtNumber.Text), dtAppointmentDate.Value.Date);
                     baoHanhRepo.create(ncc);
                     FormThongTinBaoHanh_Load(sender, e);
                     btnCancel_Click(sender, e);
-                    MessageBox.Show("Lưu thành công");
+                    MessageBox.Show("Lưu thành công");                 
                 }
             }
 
@@ -114,6 +114,10 @@ namespace quanlybanhang
                 dtEndDate.Text = dgvList.Rows[e.RowIndex].Cells[4].Value.ToString();
                 txtNumber.Text = dgvList.Rows[e.RowIndex].Cells[5].Value.ToString();
                 dtAppointmentDate.Text = dgvList.Rows[e.RowIndex].Cells[6].Value.ToString();
+                dtStartDate.Value = DateTime.Parse(dgvList.Rows[e.RowIndex].Cells[3].Value.ToString());
+                dtEndDate.Value = DateTime.Parse(dgvList.Rows[e.RowIndex].Cells[4].Value.ToString());
+                dtAppointmentDate.Value = DateTime.Parse(dgvList.Rows[e.RowIndex].Cells[6].Value.ToString());
+
             }
             catch (Exception)
             {

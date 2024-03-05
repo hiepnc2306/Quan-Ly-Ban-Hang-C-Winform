@@ -58,7 +58,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(252, 24);
+            this.label1.Location = new System.Drawing.Point(278, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(340, 27);
             this.label1.TabIndex = 0;
@@ -68,7 +68,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(30, 92);
+            this.label2.Location = new System.Drawing.Point(26, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 21);
             this.label2.TabIndex = 1;
@@ -78,7 +78,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(30, 132);
+            this.label3.Location = new System.Drawing.Point(76, 72);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 21);
             this.label3.TabIndex = 2;
@@ -88,7 +88,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(350, 86);
+            this.label4.Location = new System.Drawing.Point(454, 19);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(128, 21);
             this.label4.TabIndex = 3;
@@ -99,7 +99,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(458, 133);
+            this.label5.Location = new System.Drawing.Point(474, 72);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 21);
             this.label5.TabIndex = 4;
@@ -108,15 +108,15 @@
             // txbID
             // 
             this.txbID.Enabled = false;
-            this.txbID.Location = new System.Drawing.Point(159, 81);
+            this.txbID.Location = new System.Drawing.Point(155, 14);
             this.txbID.Name = "txbID";
-            this.txbID.Size = new System.Drawing.Size(128, 32);
+            this.txbID.Size = new System.Drawing.Size(265, 32);
             this.txbID.TabIndex = 5;
             // 
             // txbAddress
             // 
             this.txbAddress.Enabled = false;
-            this.txbAddress.Location = new System.Drawing.Point(159, 122);
+            this.txbAddress.Location = new System.Drawing.Point(155, 61);
             this.txbAddress.Name = "txbAddress";
             this.txbAddress.Size = new System.Drawing.Size(265, 32);
             this.txbAddress.TabIndex = 6;
@@ -125,7 +125,7 @@
             // txbname
             // 
             this.txbname.Enabled = false;
-            this.txbname.Location = new System.Drawing.Point(527, 75);
+            this.txbname.Location = new System.Drawing.Point(599, 8);
             this.txbname.Name = "txbname";
             this.txbname.Size = new System.Drawing.Size(224, 32);
             this.txbname.TabIndex = 7;
@@ -133,9 +133,9 @@
             // txbPhoneNumber
             // 
             this.txbPhoneNumber.Enabled = false;
-            this.txbPhoneNumber.Location = new System.Drawing.Point(572, 127);
+            this.txbPhoneNumber.Location = new System.Drawing.Point(599, 61);
             this.txbPhoneNumber.Name = "txbPhoneNumber";
-            this.txbPhoneNumber.Size = new System.Drawing.Size(179, 32);
+            this.txbPhoneNumber.Size = new System.Drawing.Size(224, 32);
             this.txbPhoneNumber.TabIndex = 8;
             // 
             // dataGridView1
@@ -148,7 +148,7 @@
             this.Address,
             this.Sdt,
             this.Id});
-            this.dataGridView1.Location = new System.Drawing.Point(44, 200);
+            this.dataGridView1.Location = new System.Drawing.Point(80, 147);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(743, 150);
             this.dataGridView1.TabIndex = 9;
@@ -183,7 +183,7 @@
             // btnInput
             // 
             this.btnInput.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInput.Location = new System.Drawing.Point(20, 7);
+            this.btnInput.Location = new System.Drawing.Point(80, 321);
             this.btnInput.Name = "btnInput";
             this.btnInput.Size = new System.Drawing.Size(81, 38);
             this.btnInput.TabIndex = 10;
@@ -194,7 +194,7 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(138, 7);
+            this.btnCancel.Location = new System.Drawing.Point(198, 321);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(81, 38);
             this.btnCancel.TabIndex = 11;
@@ -205,7 +205,7 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(249, 7);
+            this.btnSave.Location = new System.Drawing.Point(309, 321);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(81, 38);
             this.btnSave.TabIndex = 12;
@@ -216,7 +216,7 @@
             // btnEdit
             // 
             this.btnEdit.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(385, 7);
+            this.btnEdit.Location = new System.Drawing.Point(445, 321);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(81, 38);
             this.btnEdit.TabIndex = 13;
@@ -227,7 +227,7 @@
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(515, 7);
+            this.btnDelete.Location = new System.Drawing.Point(575, 321);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(81, 38);
             this.btnDelete.TabIndex = 14;
@@ -238,7 +238,7 @@
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(649, 7);
+            this.btnExit.Location = new System.Drawing.Point(709, 321);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(90, 38);
             this.btnExit.TabIndex = 15;
@@ -250,39 +250,41 @@
             // 
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnDelete);
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.btnEdit);
+            this.panel1.Controls.Add(this.txbPhoneNumber);
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.btnCancel);
+            this.panel1.Controls.Add(this.txbname);
             this.panel1.Controls.Add(this.btnInput);
-            this.panel1.Location = new System.Drawing.Point(34, 377);
+            this.panel1.Controls.Add(this.txbAddress);
+            this.panel1.Controls.Add(this.txbID);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(12, 87);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(764, 53);
+            this.panel1.Size = new System.Drawing.Size(862, 383);
             this.panel1.TabIndex = 16;
             // 
             // FormThongTinKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.txbPhoneNumber);
-            this.Controls.Add(this.txbname);
-            this.Controls.Add(this.txbAddress);
-            this.Controls.Add(this.txbID);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "FormThongTinKhachHang";
             this.Text = "Thông tin khách hàng";
             this.Load += new System.EventHandler(this.FormThongTinKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,11 +308,11 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn CName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sdt;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.Panel panel1;
     }
 }
