@@ -59,7 +59,7 @@
             this.hỆTHỐNGToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(916, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1132, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -192,7 +192,7 @@
             this.pnlMainDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMainDisplay.Location = new System.Drawing.Point(0, 24);
             this.pnlMainDisplay.Name = "pnlMainDisplay";
-            this.pnlMainDisplay.Size = new System.Drawing.Size(916, 460);
+            this.pnlMainDisplay.Size = new System.Drawing.Size(1132, 703);
             this.pnlMainDisplay.TabIndex = 1;
             // 
             // FormMain
@@ -200,7 +200,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(916, 484);
+            this.ClientSize = new System.Drawing.Size(1132, 727);
             this.Controls.Add(this.pnlMainDisplay);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;

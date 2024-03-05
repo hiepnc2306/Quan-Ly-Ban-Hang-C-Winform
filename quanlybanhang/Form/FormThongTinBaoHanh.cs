@@ -11,7 +11,7 @@ namespace quanlybanhang
         TextBox[] tbArr;
         DateTimePicker[] dtpArr;
         List<BaoHanh> list = new List<BaoHanh>();
-        IBaoHanhRepo baoHanhRepo = new BaoHanhRepo();
+        BaoHanhRepo baoHanhRepo = new BaoHanhRepo();
         public FormThongTinBaoHanh()
         {
             InitializeComponent();
