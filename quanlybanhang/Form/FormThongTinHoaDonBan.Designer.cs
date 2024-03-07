@@ -284,7 +284,7 @@
             // 
             // btnInput
             // 
-            this.btnInput.Location = new System.Drawing.Point(91, 447);
+            this.btnInput.Location = new System.Drawing.Point(62, 447);
             this.btnInput.Name = "btnInput";
             this.btnInput.Size = new System.Drawing.Size(87, 34);
             this.btnInput.TabIndex = 4;
@@ -294,7 +294,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(220, 447);
+            this.btnCancel.Location = new System.Drawing.Point(333, 447);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(87, 34);
             this.btnCancel.TabIndex = 5;
@@ -304,25 +304,25 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(347, 447);
+            this.btnSave.Location = new System.Drawing.Point(207, 447);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(87, 34);
             this.btnSave.TabIndex = 6;
-            this.btnSave.Text = "THÊM";
+            this.btnSave.Text = "LƯU";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(478, 447);
+            this.btnEdit.Location = new System.Drawing.Point(469, 447);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(87, 34);
+            this.btnEdit.Size = new System.Drawing.Size(120, 34);
             this.btnEdit.TabIndex = 7;
-            this.btnEdit.Text = "LƯU";
+            this.btnEdit.Text = "CẬP NHẬT";
             this.btnEdit.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(607, 447);
+            this.btnDelete.Location = new System.Drawing.Point(629, 447);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(87, 34);
             this.btnDelete.TabIndex = 8;
@@ -331,11 +331,11 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(738, 447);
+            this.btnExit.Location = new System.Drawing.Point(760, 447);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(87, 34);
             this.btnExit.TabIndex = 9;
-            this.btnExit.Text = "XÓA";
+            this.btnExit.Text = "THOÁT";
             this.btnExit.UseVisualStyleBackColor = true;
             // 
             // label6
@@ -351,6 +351,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1333, 727);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnExit);
@@ -364,7 +365,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormThongTinHoaDonBan";
             this.Text = "Cập nhật thông tin bán hàng";

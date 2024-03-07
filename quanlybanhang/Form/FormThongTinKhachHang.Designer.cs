@@ -183,7 +183,7 @@
             // btnInput
             // 
             this.btnInput.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInput.Location = new System.Drawing.Point(80, 321);
+            this.btnInput.Location = new System.Drawing.Point(77, 322);
             this.btnInput.Name = "btnInput";
             this.btnInput.Size = new System.Drawing.Size(81, 38);
             this.btnInput.TabIndex = 10;
@@ -194,7 +194,7 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(198, 321);
+            this.btnCancel.Location = new System.Drawing.Point(302, 322);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(81, 38);
             this.btnCancel.TabIndex = 11;
@@ -205,29 +205,29 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(309, 321);
+            this.btnSave.Location = new System.Drawing.Point(193, 322);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(81, 38);
             this.btnSave.TabIndex = 12;
-            this.btnSave.Text = "THÊM";
+            this.btnSave.Text = "LƯU";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnEdit
             // 
             this.btnEdit.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(445, 321);
+            this.btnEdit.Location = new System.Drawing.Point(425, 322);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(81, 38);
+            this.btnEdit.Size = new System.Drawing.Size(118, 38);
             this.btnEdit.TabIndex = 13;
-            this.btnEdit.Text = "LƯU";
+            this.btnEdit.Text = "CẬP NHẬT";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(575, 321);
+            this.btnDelete.Location = new System.Drawing.Point(592, 322);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(81, 38);
             this.btnDelete.TabIndex = 14;
@@ -238,7 +238,7 @@
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(709, 321);
+            this.btnExit.Location = new System.Drawing.Point(726, 322);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(90, 38);
             this.btnExit.TabIndex = 15;
@@ -277,7 +277,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "FormThongTinKhachHang";
             this.Text = "Thông tin khách hàng";

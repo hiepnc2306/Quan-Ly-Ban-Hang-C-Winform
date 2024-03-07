@@ -149,7 +149,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(179, 349);
+            this.btnCancel.Location = new System.Drawing.Point(308, 348);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(79, 35);
             this.btnCancel.TabIndex = 11;
@@ -159,11 +159,11 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(317, 349);
+            this.btnSave.Location = new System.Drawing.Point(175, 348);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(79, 35);
             this.btnSave.TabIndex = 12;
-            this.btnSave.Text = "THÊM";
+            this.btnSave.Text = "LƯU";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -171,9 +171,9 @@
             // 
             this.btnEdit.Location = new System.Drawing.Point(424, 349);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(79, 35);
+            this.btnEdit.Size = new System.Drawing.Size(92, 35);
             this.btnEdit.TabIndex = 13;
-            this.btnEdit.Text = "LƯU";
+            this.btnEdit.Text = "CẬP NHẬT";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -280,7 +280,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormThongTinNCC";
             this.Text = "Thông tin nhà cung cấp";
             this.Load += new System.EventHandler(this.FormThongTinNCC_Load);

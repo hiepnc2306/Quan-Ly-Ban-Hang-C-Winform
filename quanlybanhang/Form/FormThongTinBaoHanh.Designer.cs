@@ -206,7 +206,7 @@
             // btnInput
             // 
             this.btnInput.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInput.Location = new System.Drawing.Point(56, 362);
+            this.btnInput.Location = new System.Drawing.Point(26, 362);
             this.btnInput.Name = "btnInput";
             this.btnInput.Size = new System.Drawing.Size(96, 43);
             this.btnInput.TabIndex = 3;
@@ -217,7 +217,7 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(187, 362);
+            this.btnCancel.Location = new System.Drawing.Point(307, 362);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(84, 43);
             this.btnCancel.TabIndex = 4;
@@ -228,22 +228,22 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(323, 362);
+            this.btnSave.Location = new System.Drawing.Point(175, 362);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(84, 43);
             this.btnSave.TabIndex = 5;
-            this.btnSave.Text = "THÊM";
+            this.btnSave.Text = "LƯU";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnEdit
             // 
             this.btnEdit.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(468, 362);
+            this.btnEdit.Location = new System.Drawing.Point(431, 362);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(84, 43);
+            this.btnEdit.Size = new System.Drawing.Size(110, 43);
             this.btnEdit.TabIndex = 6;
-            this.btnEdit.Text = "LƯU";
+            this.btnEdit.Text = "CẬP NHẬT";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -353,7 +353,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormThongTinBaoHanh";
             this.Text = "Thông tin về bảo hành";
             this.Load += new System.EventHandler(this.FormThongTinBaoHanh_Load);

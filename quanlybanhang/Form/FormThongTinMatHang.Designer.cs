@@ -34,6 +34,10 @@
             this.txbID = new System.Windows.Forms.TextBox();
             this.txbName = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnInput = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -41,10 +45,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -111,6 +111,27 @@
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // code
+            // 
+            this.code.HeaderText = "Mahang";
+            this.code.Name = "code";
+            // 
+            // name
+            // 
+            this.name.HeaderText = "Tenhang";
+            this.name.Name = "name";
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
+            // 
+            // price
+            // 
+            this.price.HeaderText = "Giatien";
+            this.price.Name = "price";
+            // 
             // btnInput
             // 
             this.btnInput.Location = new System.Drawing.Point(34, 300);
@@ -123,7 +144,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(161, 300);
+            this.btnCancel.Location = new System.Drawing.Point(265, 300);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(78, 40);
             this.btnCancel.TabIndex = 7;
@@ -133,21 +154,21 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(283, 300);
+            this.btnSave.Location = new System.Drawing.Point(145, 300);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(78, 40);
             this.btnSave.TabIndex = 8;
-            this.btnSave.Text = "THÊM";
+            this.btnSave.Text = "LƯU";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(418, 300);
+            this.btnEdit.Location = new System.Drawing.Point(398, 300);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(78, 40);
+            this.btnEdit.Size = new System.Drawing.Size(118, 40);
             this.btnEdit.TabIndex = 9;
-            this.btnEdit.Text = "LƯU";
+            this.btnEdit.Text = "CẬP NHẬT";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -189,27 +210,6 @@
             this.panel1.Size = new System.Drawing.Size(836, 365);
             this.panel1.TabIndex = 12;
             // 
-            // code
-            // 
-            this.code.HeaderText = "Mahang";
-            this.code.Name = "code";
-            // 
-            // name
-            // 
-            this.name.HeaderText = "Tenhang";
-            this.name.Name = "name";
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.Visible = false;
-            // 
-            // price
-            // 
-            this.price.HeaderText = "Giatien";
-            this.price.Name = "price";
-            // 
             // FormThongTinMatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -219,7 +219,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormThongTinMatHang";
             this.Text = "Thông tin về mặt hàng";

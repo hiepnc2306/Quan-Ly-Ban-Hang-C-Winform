@@ -326,7 +326,7 @@
             // btnInput
             // 
             this.btnInput.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInput.Location = new System.Drawing.Point(65, 454);
+            this.btnInput.Location = new System.Drawing.Point(49, 454);
             this.btnInput.Name = "btnInput";
             this.btnInput.Size = new System.Drawing.Size(99, 38);
             this.btnInput.TabIndex = 5;
@@ -336,7 +336,7 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(197, 454);
+            this.btnCancel.Location = new System.Drawing.Point(305, 454);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(99, 38);
             this.btnCancel.TabIndex = 6;
@@ -346,11 +346,11 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(321, 454);
+            this.btnSave.Location = new System.Drawing.Point(172, 454);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(99, 38);
             this.btnSave.TabIndex = 7;
-            this.btnSave.Text = "THÊM";
+            this.btnSave.Text = "LƯU";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
             // btnEdit
@@ -360,7 +360,7 @@
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(99, 38);
             this.btnEdit.TabIndex = 8;
-            this.btnEdit.Text = "LƯU";
+            this.btnEdit.Text = "CẬP NHẬT";
             this.btnEdit.UseVisualStyleBackColor = true;
             // 
             // btnDelete
@@ -387,7 +387,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 504);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(904, 504);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
@@ -400,7 +401,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FromCapNhatHoaDonNhap";
             this.Text = "Thông tin về hóa đơn nhập hàng";
             this.panel1.ResumeLayout(false);

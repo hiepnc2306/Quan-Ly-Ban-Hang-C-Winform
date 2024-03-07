@@ -67,7 +67,7 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 161);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 167);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(850, 175);
             this.dataGridView1.TabIndex = 2;
@@ -164,7 +164,7 @@
             // 
             // btnThuchien
             // 
-            this.btnThuchien.Location = new System.Drawing.Point(145, 398);
+            this.btnThuchien.Location = new System.Drawing.Point(143, 410);
             this.btnThuchien.Name = "btnThuchien";
             this.btnThuchien.Size = new System.Drawing.Size(130, 44);
             this.btnThuchien.TabIndex = 2;
@@ -173,7 +173,7 @@
             // 
             // btnContinue
             // 
-            this.btnContinue.Location = new System.Drawing.Point(299, 398);
+            this.btnContinue.Location = new System.Drawing.Point(297, 410);
             this.btnContinue.Name = "btnContinue";
             this.btnContinue.Size = new System.Drawing.Size(130, 44);
             this.btnContinue.TabIndex = 3;
@@ -182,7 +182,7 @@
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(467, 398);
+            this.btnPrint.Location = new System.Drawing.Point(465, 410);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(130, 44);
             this.btnPrint.TabIndex = 4;
@@ -191,7 +191,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(638, 398);
+            this.btnExit.Location = new System.Drawing.Point(636, 410);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(130, 44);
             this.btnExit.TabIndex = 5;
@@ -205,10 +205,10 @@
             this.groupBox3.Controls.Add(this.groupBox2);
             this.groupBox3.Location = new System.Drawing.Point(12, 44);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(862, 348);
+            this.groupBox3.Size = new System.Drawing.Size(862, 360);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
+            this.groupBox3.Text = "Tìm kiếm theo";
             // 
             // FormBaoCaoDoanhThu
             // 
@@ -223,7 +223,7 @@
             this.Controls.Add(this.btnThuchien);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormBaoCaoDoanhThu";
             this.Text = "Báo cáo doanh thu tài chính";
