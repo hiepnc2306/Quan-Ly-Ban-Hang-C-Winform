@@ -38,11 +38,6 @@
             this.txbname = new System.Windows.Forms.TextBox();
             this.txbPhoneNumber = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnInput = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -50,6 +45,11 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -143,42 +143,16 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
             this.Code,
             this.CName,
             this.Address,
-            this.Sdt,
-            this.Id});
+            this.Sdt});
             this.dataGridView1.Location = new System.Drawing.Point(80, 147);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(743, 150);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cellClick);
-            // 
-            // Code
-            // 
-            this.Code.HeaderText = "MaKH";
-            this.Code.Name = "Code";
-            // 
-            // CName
-            // 
-            this.CName.HeaderText = "TenKH";
-            this.CName.Name = "CName";
-            // 
-            // Address
-            // 
-            this.Address.HeaderText = "Diachi";
-            this.Address.Name = "Address";
-            // 
-            // Sdt
-            // 
-            this.Sdt.HeaderText = "Dienthoai";
-            this.Sdt.Name = "Sdt";
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.Visible = false;
             // 
             // btnInput
             // 
@@ -268,6 +242,32 @@
             this.panel1.Size = new System.Drawing.Size(862, 383);
             this.panel1.TabIndex = 16;
             // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
+            // 
+            // Code
+            // 
+            this.Code.HeaderText = "Mã Khách Hàng";
+            this.Code.Name = "Code";
+            // 
+            // CName
+            // 
+            this.CName.HeaderText = "Tên Khách Hàng";
+            this.CName.Name = "CName";
+            // 
+            // Address
+            // 
+            this.Address.HeaderText = "Địa Chỉ";
+            this.Address.Name = "Address";
+            // 
+            // Sdt
+            // 
+            this.Sdt.HeaderText = "Điện Thoại";
+            this.Sdt.Name = "Sdt";
+            // 
             // FormThongTinKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
@@ -308,11 +308,11 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn CName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sdt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.Panel panel1;
     }
 }

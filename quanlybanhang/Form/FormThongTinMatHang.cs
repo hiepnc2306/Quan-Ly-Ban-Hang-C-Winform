@@ -33,6 +33,8 @@ namespace quanlybanhang
             { // nhập dữ liệu từ datagridview vào text tương ứng
                 txbID.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 txbName.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txbGiaBan.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                txbGiaNhap.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             }
             catch (Exception)
             {
@@ -42,12 +44,14 @@ namespace quanlybanhang
 
         private void FormThongTinMatHang_Load(object sender, EventArgs e)
         {
-            tbArr = new TextBox[] { txbID, txbName };
+            tbArr = new TextBox[] { txbID, txbName, txbGiaBan, txbGiaNhap };
             list = repo.getAll(); // lấy danh sách mặt hàng
             // gán dữ liệu vào datagridview
             dataGridView1.Columns["Id"].DataPropertyName = "Id";
             dataGridView1.Columns["Code"].DataPropertyName = "Code";
             dataGridView1.Columns["Name"].DataPropertyName = "Name";
+            dataGridView1.Columns["SalePrice"].DataPropertyName = "SalePrice";
+            dataGridView1.Columns["PurchasePrice"].DataPropertyName = "PurchasePrice";
             dataGridView1.DataSource = list;
         }
 
@@ -90,7 +94,7 @@ namespace quanlybanhang
                 }
                 else
                 {
-                    MatHang mh = new MatHang(txbID.Text, txbName.Text);
+                    MatHang mh = new MatHang(txbID.Text, txbName.Text, Int64.Parse(txbGiaBan.Text), Int64.Parse(txbGiaNhap.Text));
                     repo.create(mh);
                     FormThongTinMatHang_Load(sender, e);
                     btnCancel_Click(sender, e);
@@ -121,7 +125,7 @@ namespace quanlybanhang
                 }
                 else
                 {
-                    MatHang mh = new MatHang(check.Id, txbID.Text, txbName.Text);
+                    MatHang mh = new MatHang(check.Id, txbID.Text, txbName.Text, Int64.Parse(txbGiaBan.Text), Int64.Parse(txbGiaNhap.Text));
                     repo.update(mh);
                     FormThongTinMatHang_Load(sender, e);
                     btnCancel_Click(sender, e);

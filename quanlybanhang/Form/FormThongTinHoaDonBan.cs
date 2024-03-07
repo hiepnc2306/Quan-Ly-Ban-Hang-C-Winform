@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace quanlybanhang
 {
@@ -11,6 +12,8 @@ namespace quanlybanhang
     {
         List<HoaDon> list;
         HoaDonRepo repo = new HoaDonRepo();
+        IKhachHangRepo khRepo = new KhachHangRepo();
+        IMatHangRepo mhRepo = new MatHangRepo();
         Constant constant = new Constant();
         List<HoaDonKhachHang> hoaDonKhachHangs = new List<HoaDonKhachHang>();
         List<HoaDonMatHang> hoaDonMatHangs = new List<HoaDonMatHang>();
@@ -28,8 +31,17 @@ namespace quanlybanhang
         {
             try
             {
+                cbbProd.Items.Clear();
+                cbbCus.Items.Clear();
+                List<MatHang> products = mhRepo.getAll();
+                List<KhachHang> customers = khRepo.getAll();
                 list = repo.getByType(constant.sales());
-
+                products.ForEach(p => { cbbProd.Items.Add(p.Code); });
+                customers.ForEach(p => cbbCus.Items.Add(p.code));
+                cbbCus.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                cbbCus.AutoCompleteSource = AutoCompleteSource.ListItems;
+                cbbProd.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                cbbProd.AutoCompleteSource = AutoCompleteSource.ListItems;
                 mapDGVCus();
                 mapDGVProd();
 
@@ -56,22 +68,17 @@ namespace quanlybanhang
                 txtInvoiceCode.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 cbbCus.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 dtpDate.Value = DateTime.Parse(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
-                HoaDon mh = repo.getByCodeAndType(txtInvoiceCode.Text, constant.sales());
-                list = new List<HoaDon> { mh };
-                mapDGVProd();
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void mapDGVCus()
         {
-            cbbCus.Items.Clear();
             HashSet<string> itemsCus = new HashSet<string>();
             foreach (HoaDon hoadon in list)
             {
                 HoaDonKhachHang hoaDonKhach = new HoaDonKhachHang(hoadon.code, hoadon.linkCode, hoadon.date);
                 hoaDonKhachHangs.Add(hoaDonKhach);
-                itemsCus.Add(hoaDonKhach.code);
             }
             dataGridView1.Columns["InvoiceCode"].DataPropertyName = "code";
             dataGridView1.Columns["CustomerCode"].DataPropertyName = "cusCode";
@@ -81,13 +88,11 @@ namespace quanlybanhang
         }
         private void mapDGVProd()
         {
-            cbbProd.Items.Clear();
             HashSet<string> itemsProd = new HashSet<string>();
             foreach (HoaDon hoadon in list)
             {
                 HoaDonMatHang hoaDonMatHang = new HoaDonMatHang(hoadon.code, hoadon.prodCode, hoadon.number, hoadon.price);
                 hoaDonMatHangs.Add(hoaDonMatHang);
-                itemsProd.Add(hoaDonMatHang.code);
             }
             dataGridView2.Columns["InvCode"].DataPropertyName = "code";
             dataGridView2.Columns["ProdCode"].DataPropertyName = "prodCode";
@@ -114,18 +119,18 @@ namespace quanlybanhang
                 cbbProd.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
                 txtNumber.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
                 txtPrice.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
-                HoaDon mh = repo.getByCodeAndType(code, constant.sales());
-                list = new List<HoaDon> { mh };
-                mapDGVCus();
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            List<TextBox> textBoxes = new List<TextBox> { txtInvoiceCode, txtNumber, txtPrice };
-            List<ComboBox> comboBoxes = new List<ComboBox> { cbbCus, cbbProd };
 
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

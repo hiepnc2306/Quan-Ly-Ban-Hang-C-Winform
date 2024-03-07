@@ -44,12 +44,12 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NCCName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -202,11 +202,11 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
             this.Code,
             this.NCCName,
             this.Address,
-            this.Sdt,
-            this.id});
+            this.Sdt});
             this.dataGridView1.Location = new System.Drawing.Point(39, 188);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -216,37 +216,6 @@
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Code
-            // 
-            this.Code.HeaderText = "MaNCC";
-            this.Code.Name = "Code";
-            this.Code.ReadOnly = true;
-            // 
-            // NCCName
-            // 
-            this.NCCName.HeaderText = "TenNCC";
-            this.NCCName.Name = "NCCName";
-            this.NCCName.ReadOnly = true;
-            // 
-            // Address
-            // 
-            this.Address.HeaderText = "Diachi";
-            this.Address.Name = "Address";
-            this.Address.ReadOnly = true;
-            // 
-            // Sdt
-            // 
-            this.Sdt.HeaderText = "Dienthoai";
-            this.Sdt.Name = "Sdt";
-            this.Sdt.ReadOnly = true;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "Id";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
             // 
             // panel2
             // 
@@ -270,6 +239,37 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(794, 405);
             this.panel2.TabIndex = 17;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "Id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // Code
+            // 
+            this.Code.HeaderText = "Mã Nhà Cung Cấp";
+            this.Code.Name = "Code";
+            this.Code.ReadOnly = true;
+            // 
+            // NCCName
+            // 
+            this.NCCName.HeaderText = "Tên Nhà Cung Cấp";
+            this.NCCName.Name = "NCCName";
+            this.NCCName.ReadOnly = true;
+            // 
+            // Address
+            // 
+            this.Address.HeaderText = "Địa Chỉ";
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
+            // 
+            // Sdt
+            // 
+            this.Sdt.HeaderText = "Điện Thoại";
+            this.Sdt.Name = "Sdt";
+            this.Sdt.ReadOnly = true;
             // 
             // FormThongTinNCC
             // 
@@ -310,11 +310,11 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn NCCName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sdt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.Panel panel2;
     }
 }
