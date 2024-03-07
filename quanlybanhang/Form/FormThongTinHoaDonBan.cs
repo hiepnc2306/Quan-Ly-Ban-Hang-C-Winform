@@ -2,6 +2,7 @@
 using quanlybanhang.Reponsitory;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace quanlybanhang
@@ -28,10 +29,10 @@ namespace quanlybanhang
             try
             {
                 list = repo.getByType(constant.sales());
-                
+
                 mapDGVCus();
                 mapDGVProd();
-                
+
             }
             catch (Exception ex)
             {
@@ -42,24 +43,24 @@ namespace quanlybanhang
 
         private void btnInput_Click(object sender, EventArgs e)
         {
-
+            txtInvoiceCode.Enabled = true;
+            txtPrice.Enabled = true;
+            txtNumber.Enabled = true;
+            dtpDate.Enabled = true;
         }
 
         private void cellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtInvoiceCode.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            cbbCus.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            dtpDate.Value = DateTime.Parse(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
-            HoaDon mh = new HoaDon();
-            foreach (HoaDon hoadon in list)
+            try
             {
-                if (hoadon.code == txtInvoiceCode.Text)
-                {
-                    mh = hoadon;
-                }
+                txtInvoiceCode.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                cbbCus.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                dtpDate.Value = DateTime.Parse(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
+                HoaDon mh = repo.getByCodeAndType(txtInvoiceCode.Text, constant.sales());
+                list = new List<HoaDon> { mh };
+                mapDGVProd();
             }
-            list = new List<HoaDon> { mh };
-            mapDGVProd();
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void mapDGVCus()
@@ -80,7 +81,7 @@ namespace quanlybanhang
         }
         private void mapDGVProd()
         {
-            cbbProd.Items.Clear();  
+            cbbProd.Items.Clear();
             HashSet<string> itemsProd = new HashSet<string>();
             foreach (HoaDon hoadon in list)
             {
@@ -98,7 +99,33 @@ namespace quanlybanhang
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            txtInvoiceCode.Enabled = false;
+            txtPrice.Enabled = false;
+            txtNumber.Enabled = false;
+            dtpDate.Enabled = false;
             FormThongTinHoaDonBan_Load(sender, e);
+        }
+
+        private void mhCellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                string code = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
+                cbbProd.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtNumber.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtPrice.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
+                HoaDon mh = repo.getByCodeAndType(code, constant.sales());
+                list = new List<HoaDon> { mh };
+                mapDGVCus();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            List<TextBox> textBoxes = new List<TextBox> { txtInvoiceCode, txtNumber, txtPrice };
+            List<ComboBox> comboBoxes = new List<ComboBox> { cbbCus, cbbProd };
+
         }
     }
 }

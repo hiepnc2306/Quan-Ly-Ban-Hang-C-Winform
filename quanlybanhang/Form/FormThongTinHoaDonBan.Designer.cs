@@ -100,6 +100,7 @@
             // 
             // dtpDate
             // 
+            this.dtpDate.Enabled = false;
             this.dtpDate.Location = new System.Drawing.Point(124, 128);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(212, 29);
@@ -136,6 +137,7 @@
             // 
             // txtInvoiceCode
             // 
+            this.txtInvoiceCode.Enabled = false;
             this.txtInvoiceCode.Location = new System.Drawing.Point(124, 20);
             this.txtInvoiceCode.Name = "txtInvoiceCode";
             this.txtInvoiceCode.Size = new System.Drawing.Size(212, 29);
@@ -206,6 +208,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(816, 123);
             this.dataGridView2.TabIndex = 7;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mhCellClick);
             // 
             // InvCode
             // 
@@ -229,6 +232,7 @@
             // 
             // txtPrice
             // 
+            this.txtPrice.Enabled = false;
             this.txtPrice.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.Location = new System.Drawing.Point(520, 40);
             this.txtPrice.Name = "txtPrice";
@@ -237,6 +241,7 @@
             // 
             // txtNumber
             // 
+            this.txtNumber.Enabled = false;
             this.txtNumber.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumber.Location = new System.Drawing.Point(520, 9);
             this.txtNumber.Name = "txtNumber";
@@ -310,6 +315,7 @@
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "LƯU";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnEdit
             // 
