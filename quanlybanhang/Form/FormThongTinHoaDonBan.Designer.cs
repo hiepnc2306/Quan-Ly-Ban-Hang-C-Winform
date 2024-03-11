@@ -41,7 +41,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cbbProd = new System.Windows.Forms.ComboBox();
+            this.cbbProdSale = new System.Windows.Forms.ComboBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.InvCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProdCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -122,17 +122,17 @@
             // 
             // InvoiceCode
             // 
-            this.InvoiceCode.HeaderText = "MaHDB";
+            this.InvoiceCode.HeaderText = "Mã Hóa Đơn";
             this.InvoiceCode.Name = "InvoiceCode";
             // 
             // CustomerCode
             // 
-            this.CustomerCode.HeaderText = "MaKH";
+            this.CustomerCode.HeaderText = "Mã Khách Hàng";
             this.CustomerCode.Name = "CustomerCode";
             // 
             // SaleDate
             // 
-            this.SaleDate.HeaderText = "NgayBan";
+            this.SaleDate.HeaderText = "Ngày Bán";
             this.SaleDate.Name = "SaleDate";
             // 
             // txtInvoiceCode
@@ -175,7 +175,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.cbbProd);
+            this.panel2.Controls.Add(this.cbbProdSale);
             this.panel2.Controls.Add(this.dataGridView2);
             this.panel2.Controls.Add(this.txtPrice);
             this.panel2.Controls.Add(this.txtNumber);
@@ -187,13 +187,13 @@
             this.panel2.Size = new System.Drawing.Size(843, 197);
             this.panel2.TabIndex = 2;
             // 
-            // cbbProd
+            // cbbProdSale
             // 
-            this.cbbProd.FormattingEnabled = true;
-            this.cbbProd.Location = new System.Drawing.Point(124, 17);
-            this.cbbProd.Name = "cbbProd";
-            this.cbbProd.Size = new System.Drawing.Size(212, 29);
-            this.cbbProd.TabIndex = 8;
+            this.cbbProdSale.FormattingEnabled = true;
+            this.cbbProdSale.Location = new System.Drawing.Point(124, 17);
+            this.cbbProdSale.Name = "cbbProdSale";
+            this.cbbProdSale.Size = new System.Drawing.Size(212, 29);
+            this.cbbProdSale.TabIndex = 8;
             // 
             // dataGridView2
             // 
@@ -212,22 +212,22 @@
             // 
             // InvCode
             // 
-            this.InvCode.HeaderText = "MaHDB";
+            this.InvCode.HeaderText = "Mã Hóa Đơn";
             this.InvCode.Name = "InvCode";
             // 
             // ProdCode
             // 
-            this.ProdCode.HeaderText = "MaMH";
+            this.ProdCode.HeaderText = "Mã Mặt Hàng";
             this.ProdCode.Name = "ProdCode";
             // 
             // Number
             // 
-            this.Number.HeaderText = "SoLuong";
+            this.Number.HeaderText = "Số Lượng";
             this.Number.Name = "Number";
             // 
             // Price
             // 
-            this.Price.HeaderText = "DonGia";
+            this.Price.HeaderText = "Đơn giá";
             this.Price.Name = "Price";
             // 
             // txtPrice
@@ -325,6 +325,7 @@
             this.btnEdit.TabIndex = 7;
             this.btnEdit.Text = "CẬP NHẬT";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -334,6 +335,7 @@
             this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "XÓA";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnExit
             // 
@@ -412,15 +414,15 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn InvoiceCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CustomerCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SaleDate;
+        private System.Windows.Forms.DateTimePicker dtpDate;
+        private System.Windows.Forms.ComboBox cbbCus;
+        private System.Windows.Forms.ComboBox cbbProdSale;
         private System.Windows.Forms.DataGridViewTextBoxColumn InvCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProdCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.DateTimePicker dtpDate;
-        private System.Windows.Forms.ComboBox cbbCus;
-        private System.Windows.Forms.ComboBox cbbProd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn InvoiceCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CustomerCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SaleDate;
     }
 }

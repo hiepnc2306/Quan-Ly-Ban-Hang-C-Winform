@@ -30,28 +30,25 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
+            this.cbbNCC = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Invoice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NCCCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtInvoiceCode = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txbProduct_code = new System.Windows.Forms.TextBox();
+            this.cbbProd = new System.Windows.Forms.ComboBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenMatHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.InvoiceCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProdCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtNumber = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -81,10 +78,10 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.dtpDate);
+            this.panel1.Controls.Add(this.cbbNCC);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtInvoiceCode);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
@@ -93,57 +90,61 @@
             this.panel1.Size = new System.Drawing.Size(871, 159);
             this.panel1.TabIndex = 1;
             // 
+            // dtpDate
+            // 
+            this.dtpDate.Location = new System.Drawing.Point(173, 123);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(134, 20);
+            this.dtpDate.TabIndex = 8;
+            this.dtpDate.UseWaitCursor = true;
+            // 
+            // cbbNCC
+            // 
+            this.cbbNCC.Enabled = false;
+            this.cbbNCC.FormattingEnabled = true;
+            this.cbbNCC.Location = new System.Drawing.Point(173, 75);
+            this.cbbNCC.Name = "cbbNCC";
+            this.cbbNCC.Size = new System.Drawing.Size(133, 22);
+            this.cbbNCC.TabIndex = 7;
+            this.cbbNCC.SelectedValueChanged += new System.EventHandler(this.cbbNCC_SelectedValueChanged);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
+            this.Invoice,
+            this.NCCCode,
+            this.Date});
             this.dataGridView1.Location = new System.Drawing.Point(365, 9);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(488, 134);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.nccCellClick);
             // 
-            // Column1
+            // Invoice
             // 
-            this.Column1.HeaderText = "MaHDN";
-            this.Column1.Name = "Column1";
+            this.Invoice.HeaderText = "Mã Hóa Đơn";
+            this.Invoice.Name = "Invoice";
             // 
-            // Column2
+            // NCCCode
             // 
-            this.Column2.HeaderText = "MaNCC";
-            this.Column2.Name = "Column2";
+            this.NCCCode.HeaderText = "Mã Nhà Cung Cấp";
+            this.NCCCode.Name = "NCCCode";
             // 
-            // Column3
+            // Date
             // 
-            this.Column3.HeaderText = "NgayNhap";
-            this.Column3.Name = "Column3";
+            this.Date.HeaderText = "Ngày Nhập";
+            this.Date.Name = "Date";
             // 
-            // textBox3
+            // txtInvoiceCode
             // 
-            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(173, 121);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(134, 22);
-            this.textBox3.TabIndex = 5;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(173, 74);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(134, 22);
-            this.textBox2.TabIndex = 4;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(173, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(134, 22);
-            this.textBox1.TabIndex = 3;
+            this.txtInvoiceCode.Enabled = false;
+            this.txtInvoiceCode.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInvoiceCode.Location = new System.Drawing.Point(173, 31);
+            this.txtInvoiceCode.Name = "txtInvoiceCode";
+            this.txtInvoiceCode.Size = new System.Drawing.Size(134, 22);
+            this.txtInvoiceCode.TabIndex = 3;
             // 
             // label6
             // 
@@ -177,12 +178,10 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.txbProduct_code);
+            this.panel2.Controls.Add(this.cbbProd);
             this.panel2.Controls.Add(this.dataGridView2);
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.txtPrice);
+            this.panel2.Controls.Add(this.txtNumber);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
@@ -191,103 +190,84 @@
             this.panel2.Size = new System.Drawing.Size(870, 221);
             this.panel2.TabIndex = 2;
             // 
-            // textBox6
+            // cbbProd
             // 
-            this.textBox6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(152, 47);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(134, 22);
-            this.textBox6.TabIndex = 9;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(38, 52);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(89, 17);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "Tên mặt hàng";
-            // 
-            // txbProduct_code
-            // 
-            this.txbProduct_code.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbProduct_code.Location = new System.Drawing.Point(152, 15);
-            this.txbProduct_code.Name = "txbProduct_code";
-            this.txbProduct_code.Size = new System.Drawing.Size(134, 22);
-            this.txbProduct_code.TabIndex = 7;
+            this.cbbProd.Enabled = false;
+            this.cbbProd.FormattingEnabled = true;
+            this.cbbProd.Location = new System.Drawing.Point(152, 27);
+            this.cbbProd.Name = "cbbProd";
+            this.cbbProd.Size = new System.Drawing.Size(133, 22);
+            this.cbbProd.TabIndex = 7;
+            this.cbbProd.SelectedValueChanged += new System.EventHandler(this.cbbProd_SelectedValueChanged);
             // 
             // dataGridView2
             // 
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.TenMatHang,
-            this.dataGridViewTextBoxColumn3,
-            this.Column4});
+            this.InvoiceCode,
+            this.ProdCode,
+            this.Number,
+            this.Price});
             this.dataGridView2.Location = new System.Drawing.Point(29, 89);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(814, 129);
             this.dataGridView2.TabIndex = 6;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mhCellClick);
             // 
-            // dataGridViewTextBoxColumn1
+            // InvoiceCode
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "MaHDN";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.InvoiceCode.HeaderText = "Mã Hóa Đơn";
+            this.InvoiceCode.Name = "InvoiceCode";
             // 
-            // dataGridViewTextBoxColumn2
+            // ProdCode
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "MaHang";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.ProdCode.HeaderText = "Mã Mặt Hàng";
+            this.ProdCode.Name = "ProdCode";
             // 
-            // TenMatHang
+            // Number
             // 
-            this.TenMatHang.HeaderText = "TenMatHang";
-            this.TenMatHang.Name = "TenMatHang";
+            this.Number.HeaderText = "Số Lượng";
+            this.Number.Name = "Number";
             // 
-            // dataGridViewTextBoxColumn3
+            // Price
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "SoLuong";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.Price.HeaderText = "Giá";
+            this.Price.Name = "Price";
             // 
-            // Column4
+            // txtPrice
             // 
-            this.Column4.HeaderText = "DonGia";
-            this.Column4.Name = "Column4";
+            this.txtPrice.Enabled = false;
+            this.txtPrice.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.Location = new System.Drawing.Point(562, 45);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(134, 22);
+            this.txtPrice.TabIndex = 5;
             // 
-            // textBox5
+            // txtNumber
             // 
-            this.textBox5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(562, 45);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(134, 22);
-            this.textBox5.TabIndex = 5;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(562, 15);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(134, 22);
-            this.textBox4.TabIndex = 4;
+            this.txtNumber.Enabled = false;
+            this.txtNumber.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumber.Location = new System.Drawing.Point(562, 15);
+            this.txtNumber.Name = "txtNumber";
+            this.txtNumber.Size = new System.Drawing.Size(134, 22);
+            this.txtNumber.TabIndex = 4;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(427, 52);
+            this.label9.Location = new System.Drawing.Point(469, 50);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 17);
+            this.label9.Size = new System.Drawing.Size(28, 17);
             this.label9.TabIndex = 3;
-            this.label9.Text = "Đơn giá";
+            this.label9.Text = "Giá";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(427, 20);
+            this.label8.Location = new System.Drawing.Point(469, 17);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(60, 17);
             this.label8.TabIndex = 2;
@@ -297,7 +277,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(35, 20);
+            this.label7.Location = new System.Drawing.Point(26, 32);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(86, 17);
             this.label7.TabIndex = 1;
@@ -332,6 +312,7 @@
             this.btnInput.TabIndex = 5;
             this.btnInput.Text = "NHẬP";
             this.btnInput.UseVisualStyleBackColor = true;
+            this.btnInput.Click += new System.EventHandler(this.btnInput_Click);
             // 
             // btnCancel
             // 
@@ -342,6 +323,7 @@
             this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "HỦY";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
@@ -352,6 +334,7 @@
             this.btnSave.TabIndex = 7;
             this.btnSave.Text = "LƯU";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnEdit
             // 
@@ -362,6 +345,7 @@
             this.btnEdit.TabIndex = 8;
             this.btnEdit.Text = "CẬP NHẬT";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -372,6 +356,7 @@
             this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "XÓA";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnExit
             // 
@@ -382,6 +367,7 @@
             this.btnExit.TabIndex = 10;
             this.btnExit.Text = "THOÁT";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // FromCapNhatHoaDonNhap
             // 
@@ -404,6 +390,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FromCapNhatHoaDonNhap";
             this.Text = "Thông tin về hóa đơn nhập hàng";
+            this.Load += new System.EventHandler(this.FromCapNhatHoaDonNhap_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -420,9 +407,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtInvoiceCode;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -430,8 +415,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.TextBox txtNumber;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -441,16 +426,15 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.TextBox txbProduct_code;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenMatHang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DateTimePicker dtpDate;
+        private System.Windows.Forms.ComboBox cbbNCC;
+        private System.Windows.Forms.ComboBox cbbProd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn InvoiceCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProdCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Invoice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NCCCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
     }
 }

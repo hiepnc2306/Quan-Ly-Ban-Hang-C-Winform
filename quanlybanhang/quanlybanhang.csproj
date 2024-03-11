@@ -182,6 +182,7 @@
     <Compile Include="Model\HoaDon.cs" />
     <Compile Include="Model\HoaDonKhachHang.cs" />
     <Compile Include="Model\HoaDonMatHang.cs" />
+    <Compile Include="Model\HoaDonNhaCungCap.cs" />
     <Compile Include="Model\KhachHang.cs" />
     <Compile Include="Model\MatHang.cs" />
     <Compile Include="Model\NhaCungCap.cs" />
@@ -191,7 +192,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reponsitory\BaoHanhRepo.cs" />
     <Compile Include="Reponsitory\IBaseRepo.cs" />
-    <Compile Include="Reponsitory\HoaDonRepo.cs" />
+    <Compile Include="Reponsitory\IHoaDonRepo.cs" />
     <Compile Include="Reponsitory\IKhachHangRepo.cs" />
     <Compile Include="Reponsitory\IMatHangRepo.cs" />
     <Compile Include="Reponsitory\INhaCungCapRepo.cs" />

@@ -18,7 +18,7 @@ namespace quanlybanhang.Model
         public string type { get; set; }
 
         public HoaDon() { }
-        public HoaDon(int id, string code, string prodCode, string linkCode, int number, long price, DateTime date, string type)
+        public HoaDon(int id, string code, string linkCode, string prodCode, int number, long price, DateTime date, string type)
         {
             this.id = id;
             this.code = code;
@@ -30,7 +30,7 @@ namespace quanlybanhang.Model
             this.type = type;
         }
 
-        public HoaDon(string code, string prodCode, string linkCode, int number, long price, DateTime date, string type)
+        public HoaDon(string code, string linkCode, string prodCode, int number, long price, DateTime date, string type)
         {
             this.code = code;
             this.prodCode = prodCode;
