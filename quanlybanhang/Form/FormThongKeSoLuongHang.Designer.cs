@@ -37,9 +37,7 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txbDateTo = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.txbDateFrom = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rdbYear = new System.Windows.Forms.RadioButton();
@@ -54,6 +52,8 @@
             this.btnPrint = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.txb = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -125,9 +125,9 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.txbDateTo);
+            this.groupBox3.Controls.Add(this.dateTimePicker2);
+            this.groupBox3.Controls.Add(this.dateTimePicker1);
             this.groupBox3.Controls.Add(this.checkBox1);
-            this.groupBox3.Controls.Add(this.txbDateFrom);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(344, 22);
@@ -136,13 +136,6 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Ngày thống kê";
-            // 
-            // txbDateTo
-            // 
-            this.txbDateTo.Location = new System.Drawing.Point(193, 96);
-            this.txbDateTo.Name = "txbDateTo";
-            this.txbDateTo.Size = new System.Drawing.Size(195, 25);
-            this.txbDateTo.TabIndex = 3;
             // 
             // checkBox1
             // 
@@ -153,13 +146,6 @@
             this.checkBox1.TabIndex = 2;
             this.checkBox1.Text = "Đến Ngày/Tháng/Năm";
             this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // txbDateFrom
-            // 
-            this.txbDateFrom.Location = new System.Drawing.Point(193, 35);
-            this.txbDateFrom.Name = "txbDateFrom";
-            this.txbDateFrom.Size = new System.Drawing.Size(195, 25);
-            this.txbDateFrom.TabIndex = 1;
             // 
             // label2
             // 
@@ -315,6 +301,20 @@
             this.txb.Size = new System.Drawing.Size(140, 20);
             this.txb.TabIndex = 7;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(188, 35);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 25);
+            this.dateTimePicker1.TabIndex = 3;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(188, 95);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 25);
+            this.dateTimePicker2.TabIndex = 4;
+            // 
             // FormThongKeSoLuongHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -354,9 +354,7 @@
         private System.Windows.Forms.RadioButton rdbXuat;
         private System.Windows.Forms.RadioButton rdbNhap;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txbDateTo;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox txbDateFrom;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton rdbYear;
@@ -373,5 +371,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

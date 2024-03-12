@@ -33,9 +33,7 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txbDayto = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.txbDayfrom = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rdb2 = new System.Windows.Forms.RadioButton();
@@ -45,6 +43,8 @@
             this.btnPrint = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -85,9 +85,9 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txbDayto);
+            this.groupBox2.Controls.Add(this.dateTimePicker2);
+            this.groupBox2.Controls.Add(this.dateTimePicker1);
             this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Controls.Add(this.txbDayfrom);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(408, 24);
             this.groupBox2.Name = "groupBox2";
@@ -95,13 +95,6 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ngày lập";
-            // 
-            // txbDayto
-            // 
-            this.txbDayto.Location = new System.Drawing.Point(170, 69);
-            this.txbDayto.Name = "txbDayto";
-            this.txbDayto.Size = new System.Drawing.Size(189, 25);
-            this.txbDayto.TabIndex = 3;
             // 
             // checkBox1
             // 
@@ -112,13 +105,6 @@
             this.checkBox1.TabIndex = 2;
             this.checkBox1.Text = "Đến ngày";
             this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // txbDayfrom
-            // 
-            this.txbDayfrom.Location = new System.Drawing.Point(170, 26);
-            this.txbDayfrom.Name = "txbDayfrom";
-            this.txbDayfrom.Size = new System.Drawing.Size(189, 25);
-            this.txbDayfrom.TabIndex = 1;
             // 
             // label2
             // 
@@ -211,6 +197,20 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tìm kiếm theo";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(183, 24);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 25);
+            this.dateTimePicker1.TabIndex = 3;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(183, 69);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 25);
+            this.dateTimePicker2.TabIndex = 4;
+            // 
             // FormBaoCaoDoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -250,13 +250,13 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.TextBox txbDayto;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox txbDayfrom;
         private System.Windows.Forms.Button btnThuchien;
         private System.Windows.Forms.Button btnContinue;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
