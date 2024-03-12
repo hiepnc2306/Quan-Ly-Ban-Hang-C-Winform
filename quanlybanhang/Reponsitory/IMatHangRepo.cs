@@ -24,12 +24,13 @@ namespace quanlybanhang.Reponsitory
             {
                 OleDbConnection conn = connection.conn();
                 conn.Open();
-                String query = "insert into mat_hang (product_code, product_name, sale_price, purchase_price) values (@ma, @ten, @sale, @purchase)";
+                String query = "insert into mat_hang (product_code, product_name, sale_price, purchase_price, quantity) values (@ma, @ten, @sale, @purchase, @quantity)";
                 OleDbCommand command = new OleDbCommand(query, conn);
                 command.Parameters.Add("@ma", mh.Code);
                 command.Parameters.Add("@ten", mh.Name);
                 command.Parameters.Add("@sale", mh.SalePrice);
                 command.Parameters.Add("@purchase", mh.PurchasePrice);
+                command.Parameters.Add("@quantity", mh.Quantity);
                 OleDbDataReader reader = command.ExecuteReader();
                 conn.Close();
             }
@@ -81,7 +82,8 @@ namespace quanlybanhang.Reponsitory
                 while (reader.Read())
                 {
                     MatHang matHang = new MatHang(Int32.Parse(reader[0].ToString()), reader[1].ToString()
-                        , reader[2].ToString(), Int64.Parse(reader[3].ToString()), Int64.Parse(reader[4].ToString()));
+                        , reader[2].ToString(), Int64.Parse(reader[3].ToString()), Int64.Parse(reader[4].ToString()), 
+                        Int32.Parse(reader[5].ToString()));
                     list.Add(matHang);
                 }
                 conn.Close();
@@ -105,7 +107,8 @@ namespace quanlybanhang.Reponsitory
                 OleDbDataReader reader = command.ExecuteReader();
                 reader.Read();
                 MatHang matHang = new MatHang(Int32.Parse(reader[0].ToString()), reader[1].ToString()
-                        , reader[2].ToString(), Int64.Parse(reader[3].ToString()), Int64.Parse(reader[4].ToString()));
+                        , reader[2].ToString(), Int64.Parse(reader[3].ToString()), Int64.Parse(reader[4].ToString()), 
+                        Int32.Parse(reader[5].ToString()));
                 conn.Close();
                 return matHang;
             }
@@ -122,14 +125,15 @@ namespace quanlybanhang.Reponsitory
             {
                 OleDbConnection conn = connection.conn();
                 conn.Open();
-                String query = "update mat_hang set product_code = @ma, product_name = @ten " +
-                    " sale_price = @sale, purchase_price = @purchase where id = @id";
+                String query = "update mat_hang set product_code = @ma, product_name = @ten, " +
+                    " sale_price = @sale, purchase_price = @purchase, quantity = @quantity where id = @id";
                 OleDbCommand command = new OleDbCommand(query, conn);
                 command.Parameters.Add("@ma", mh.Code);
                 command.Parameters.Add("@ten", mh.Name);
                 command.Parameters.Add("@id", mh.Id);
                 command.Parameters.Add("@sale", mh.SalePrice);
                 command.Parameters.Add("@purchase", mh.PurchasePrice);
+                command.Parameters.Add("@quantity", mh.Quantity);
                 OleDbDataReader reader = command.ExecuteReader();
                 conn.Close();
             }

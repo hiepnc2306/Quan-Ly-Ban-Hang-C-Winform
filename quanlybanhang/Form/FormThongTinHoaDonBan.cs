@@ -30,6 +30,26 @@ namespace quanlybanhang
             InitializeComponent();
         }
 
+        public void getListHoaDon()
+        {
+            if (cbbCus.Text != null && !cbbCus.Text.Equals("") && cbbProdSale.Text != null && !cbbProdSale.Text.Equals(""))
+            {
+                list = repo.getByTypeAndProdCodeAndLinkCode(constant.sales(), cbbProdSale.Text, cbbCus.Text);
+            }
+            else if (cbbCus.Text != null && !cbbCus.Text.Equals(""))
+            {
+                list = repo.getByTypeAndLinkCode(constant.sales(), cbbCus.Text);
+            }
+            else if (cbbProdSale.Text != null && !cbbProdSale.Text.Equals(""))
+            {
+                list = repo.getByTypeAndProdCode(constant.sales(), cbbProdSale.Text);
+            }
+            else
+            {
+                list = repo.getByType(constant.sales());
+            }
+        }
+
         private void label6_Click(object sender, EventArgs e)
         {
 
@@ -43,7 +63,7 @@ namespace quanlybanhang
                 cbbCus.Items.Clear();
                 List<MatHang> products = mhRepo.getAll();
                 List<KhachHang> customers = khRepo.getAll();
-                list = repo.getByType(constant.sales());
+                getListHoaDon();
                 products.ForEach(p => { cbbProdSale.Items.Add(p.Code); });
                 customers.ForEach(p => cbbCus.Items.Add(p.code));
                 cbbCus.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
@@ -73,10 +93,10 @@ namespace quanlybanhang
             try
             {
                 txtInvoiceCode.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                cbbCus.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 dtpDate.Value = DateTime.Parse(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
+                cbbCus.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) { }
         }
 
         private void mapDGVCus()
@@ -186,11 +206,13 @@ namespace quanlybanhang
                         long price = matHang.SalePrice * number;
                         HoaDon hoaDon = new HoaDon(txtInvoiceCode.Text, cbbProdSale.Text, cbbCus.Text, number,
                         price, dtpDate.Value, constant.sales());
+                        int quantity = matHang.Quantity - number;
                         try
                         {
+                            MatHang mh1 = new MatHang(matHang.Id, matHang.Code, matHang.Name, matHang.SalePrice, matHang.SalePrice, quantity);
+                            mhRepo.update(mh1);
                             repo.create(hoaDon);
                             MessageBox.Show("Lưu thành công!");
-                            FormThongTinHoaDonBan_Load(sender, e);
                             btnCancel_Click(sender, e);
                         }
                         catch (Exception)
@@ -266,11 +288,14 @@ namespace quanlybanhang
                         long price = matHang.SalePrice * number;
                         HoaDon hoaDon = new HoaDon(hd.id, txtInvoiceCode.Text, cbbProdSale.Text, cbbCus.Text, number,
                         price, dtpDate.Value, constant.sales());
+                        int quantity = matHang.Quantity - hd.number + number;
                         try
                         {
+                            MatHang mh1 = new MatHang(matHang.Id, matHang.Code, matHang.Name, matHang.SalePrice, 
+                                matHang.SalePrice, quantity);
+                            mhRepo.update(mh1);
                             repo.update(hoaDon);
                             MessageBox.Show("Cập nhật thành công!");
-                            FormThongTinHoaDonBan_Load(sender, e);
                             btnCancel_Click(sender, e);
                         }
                         catch (Exception)

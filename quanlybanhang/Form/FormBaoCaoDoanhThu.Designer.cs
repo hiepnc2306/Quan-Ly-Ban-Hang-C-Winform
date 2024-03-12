@@ -55,7 +55,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(312, 9);
+            this.label1.Location = new System.Drawing.Point(340, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(262, 27);
             this.label1.TabIndex = 0;
@@ -63,6 +63,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -164,7 +165,7 @@
             // 
             // btnThuchien
             // 
-            this.btnThuchien.Location = new System.Drawing.Point(143, 410);
+            this.btnThuchien.Location = new System.Drawing.Point(167, 420);
             this.btnThuchien.Name = "btnThuchien";
             this.btnThuchien.Size = new System.Drawing.Size(130, 44);
             this.btnThuchien.TabIndex = 2;
@@ -173,7 +174,7 @@
             // 
             // btnContinue
             // 
-            this.btnContinue.Location = new System.Drawing.Point(297, 410);
+            this.btnContinue.Location = new System.Drawing.Point(321, 420);
             this.btnContinue.Name = "btnContinue";
             this.btnContinue.Size = new System.Drawing.Size(130, 44);
             this.btnContinue.TabIndex = 3;
@@ -182,7 +183,7 @@
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(465, 410);
+            this.btnPrint.Location = new System.Drawing.Point(489, 420);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(130, 44);
             this.btnPrint.TabIndex = 4;
@@ -191,7 +192,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(636, 410);
+            this.btnExit.Location = new System.Drawing.Point(660, 420);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(130, 44);
             this.btnExit.TabIndex = 5;
@@ -203,7 +204,7 @@
             this.groupBox3.Controls.Add(this.groupBox1);
             this.groupBox3.Controls.Add(this.dataGridView1);
             this.groupBox3.Controls.Add(this.groupBox2);
-            this.groupBox3.Location = new System.Drawing.Point(12, 44);
+            this.groupBox3.Location = new System.Drawing.Point(40, 44);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(862, 360);
             this.groupBox3.TabIndex = 6;

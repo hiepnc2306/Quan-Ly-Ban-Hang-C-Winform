@@ -66,7 +66,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(300, 9);
+            this.label1.Location = new System.Drawing.Point(360, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(306, 27);
             this.label1.TabIndex = 0;
@@ -272,6 +272,7 @@
             // dgvList
             // 
             this.dgvList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvList.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Code,
@@ -339,7 +340,7 @@
             this.panel2.Controls.Add(this.btnCancel);
             this.panel2.Controls.Add(this.btnInput);
             this.panel2.Controls.Add(this.panel1);
-            this.panel2.Location = new System.Drawing.Point(23, 48);
+            this.panel2.Location = new System.Drawing.Point(58, 71);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(845, 415);
             this.panel2.TabIndex = 9;
@@ -353,7 +354,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormThongTinBaoHanh";
             this.Text = "Thông tin về bảo hành";
             this.Load += new System.EventHandler(this.FormThongTinBaoHanh_Load);

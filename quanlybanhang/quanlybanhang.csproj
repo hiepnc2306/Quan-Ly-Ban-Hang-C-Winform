@@ -244,6 +244,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -258,6 +259,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cach-su-dung-2-man-hinh-tren-1-may-tinh-win-10-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\windows-10-logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z5240687179420_8f3de45011c545f47485aa0588f700cc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z5240693278409_16a924136dda81b52b7fe1d2d1c63c2d.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z5240700615677_80c447542fe09bc5f9c269ca0eb5e778.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

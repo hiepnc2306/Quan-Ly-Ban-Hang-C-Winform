@@ -45,13 +45,14 @@
             this.thốngKêSốLượngHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.báoCáoDoanhThuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hỆTHỐNGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnlMainDisplay = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.pnlMainDisplay = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cẬPNHẬTToolStripMenuItem,
             this.tÌMKIẾMToolStripMenuItem,
@@ -59,7 +60,7 @@
             this.hỆTHỐNGToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1132, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(913, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -189,10 +190,12 @@
             // pnlMainDisplay
             // 
             this.pnlMainDisplay.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnlMainDisplay.BackgroundImage = global::quanlybanhang.Properties.Resources.windows_10_logo;
+            this.pnlMainDisplay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlMainDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMainDisplay.Location = new System.Drawing.Point(0, 24);
+            this.pnlMainDisplay.Location = new System.Drawing.Point(0, 29);
             this.pnlMainDisplay.Name = "pnlMainDisplay";
-            this.pnlMainDisplay.Size = new System.Drawing.Size(1132, 703);
+            this.pnlMainDisplay.Size = new System.Drawing.Size(913, 483);
             this.pnlMainDisplay.TabIndex = 1;
             // 
             // FormMain
@@ -200,10 +203,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1132, 727);
+            this.ClientSize = new System.Drawing.Size(913, 512);
             this.Controls.Add(this.pnlMainDisplay);
             this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMain";
             this.Text = "Quản lý bán hàng";

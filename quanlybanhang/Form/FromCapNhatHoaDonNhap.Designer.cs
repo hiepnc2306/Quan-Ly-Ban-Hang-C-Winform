@@ -70,11 +70,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(252, 10);
+            this.label1.Location = new System.Drawing.Point(341, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(332, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "CẬP NHẬT HÓA ĐƠN NHẬP HÀNG";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1
             // 
@@ -85,7 +86,7 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(19, 46);
+            this.panel1.Location = new System.Drawing.Point(31, 51);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(871, 159);
             this.panel1.TabIndex = 1;
@@ -111,6 +112,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Invoice,
@@ -185,7 +187,7 @@
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(20, 221);
+            this.panel2.Location = new System.Drawing.Point(32, 226);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(870, 221);
             this.panel2.TabIndex = 2;
@@ -203,6 +205,7 @@
             // dataGridView2
             // 
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.InvoiceCode,
@@ -287,7 +290,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(46, 34);
+            this.label2.Location = new System.Drawing.Point(58, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 17);
             this.label2.TabIndex = 3;
@@ -297,7 +300,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(46, 215);
+            this.label3.Location = new System.Drawing.Point(58, 220);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(121, 17);
             this.label3.TabIndex = 4;
@@ -306,7 +309,7 @@
             // btnInput
             // 
             this.btnInput.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInput.Location = new System.Drawing.Point(49, 454);
+            this.btnInput.Location = new System.Drawing.Point(61, 459);
             this.btnInput.Name = "btnInput";
             this.btnInput.Size = new System.Drawing.Size(99, 38);
             this.btnInput.TabIndex = 5;
@@ -317,7 +320,7 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(305, 454);
+            this.btnCancel.Location = new System.Drawing.Point(317, 459);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(99, 38);
             this.btnCancel.TabIndex = 6;
@@ -328,7 +331,7 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(172, 454);
+            this.btnSave.Location = new System.Drawing.Point(184, 459);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(99, 38);
             this.btnSave.TabIndex = 7;
@@ -339,7 +342,7 @@
             // btnEdit
             // 
             this.btnEdit.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(450, 454);
+            this.btnEdit.Location = new System.Drawing.Point(462, 459);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(99, 38);
             this.btnEdit.TabIndex = 8;
@@ -350,7 +353,7 @@
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(584, 454);
+            this.btnDelete.Location = new System.Drawing.Point(596, 459);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(99, 38);
             this.btnDelete.TabIndex = 9;
@@ -361,7 +364,7 @@
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(721, 454);
+            this.btnExit.Location = new System.Drawing.Point(733, 459);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(99, 38);
             this.btnExit.TabIndex = 10;
@@ -387,7 +390,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FromCapNhatHoaDonNhap";
             this.Text = "Thông tin về hóa đơn nhập hàng";
             this.Load += new System.EventHandler(this.FromCapNhatHoaDonNhap_Load);

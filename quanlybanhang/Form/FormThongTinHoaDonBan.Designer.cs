@@ -70,7 +70,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(261, 9);
+            this.label1.Location = new System.Drawing.Point(355, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(382, 27);
             this.label1.TabIndex = 0;
@@ -85,7 +85,7 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(33, 49);
+            this.panel1.Location = new System.Drawing.Point(62, 73);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(843, 179);
             this.panel1.TabIndex = 1;
@@ -109,14 +109,15 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.InvoiceCode,
             this.CustomerCode,
             this.SaleDate});
-            this.dataGridView1.Location = new System.Drawing.Point(359, 20);
+            this.dataGridView1.Location = new System.Drawing.Point(365, 20);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(469, 146);
+            this.dataGridView1.Size = new System.Drawing.Size(469, 137);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cellClick);
             // 
@@ -182,9 +183,9 @@
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(33, 244);
+            this.panel2.Location = new System.Drawing.Point(62, 273);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(843, 197);
+            this.panel2.Size = new System.Drawing.Size(843, 222);
             this.panel2.TabIndex = 2;
             // 
             // cbbProdSale
@@ -198,15 +199,16 @@
             // dataGridView2
             // 
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.InvCode,
             this.ProdCode,
             this.Number,
             this.Price});
-            this.dataGridView2.Location = new System.Drawing.Point(12, 71);
+            this.dataGridView2.Location = new System.Drawing.Point(18, 71);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(816, 123);
+            this.dataGridView2.Size = new System.Drawing.Size(816, 148);
             this.dataGridView2.TabIndex = 7;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mhCellClick);
             // 
@@ -281,7 +283,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(78, 38);
+            this.label2.Location = new System.Drawing.Point(78, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(171, 21);
             this.label2.TabIndex = 3;
@@ -289,7 +291,7 @@
             // 
             // btnInput
             // 
-            this.btnInput.Location = new System.Drawing.Point(62, 447);
+            this.btnInput.Location = new System.Drawing.Point(91, 501);
             this.btnInput.Name = "btnInput";
             this.btnInput.Size = new System.Drawing.Size(87, 34);
             this.btnInput.TabIndex = 4;
@@ -299,7 +301,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(333, 447);
+            this.btnCancel.Location = new System.Drawing.Point(362, 501);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(87, 34);
             this.btnCancel.TabIndex = 5;
@@ -309,7 +311,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(207, 447);
+            this.btnSave.Location = new System.Drawing.Point(236, 501);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(87, 34);
             this.btnSave.TabIndex = 6;
@@ -319,7 +321,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(469, 447);
+            this.btnEdit.Location = new System.Drawing.Point(498, 501);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(120, 34);
             this.btnEdit.TabIndex = 7;
@@ -329,7 +331,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(629, 447);
+            this.btnDelete.Location = new System.Drawing.Point(658, 501);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(87, 34);
             this.btnDelete.TabIndex = 8;
@@ -339,7 +341,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(760, 447);
+            this.btnExit.Location = new System.Drawing.Point(789, 501);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(87, 34);
             this.btnExit.TabIndex = 9;
@@ -350,7 +352,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(78, 231);
+            this.label6.Location = new System.Drawing.Point(78, 266);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(154, 21);
             this.label6.TabIndex = 10;
@@ -374,7 +376,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormThongTinHoaDonBan";
             this.Text = "Cập nhật thông tin bán hàng";

@@ -55,7 +55,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(270, 9);
+            this.label1.Location = new System.Drawing.Point(305, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(386, 27);
             this.label1.TabIndex = 0;
@@ -65,6 +65,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -157,7 +158,7 @@
             // txb
             // 
             this.txb.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb.Location = new System.Drawing.Point(677, 380);
+            this.txb.Location = new System.Drawing.Point(715, 401);
             this.txb.Name = "txb";
             this.txb.Size = new System.Drawing.Size(126, 25);
             this.txb.TabIndex = 12;
@@ -166,7 +167,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(551, 390);
+            this.label3.Location = new System.Drawing.Point(589, 411);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 15);
             this.label3.TabIndex = 11;
@@ -175,7 +176,7 @@
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(378, 380);
+            this.btnExit.Location = new System.Drawing.Point(416, 401);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(104, 38);
             this.btnExit.TabIndex = 10;
@@ -185,7 +186,7 @@
             // btnContinue
             // 
             this.btnContinue.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContinue.Location = new System.Drawing.Point(240, 380);
+            this.btnContinue.Location = new System.Drawing.Point(278, 401);
             this.btnContinue.Name = "btnContinue";
             this.btnContinue.Size = new System.Drawing.Size(104, 38);
             this.btnContinue.TabIndex = 9;
@@ -195,7 +196,7 @@
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(106, 380);
+            this.btnSearch.Location = new System.Drawing.Point(144, 401);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(104, 38);
             this.btnSearch.TabIndex = 8;
@@ -210,7 +211,7 @@
             this.groupBox1.Controls.Add(this.rdbID);
             this.groupBox1.Controls.Add(this.rdbName);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 58);
+            this.groupBox1.Location = new System.Drawing.Point(47, 61);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(860, 316);
             this.groupBox1.TabIndex = 13;
@@ -231,7 +232,7 @@
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormTimKiemHangHoa";
             this.Text = "Tìm kiếm thông tin";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

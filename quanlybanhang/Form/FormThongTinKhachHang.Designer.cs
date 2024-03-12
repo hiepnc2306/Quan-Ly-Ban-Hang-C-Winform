@@ -38,6 +38,11 @@
             this.txbname = new System.Windows.Forms.TextBox();
             this.txbPhoneNumber = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnInput = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -45,11 +50,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +58,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(278, 32);
+            this.label1.Location = new System.Drawing.Point(361, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(340, 27);
             this.label1.TabIndex = 0;
@@ -141,6 +141,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -150,97 +151,9 @@
             this.Sdt});
             this.dataGridView1.Location = new System.Drawing.Point(80, 147);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(743, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(743, 191);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cellClick);
-            // 
-            // btnInput
-            // 
-            this.btnInput.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInput.Location = new System.Drawing.Point(77, 322);
-            this.btnInput.Name = "btnInput";
-            this.btnInput.Size = new System.Drawing.Size(81, 38);
-            this.btnInput.TabIndex = 10;
-            this.btnInput.Text = "NHẬP";
-            this.btnInput.UseVisualStyleBackColor = true;
-            this.btnInput.Click += new System.EventHandler(this.btnInput_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(302, 322);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(81, 38);
-            this.btnCancel.TabIndex = 11;
-            this.btnCancel.Text = "HUỶ";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(193, 322);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(81, 38);
-            this.btnSave.TabIndex = 12;
-            this.btnSave.Text = "LƯU";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(425, 322);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(118, 38);
-            this.btnEdit.TabIndex = 13;
-            this.btnEdit.Text = "CẬP NHẬT";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(592, 322);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(81, 38);
-            this.btnDelete.TabIndex = 14;
-            this.btnDelete.Text = "XÓA";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(726, 322);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(90, 38);
-            this.btnExit.TabIndex = 15;
-            this.btnExit.Text = "THOÁT";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnExit);
-            this.panel1.Controls.Add(this.btnDelete);
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.btnEdit);
-            this.panel1.Controls.Add(this.txbPhoneNumber);
-            this.panel1.Controls.Add(this.btnSave);
-            this.panel1.Controls.Add(this.btnCancel);
-            this.panel1.Controls.Add(this.txbname);
-            this.panel1.Controls.Add(this.btnInput);
-            this.panel1.Controls.Add(this.txbAddress);
-            this.panel1.Controls.Add(this.txbID);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(12, 87);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(862, 383);
-            this.panel1.TabIndex = 16;
             // 
             // Id
             // 
@@ -268,6 +181,94 @@
             this.Sdt.HeaderText = "Điện Thoại";
             this.Sdt.Name = "Sdt";
             // 
+            // btnInput
+            // 
+            this.btnInput.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInput.Location = new System.Drawing.Point(86, 358);
+            this.btnInput.Name = "btnInput";
+            this.btnInput.Size = new System.Drawing.Size(81, 38);
+            this.btnInput.TabIndex = 10;
+            this.btnInput.Text = "NHẬP";
+            this.btnInput.UseVisualStyleBackColor = true;
+            this.btnInput.Click += new System.EventHandler(this.btnInput_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(311, 358);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(81, 38);
+            this.btnCancel.TabIndex = 11;
+            this.btnCancel.Text = "HUỶ";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(202, 358);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(81, 38);
+            this.btnSave.TabIndex = 12;
+            this.btnSave.Text = "LƯU";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Location = new System.Drawing.Point(434, 358);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(118, 38);
+            this.btnEdit.TabIndex = 13;
+            this.btnEdit.Text = "CẬP NHẬT";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(601, 358);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(81, 38);
+            this.btnDelete.TabIndex = 14;
+            this.btnDelete.Text = "XÓA";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(735, 358);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(90, 38);
+            this.btnExit.TabIndex = 15;
+            this.btnExit.Text = "THOÁT";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnExit);
+            this.panel1.Controls.Add(this.btnDelete);
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.btnEdit);
+            this.panel1.Controls.Add(this.txbPhoneNumber);
+            this.panel1.Controls.Add(this.btnSave);
+            this.panel1.Controls.Add(this.btnCancel);
+            this.panel1.Controls.Add(this.txbname);
+            this.panel1.Controls.Add(this.btnInput);
+            this.panel1.Controls.Add(this.txbAddress);
+            this.panel1.Controls.Add(this.txbID);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(52, 94);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(862, 415);
+            this.panel1.TabIndex = 16;
+            // 
             // FormThongTinKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
@@ -277,7 +278,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "FormThongTinKhachHang";
             this.Text = "Thông tin khách hàng";

@@ -1,4 +1,5 @@
-﻿using quanlybanhang.Model;
+﻿using Mysqlx.Crud;
+using quanlybanhang.Model;
 using quanlybanhang.Reponsitory;
 using System;
 using System.Collections.Generic;
@@ -126,6 +127,7 @@ namespace quanlybanhang
             }
             dtpDate.Enabled = false;
             dtpDate.ResetText();
+            FromCapNhatHoaDonNhap_Load(sender, e);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -134,6 +136,75 @@ namespace quanlybanhang
         }
 
         private void btnSave_Click(object sender, EventArgs e)
+        {
+            create(sender, e);
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            update(sender, e);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            HoaDon hd = repo.getByCode(txtInvoiceCode.Text);
+            if (hd != null)
+            {
+                try
+                {
+                    repo.delete(txtInvoiceCode.Text);
+                    MessageBox.Show("Xóa thành công!");
+                    FromCapNhatHoaDonNhap_Load(sender, e);
+                    btnCancel_Click(sender, e);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Có lỗi xảy ra!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy hóa đơn nhập với mã được nhập!");
+            }
+        }
+
+        private void nccCellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                txtInvoiceCode.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                dtpDate.Value = DateTime.Parse(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
+                cbbNCC.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            }
+            catch (Exception ex) { }
+        }
+
+        private void mhCellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                string code = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtNumber.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtPrice.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
+                cbbProd.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+            }
+            catch (Exception ex) { }
+        }
+
+        private void cbbNCC_SelectedValueChanged(object sender, EventArgs e)
+        {
+            getListHoaDon();
+            mapDGVNCC();
+            mapDGVProd();
+        }
+
+        private void cbbProd_SelectedValueChanged(object sender, EventArgs e)
+        {
+            getListHoaDon();
+            mapDGVNCC();
+            mapDGVProd();
+        }
+        public void create(object sender, EventArgs e)
         {
             bool check = true;
             foreach (TextBox txb in tbs)
@@ -183,10 +254,13 @@ namespace quanlybanhang
                     {
                         int number = Int32.Parse(txtNumber.Text);
                         long price = matHang.PurchasePrice * number;
-                        HoaDon hoaDon = new HoaDon(txtInvoiceCode.Text, cbbProd.Text, cbbNCC.Text, number,
+                        HoaDon hoaDon = new HoaDon(txtInvoiceCode.Text, cbbNCC.Text, cbbProd.Text, number,
                         price, dtpDate.Value, constant.purchase());
+                        int quantity = matHang.Quantity + number;
                         try
                         {
+                            MatHang mh1 = new MatHang(matHang.Id, matHang.Code, matHang.Name, matHang.SalePrice, matHang.PurchasePrice, quantity);
+                            mhRepo.update(mh1);
                             repo.create(hoaDon);
                             MessageBox.Show("Lưu thành công!");
                             FromCapNhatHoaDonNhap_Load(sender, e);
@@ -206,7 +280,7 @@ namespace quanlybanhang
             }
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        public void update(object sender, EventArgs e)
         {
             bool check = true;
             foreach (TextBox txb in tbs)
@@ -256,10 +330,14 @@ namespace quanlybanhang
                     {
                         int number = Int32.Parse(txtNumber.Text);
                         long price = matHang.PurchasePrice * number;
-                        HoaDon hoaDon = new HoaDon(hd.id, txtInvoiceCode.Text, cbbProd.Text, cbbNCC.Text, number,
+                        int quantity = matHang.Quantity - hd.number + number;
+                        HoaDon hoaDon = new HoaDon(hd.id, txtInvoiceCode.Text, cbbNCC.Text, cbbProd.Text, number,
                         price, dtpDate.Value, constant.purchase());
                         try
                         {
+                            MatHang mh1 = new MatHang(matHang.Id, matHang.Code, matHang.Name, matHang.SalePrice, 
+                                matHang.PurchasePrice, quantity);
+                            mhRepo.update(mh1);
                             repo.update(hoaDon);
                             MessageBox.Show("Cập nhật thành công!");
                             FromCapNhatHoaDonNhap_Load(sender, e);
@@ -279,65 +357,9 @@ namespace quanlybanhang
             }
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            HoaDon hd = repo.getByCode(txtInvoiceCode.Text);
-            if (hd != null)
-            {
-                try
-                {
-                    repo.delete(txtInvoiceCode.Text);
-                    MessageBox.Show("Xóa thành công!");
-                    FromCapNhatHoaDonNhap_Load(sender, e);
-                    btnCancel_Click(sender, e);
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Có lỗi xảy ra!");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Không tìm thấy hóa đơn nhập với mã được nhập!");
-            }
-        }
 
-        private void nccCellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                txtInvoiceCode.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                cbbNCC.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                dtpDate.Value = DateTime.Parse(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
-            }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
-        }
-
-        private void mhCellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                string code = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
-                cbbProd.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
-                txtNumber.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
-                txtPrice.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
-            }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
-        }
-
-        private void cbbNCC_SelectedValueChanged(object sender, EventArgs e)
-        {
-            FromCapNhatHoaDonNhap_Load(sender, e);
-        }
-
-        private void cbbProd_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            FromCapNhatHoaDonNhap_Load(sender, e);
-        }
-
-        private void cbbProd_SelectedValueChanged(object sender, EventArgs e)
-        {
-            FromCapNhatHoaDonNhap_Load(sender, e);
         }
     }
 }

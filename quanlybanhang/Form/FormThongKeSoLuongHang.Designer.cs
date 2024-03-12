@@ -31,6 +31,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txbDateTo = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -49,11 +54,6 @@
             this.btnPrint = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.txb = new System.Windows.Forms.TextBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -65,7 +65,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(271, 9);
+            this.label1.Location = new System.Drawing.Point(320, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(332, 27);
             this.label1.TabIndex = 1;
@@ -77,7 +77,7 @@
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(60, 39);
+            this.panel1.Location = new System.Drawing.Point(109, 57);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(753, 378);
             this.panel1.TabIndex = 2;
@@ -85,6 +85,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -96,6 +97,31 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(713, 177);
             this.dataGridView1.TabIndex = 3;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ThoiGian";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "MaHD";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "TenHang";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Soluong";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "DonGia";
+            this.Column5.Name = "Column5";
             // 
             // groupBox3
             // 
@@ -245,7 +271,7 @@
             // btnThucHien
             // 
             this.btnThucHien.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThucHien.Location = new System.Drawing.Point(65, 432);
+            this.btnThucHien.Location = new System.Drawing.Point(114, 450);
             this.btnThucHien.Name = "btnThucHien";
             this.btnThucHien.Size = new System.Drawing.Size(122, 42);
             this.btnThucHien.TabIndex = 3;
@@ -255,7 +281,7 @@
             // btnContinue
             // 
             this.btnContinue.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContinue.Location = new System.Drawing.Point(203, 432);
+            this.btnContinue.Location = new System.Drawing.Point(252, 450);
             this.btnContinue.Name = "btnContinue";
             this.btnContinue.Size = new System.Drawing.Size(122, 42);
             this.btnContinue.TabIndex = 4;
@@ -265,7 +291,7 @@
             // btnPrint
             // 
             this.btnPrint.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrint.Location = new System.Drawing.Point(340, 432);
+            this.btnPrint.Location = new System.Drawing.Point(389, 450);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(122, 42);
             this.btnPrint.TabIndex = 5;
@@ -275,7 +301,7 @@
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(485, 432);
+            this.btnExit.Location = new System.Drawing.Point(534, 450);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(122, 42);
             this.btnExit.TabIndex = 6;
@@ -284,35 +310,10 @@
             // 
             // txb
             // 
-            this.txb.Location = new System.Drawing.Point(678, 444);
+            this.txb.Location = new System.Drawing.Point(722, 462);
             this.txb.Name = "txb";
             this.txb.Size = new System.Drawing.Size(140, 20);
             this.txb.TabIndex = 7;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ThoiGian";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "MaHD";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "TenHang";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Soluong";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "DonGia";
-            this.Column5.Name = "Column5";
             // 
             // FormThongKeSoLuongHang
             // 
@@ -328,7 +329,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormThongKeSoLuongHang";
             this.Text = "Form11";
             this.panel1.ResumeLayout(false);

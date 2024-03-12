@@ -25,7 +25,7 @@ namespace quanlybanhang.Reponsitory
         {
             OleDbConnection conn = connection.conn();
             conn.Open();
-            String query = "insert into hoa_don (code , link_code, product_code, quantity, price, date, type) " +
+            String query = "insert into hoa_don (code , link_code, product_code, quantity, price, [date], type) " +
                 " values (@ma, @malink, @masp, @soluong, @gia, @ngay, @loai)";
             using (OleDbCommand command = new OleDbCommand(query, conn))
             {
@@ -231,7 +231,7 @@ namespace quanlybanhang.Reponsitory
             conn.Open();
             String query = "update hoa_don set code = @ma, link_code = @malink, " +
                 " product_code = @masp, quantity = @soluong, price = @gia, " +
-                "date = @ngay, type = @type where id = @id ";
+                "[date] = @ngay, type = @loai where id = @id ";
             using (OleDbCommand command = new OleDbCommand(query, conn))
             {
                 command.Parameters.AddWithValue("@ma", o.code);

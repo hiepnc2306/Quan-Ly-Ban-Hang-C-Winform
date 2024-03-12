@@ -13,22 +13,25 @@ namespace quanlybanhang.Model
         public string Name { get; set; }
         public long SalePrice { get; set; }
         public long PurchasePrice { get; set; }
+        public int Quantity { get; set; }
 
         public MatHang() { }
-        public MatHang(int id, string code, string name, long SalePrice , long PurchasePrice)
+        public MatHang(int id, string code, string name, long SalePrice , long PurchasePrice, int Quantity)
         {
             Id = id;
             Code = code;
             Name = name;
             this.SalePrice = SalePrice;
             this.PurchasePrice = PurchasePrice;
+            this.Quantity = Quantity;
         }
-        public MatHang(string code, string name, long SalePrice, long PurchasePrice)
+        public MatHang(string code, string name, long SalePrice, long PurchasePrice, int Quantity)
         {
             Code = code;
             Name = name;
             this.SalePrice = SalePrice;
             this.PurchasePrice = PurchasePrice;
+            this.Quantity = Quantity;
         }
     }
 }
