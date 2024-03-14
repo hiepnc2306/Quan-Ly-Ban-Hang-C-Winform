@@ -36,8 +36,8 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.rdbID = new System.Windows.Forms.RadioButton();
             this.rdbName = new System.Windows.Forms.RadioButton();
-            this.txbID = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtNCC = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -134,21 +134,21 @@
             this.rdbName.Text = "Tên nhà cung cấp";
             this.rdbName.UseVisualStyleBackColor = true;
             // 
-            // txbID
+            // txtId
             // 
-            this.txbID.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbID.Location = new System.Drawing.Point(200, 49);
-            this.txbID.Name = "txbID";
-            this.txbID.Size = new System.Drawing.Size(193, 25);
-            this.txbID.TabIndex = 2;
+            this.txtId.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.Location = new System.Drawing.Point(200, 49);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(193, 25);
+            this.txtId.TabIndex = 2;
             // 
-            // textBox2
+            // txtNCC
             // 
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(571, 49);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(193, 25);
-            this.textBox2.TabIndex = 3;
+            this.txtNCC.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNCC.Location = new System.Drawing.Point(571, 49);
+            this.txtNCC.Name = "txtNCC";
+            this.txtNCC.Size = new System.Drawing.Size(193, 25);
+            this.txtNCC.TabIndex = 3;
             // 
             // dataGridView1
             // 
@@ -208,9 +208,9 @@
             // 
             this.groupBox1.Controls.Add(this.rdbName);
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtNCC);
             this.groupBox1.Controls.Add(this.rdbID);
-            this.groupBox1.Controls.Add(this.txbID);
+            this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(24, 78);
             this.groupBox1.Name = "groupBox1";
@@ -236,6 +236,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormTimKiemNCC";
             this.Text = "Tìm kiếm thông tin Nhà cung cấp";
+            this.Load += new System.EventHandler(this.FormTimKiemNCC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -254,8 +255,8 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.RadioButton rdbID;
         private System.Windows.Forms.RadioButton rdbName;
-        private System.Windows.Forms.TextBox txbID;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtNCC;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
