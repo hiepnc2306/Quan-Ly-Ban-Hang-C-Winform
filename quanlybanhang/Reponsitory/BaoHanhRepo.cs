@@ -141,11 +141,12 @@ namespace quanlybanhang.Reponsitory
             conn.Open();
             String query = "update thong_tin_bao_hanh set warranty_code = @mabh, hdb_code = @mahdb, " +
                 " created = @ngaybd, closed = @ngaykt, times = @solan, appointed = @ngayhen where id = @id ";
-            using (OleDbCommand command = new OleDbCommand(query, conn) ) {
+            using (OleDbCommand command = new OleDbCommand(query, conn))
+            {
                 command.Parameters.AddWithValue("@mabh", bh.code);
                 command.Parameters.AddWithValue("@mahdb", bh.checkCode);
-                command.Parameters.AddWithValue("@ngaybd",bh.startDate);
-                command.Parameters.AddWithValue("@ngaykt",bh.endDate);
+                command.Parameters.AddWithValue("@ngaybd", bh.startDate);
+                command.Parameters.AddWithValue("@ngaykt", bh.endDate);
                 command.Parameters.AddWithValue("@solan", bh.number);
                 command.Parameters.AddWithValue("@ngayhen", bh.appointmentDate);
                 command.Parameters.AddWithValue("@id", bh.id);

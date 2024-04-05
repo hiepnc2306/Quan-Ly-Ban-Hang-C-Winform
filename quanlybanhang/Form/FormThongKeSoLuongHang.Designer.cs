@@ -320,7 +320,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(862, 525);
+            this.ClientSize = new System.Drawing.Size(989, 525);
             this.Controls.Add(this.txb);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnPrint);
@@ -332,6 +332,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormThongKeSoLuongHang";
             this.Text = "Form11";
+            this.Load += new System.EventHandler(this.FormThongKeSoLuongHang_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox3.ResumeLayout(false);

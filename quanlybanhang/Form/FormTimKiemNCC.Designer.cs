@@ -35,8 +35,21 @@
             this.txbNumber = new System.Windows.Forms.TextBox();
             this.rdbID = new System.Windows.Forms.RadioButton();
             this.rdbName = new System.Windows.Forms.RadioButton();
+<<<<<<< HEAD
             this.txbID = new System.Windows.Forms.TextBox();
             this.txbName = new System.Windows.Forms.TextBox();
+=======
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtNCC = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+>>>>>>> 94670ca40f13c843cef558067aef2d911265db39
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvNCC = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -126,8 +139,9 @@
             this.rdbName.UseVisualStyleBackColor = true;
             this.rdbName.CheckedChanged += new System.EventHandler(this.rdbName_CheckedChanged);
             // 
-            // txbID
+            // txtId
             // 
+<<<<<<< HEAD
             this.txbID.Enabled = false;
             this.txbID.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbID.Location = new System.Drawing.Point(200, 49);
@@ -143,14 +157,88 @@
             this.txbName.Name = "txbName";
             this.txbName.Size = new System.Drawing.Size(193, 25);
             this.txbName.TabIndex = 3;
+=======
+            this.txtId.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.Location = new System.Drawing.Point(200, 49);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(193, 25);
+            this.txtId.TabIndex = 2;
+            // 
+            // txtNCC
+            // 
+            this.txtNCC.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNCC.Location = new System.Drawing.Point(571, 49);
+            this.txtNCC.Name = "txtNCC";
+            this.txtNCC.Size = new System.Drawing.Size(193, 25);
+            this.txtNCC.TabIndex = 3;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7});
+            this.dataGridView1.Location = new System.Drawing.Point(10, 112);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(861, 213);
+            this.dataGridView1.TabIndex = 4;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "SoPhieu";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "MaKH";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "MaMH";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "NgayBatDau";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "NgayKetThuc";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "SoLan";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "NgayHen";
+            this.Column7.Name = "Column7";
+>>>>>>> 94670ca40f13c843cef558067aef2d911265db39
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvNCC);
             this.groupBox1.Controls.Add(this.rdbName);
+<<<<<<< HEAD
             this.groupBox1.Controls.Add(this.txbName);
+=======
+            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.txtNCC);
+>>>>>>> 94670ca40f13c843cef558067aef2d911265db39
             this.groupBox1.Controls.Add(this.rdbID);
-            this.groupBox1.Controls.Add(this.txbID);
+            this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 76);
             this.groupBox1.Name = "groupBox1";
@@ -225,6 +313,10 @@
             this.Name = "FormTimKiemNCC";
             this.Text = "Tìm kiếm thông tin Nhà cung cấp";
             this.Load += new System.EventHandler(this.FormTimKiemNCC_Load);
+<<<<<<< HEAD
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+>>>>>>> 94670ca40f13c843cef558067aef2d911265db39
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNCC)).EndInit();
@@ -242,8 +334,14 @@
         private System.Windows.Forms.TextBox txbNumber;
         private System.Windows.Forms.RadioButton rdbID;
         private System.Windows.Forms.RadioButton rdbName;
+<<<<<<< HEAD
         private System.Windows.Forms.TextBox txbID;
         private System.Windows.Forms.TextBox txbName;
+=======
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtNCC;
+        private System.Windows.Forms.DataGridView dataGridView1;
+>>>>>>> 94670ca40f13c843cef558067aef2d911265db39
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvNCC;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;

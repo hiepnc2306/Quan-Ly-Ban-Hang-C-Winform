@@ -3,15 +3,21 @@ using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace quanlybanhang.Reponsitory
 {
-     interface INhaCungCapRepo : IBaseRepo<NhaCungCap>
+    interface INhaCungCapRepo : IBaseRepo<NhaCungCap>
     {
         void delete(int id);
+<<<<<<< HEAD
         int getMaxId();
         List<NhaCungCap> FindByCode(string code);
         List<NhaCungCap> FindByName(string name);
+=======
+        List<NhaCungCap> searchByCode(string code);
+        List<NhaCungCap> searchByName(string name);
+>>>>>>> 94670ca40f13c843cef558067aef2d911265db39
     }
     class NhaCungCapRepo : INhaCungCapRepo
     {
@@ -32,11 +38,12 @@ namespace quanlybanhang.Reponsitory
                 command.Parameters.Add("@sdt", ncc.Sdt);
                 OleDbDataReader reader = command.ExecuteReader();
                 conn.Close();
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Có lỗi xảy ra");
             }
-            
+
         }
 
         public void delete(int id)
@@ -47,7 +54,7 @@ namespace quanlybanhang.Reponsitory
                 conn.Open();
                 String query = "delete from nha_cung_cap where id = @id";
                 OleDbCommand command = new OleDbCommand(query, conn);
-                command.Parameters.Add("@id",id);
+                command.Parameters.Add("@id", id);
                 OleDbDataReader reader = command.ExecuteReader();
                 conn.Close();
             }
@@ -137,7 +144,8 @@ namespace quanlybanhang.Reponsitory
                 }
                 conn.Close();
                 return list;
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 return null;
             }
@@ -165,12 +173,17 @@ namespace quanlybanhang.Reponsitory
             }
         }
 
+<<<<<<< HEAD
         public int getMaxId()
+=======
+        public List<NhaCungCap> searchByCode(string code)
+>>>>>>> 94670ca40f13c843cef558067aef2d911265db39
         {
             try
             {
                 OleDbConnection conn = connection.conn();
                 conn.Open();
+<<<<<<< HEAD
                 String query = "select max(id) from nha_cung_cap";
                 OleDbCommand command = new OleDbCommand(query, conn);
                 OleDbDataReader reader = command.ExecuteReader();
@@ -182,6 +195,51 @@ namespace quanlybanhang.Reponsitory
             catch (Exception e)
             {
                 return 0;
+=======
+                List<NhaCungCap> list = new List<NhaCungCap>();
+                String query = "select * from nha_cung_cap where code like concat('%', @code, '%')";
+                OleDbCommand command = new OleDbCommand(query, conn);
+                command.Parameters.Add("@code", code);
+                OleDbDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    NhaCungCap nhaCungCap = new NhaCungCap(Int32.Parse(reader[0].ToString()), reader[1].ToString()
+                        , reader[2].ToString(), reader[3].ToString(), reader[4].ToString());
+                    list.Add(nhaCungCap);
+                }
+                conn.Close();
+                return list;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+
+        public List<NhaCungCap> searchByName(string name)
+        {
+            try
+            {
+                OleDbConnection conn = connection.conn();
+                conn.Open();
+                List<NhaCungCap> list = new List<NhaCungCap>();
+                String query = "select * from nha_cung_cap where name like concat('%', @name, '%')";
+                OleDbCommand command = new OleDbCommand(query, conn);
+                command.Parameters.Add("@name", name);
+                OleDbDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    NhaCungCap nhaCungCap = new NhaCungCap(Int32.Parse(reader[0].ToString()), reader[1].ToString()
+                        , reader[2].ToString(), reader[3].ToString(), reader[4].ToString());
+                    list.Add(nhaCungCap);
+                }
+                conn.Close();
+                return list;
+            }
+            catch (Exception e)
+            {
+                return null;
+>>>>>>> 94670ca40f13c843cef558067aef2d911265db39
             }
         }
 
