@@ -10,14 +10,10 @@ namespace quanlybanhang.Reponsitory
     interface INhaCungCapRepo : IBaseRepo<NhaCungCap>
     {
         void delete(int id);
-<<<<<<< HEAD
+
         int getMaxId();
         List<NhaCungCap> FindByCode(string code);
         List<NhaCungCap> FindByName(string name);
-=======
-        List<NhaCungCap> searchByCode(string code);
-        List<NhaCungCap> searchByName(string name);
->>>>>>> 94670ca40f13c843cef558067aef2d911265db39
     }
     class NhaCungCapRepo : INhaCungCapRepo
     {
@@ -173,17 +169,12 @@ namespace quanlybanhang.Reponsitory
             }
         }
 
-<<<<<<< HEAD
         public int getMaxId()
-=======
-        public List<NhaCungCap> searchByCode(string code)
->>>>>>> 94670ca40f13c843cef558067aef2d911265db39
         {
             try
             {
                 OleDbConnection conn = connection.conn();
                 conn.Open();
-<<<<<<< HEAD
                 String query = "select max(id) from nha_cung_cap";
                 OleDbCommand command = new OleDbCommand(query, conn);
                 OleDbDataReader reader = command.ExecuteReader();
@@ -195,51 +186,6 @@ namespace quanlybanhang.Reponsitory
             catch (Exception e)
             {
                 return 0;
-=======
-                List<NhaCungCap> list = new List<NhaCungCap>();
-                String query = "select * from nha_cung_cap where code like concat('%', @code, '%')";
-                OleDbCommand command = new OleDbCommand(query, conn);
-                command.Parameters.Add("@code", code);
-                OleDbDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    NhaCungCap nhaCungCap = new NhaCungCap(Int32.Parse(reader[0].ToString()), reader[1].ToString()
-                        , reader[2].ToString(), reader[3].ToString(), reader[4].ToString());
-                    list.Add(nhaCungCap);
-                }
-                conn.Close();
-                return list;
-            }
-            catch (Exception e)
-            {
-                return null;
-            }
-        }
-
-        public List<NhaCungCap> searchByName(string name)
-        {
-            try
-            {
-                OleDbConnection conn = connection.conn();
-                conn.Open();
-                List<NhaCungCap> list = new List<NhaCungCap>();
-                String query = "select * from nha_cung_cap where name like concat('%', @name, '%')";
-                OleDbCommand command = new OleDbCommand(query, conn);
-                command.Parameters.Add("@name", name);
-                OleDbDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    NhaCungCap nhaCungCap = new NhaCungCap(Int32.Parse(reader[0].ToString()), reader[1].ToString()
-                        , reader[2].ToString(), reader[3].ToString(), reader[4].ToString());
-                    list.Add(nhaCungCap);
-                }
-                conn.Close();
-                return list;
-            }
-            catch (Exception e)
-            {
-                return null;
->>>>>>> 94670ca40f13c843cef558067aef2d911265db39
             }
         }
 
