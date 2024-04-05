@@ -111,7 +111,13 @@ namespace quanlybanhang
             dataGridView1.Columns["CustomerCode"].DataPropertyName = "cusCode";
             dataGridView1.Columns["SaleDate"].DataPropertyName = "saleDate";
             dataGridView1.DataSource = hoaDonKhachHangs;
+            foreach (DataGridViewRow Column in dataGridView1.Columns)
+            {
+                Column.Cells["SaleDate"].Value = ((DateTime)Column.Cells["SaleDate"].Value).ToShortDateString();
+            }
+
             foreach (string code in itemsCus) { cbbCus.Items.Add(code); }
+
         }
         private void mapDGVProd()
         {
@@ -126,6 +132,11 @@ namespace quanlybanhang
             dataGridView2.Columns["Number"].DataPropertyName = "number";
             dataGridView2.Columns["Price"].DataPropertyName = "price";
             dataGridView2.DataSource = hoaDonMatHangs;
+            foreach (DataGridViewRow column in dataGridView2.Columns)
+            {
+                column.Cells["SaleDate"].Value = ((DateTime)column.Cells["SaleDate"].Value).ToShortDateString();
+            }
+
             foreach (string code in itemsProd) { cbbProdSale.Items.Add(code); }
         }
 
@@ -139,7 +150,12 @@ namespace quanlybanhang
             txtPrice.Enabled = false;
             txtNumber.Enabled = false;
             dtpDate.Enabled = false;
+
+            cbbCus.ResetText();
+            cbbProdSale.ResetText();
+
             FormThongTinHoaDonBan_Load(sender, e);
+
         }
 
         private void mhCellClick(object sender, DataGridViewCellEventArgs e)
@@ -156,7 +172,7 @@ namespace quanlybanhang
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            tbArr  = new TextBox[] { txtInvoiceCode, txtNumber, txtPrice};
+            tbArr = new TextBox[] { txtInvoiceCode, txtNumber };
             ComboBox[] cbbs = new ComboBox[] { cbbCus, cbbProdSale };
             bool check = true;
             foreach (TextBox txb in tbArr)
@@ -183,7 +199,8 @@ namespace quanlybanhang
                 }
                 if (check == true)
                 {
-                    if (dtpDate.Text == null || dtpDate.Text.Equals("")){
+                    if (dtpDate.Text == null || dtpDate.Text.Equals(""))
+                    {
                         MessageBox.Show("Vui lòng nhập đủ thông tin");
                         dtpDate.Focus();
                         check = false;
@@ -197,34 +214,26 @@ namespace quanlybanhang
                 if (matHang == null || khachHang == null)
                 {
                     MessageBox.Show("Không tìm thấy thông tin mặt hàng hoặc khách hàng theo mã vừa nhập!");
-                } else
+                }
+                else
                 {
-                    HoaDon hd = repo.getByCode(txtInvoiceCode.Text);
-                    if (hd == null)
+                    int number = Int32.Parse(txtNumber.Text);
+                    long price = matHang.SalePrice * number;
+                    HoaDon hoaDon = new HoaDon(txtInvoiceCode.Text, cbbCus.Text, cbbProdSale.Text, number,
+                    price, dtpDate.Value, constant.sales());
+                    int quantity = matHang.Quantity - number;
+                    try
                     {
-                        int number = Int32.Parse(txtNumber.Text);
-                        long price = matHang.SalePrice * number;
-                        HoaDon hoaDon = new HoaDon(txtInvoiceCode.Text, cbbProdSale.Text, cbbCus.Text, number,
-                        price, dtpDate.Value, constant.sales());
-                        int quantity = matHang.Quantity - number;
-                        try
-                        {
-                            MatHang mh1 = new MatHang(matHang.Id, matHang.Code, matHang.Name, matHang.SalePrice, matHang.SalePrice, quantity);
-                            mhRepo.update(mh1);
-                            repo.create(hoaDon);
-                            MessageBox.Show("Lưu thành công!");
-                            btnCancel_Click(sender, e);
-                        }
-                        catch (Exception)
-                        {
-                            MessageBox.Show("Có lỗi xảy ra khi thêm mới hóa đơn bán!");
-                        }
+                        MatHang mh1 = new MatHang(matHang.Id, matHang.Code, matHang.Name, matHang.SalePrice, matHang.SalePrice, quantity);
+                        mhRepo.update(mh1);
+                        repo.create(hoaDon);
+                        MessageBox.Show("Lưu thành công!");
+                        btnCancel_Click(sender, e);
                     }
-                    else
+                    catch (Exception)
                     {
-                        MessageBox.Show("Hóa đơn bán đã tồn tại với mã được nhập!");
+                        MessageBox.Show("Có lỗi xảy ra khi thêm mới hóa đơn bán!");
                     }
-                    
                 }
             }
         }
@@ -286,12 +295,12 @@ namespace quanlybanhang
                     {
                         int number = Int32.Parse(txtNumber.Text);
                         long price = matHang.SalePrice * number;
-                        HoaDon hoaDon = new HoaDon(hd.id, txtInvoiceCode.Text, cbbProdSale.Text, cbbCus.Text, number,
+                        HoaDon hoaDon = new HoaDon(hd.id, txtInvoiceCode.Text, cbbCus.Text, cbbProdSale.Text, number,
                         price, dtpDate.Value, constant.sales());
                         int quantity = matHang.Quantity - hd.number + number;
                         try
                         {
-                            MatHang mh1 = new MatHang(matHang.Id, matHang.Code, matHang.Name, matHang.SalePrice, 
+                            MatHang mh1 = new MatHang(matHang.Id, matHang.Code, matHang.Name, matHang.SalePrice,
                                 matHang.SalePrice, quantity);
                             mhRepo.update(mh1);
                             repo.update(hoaDon);
@@ -323,7 +332,8 @@ namespace quanlybanhang
                     MessageBox.Show("Xóa thành công!");
                     FormThongTinHoaDonBan_Load(sender, e);
                     btnCancel_Click(sender, e);
-                } catch (Exception)
+                }
+                catch (Exception)
                 {
                     MessageBox.Show("Có lỗi xảy ra!");
                 }

@@ -9,6 +9,9 @@ namespace quanlybanhang.Reponsitory
      interface INhaCungCapRepo : IBaseRepo<NhaCungCap>
     {
         void delete(int id);
+        int getMaxId();
+        List<NhaCungCap> FindByCode(string code);
+        List<NhaCungCap> FindByName(string name);
     }
     class NhaCungCapRepo : INhaCungCapRepo
     {
@@ -59,6 +62,58 @@ namespace quanlybanhang.Reponsitory
             throw new NotImplementedException();
         }
 
+        public List<NhaCungCap> FindByCode(string code)
+        {
+            try
+            {
+                OleDbConnection conn = connection.conn();
+                conn.Open();
+                List<NhaCungCap> list = new List<NhaCungCap>();
+                String query = "select * from nha_cung_cap where supplier_code like '%' & LCASE(@code) & '%'";
+                OleDbCommand command = new OleDbCommand(query, conn);
+                command.Parameters.Add("@code", code);
+                OleDbDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    NhaCungCap nhaCungCap = new NhaCungCap(Int32.Parse(reader[0].ToString()), reader[1].ToString()
+                        , reader[2].ToString(), reader[3].ToString(), reader[4].ToString());
+                    list.Add(nhaCungCap);
+                }
+                conn.Close();
+                return list;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+
+        public List<NhaCungCap> FindByName(string code)
+        {
+            try
+            {
+                OleDbConnection conn = connection.conn();
+                conn.Open();
+                List<NhaCungCap> list = new List<NhaCungCap>();
+                String query = "select * from nha_cung_cap where supplier_name like '%' & LCASE(@code) & '%'";
+                OleDbCommand command = new OleDbCommand(query, conn);
+                command.Parameters.Add("@code", code);
+                OleDbDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    NhaCungCap nhaCungCap = new NhaCungCap(Int32.Parse(reader[0].ToString()), reader[1].ToString()
+                        , reader[2].ToString(), reader[3].ToString(), reader[4].ToString());
+                    list.Add(nhaCungCap);
+                }
+                conn.Close();
+                return list;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+
         public NhaCungCap get(int id)
         {
             throw new NotImplementedException();
@@ -107,6 +162,26 @@ namespace quanlybanhang.Reponsitory
             catch (Exception e)
             {
                 return null;
+            }
+        }
+
+        public int getMaxId()
+        {
+            try
+            {
+                OleDbConnection conn = connection.conn();
+                conn.Open();
+                String query = "select max(id) from nha_cung_cap";
+                OleDbCommand command = new OleDbCommand(query, conn);
+                OleDbDataReader reader = command.ExecuteReader();
+                reader.Read();
+                int nhaCungCap = Int32.Parse(reader[0].ToString());
+                conn.Close();
+                return nhaCungCap;
+            }
+            catch (Exception e)
+            {
+                return 0;
             }
         }
 

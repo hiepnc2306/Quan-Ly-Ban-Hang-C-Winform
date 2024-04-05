@@ -12,6 +12,7 @@ namespace quanlybanhang.Reponsitory
     internal interface IMatHangRepo : IBaseRepo<MatHang>
     {
         void delete(int id);
+        int getMaxId();
     }
     class MatHangRepo : IMatHangRepo
     {
@@ -37,6 +38,26 @@ namespace quanlybanhang.Reponsitory
             catch (Exception ex)
             {
                 MessageBox.Show("Có lỗi xảy ra");
+            }
+        }
+
+        public int getMaxId()
+        {
+            try
+            {
+                OleDbConnection conn = connection.conn();
+                conn.Open();
+                String query = "select max(id) from mat_hang";
+                OleDbCommand command = new OleDbCommand(query, conn);
+                OleDbDataReader reader = command.ExecuteReader();
+                reader.Read();
+                int mh = Int32.Parse(reader[0].ToString());
+                conn.Close();
+                return mh;
+            }
+            catch (Exception)
+            {
+                return 0;
             }
         }
 

@@ -86,14 +86,16 @@ namespace quanlybanhang
             }
             if (valid)
             {
-                BaoHanh check = baoHanhRepo.getByCode(txtCode.Text);
+                int MaxId = baoHanhRepo.getMaxId() + 1;
+                string code = "BH" + MaxId.ToString();
+                BaoHanh check = baoHanhRepo.getByCode(code);
                 if (check != null)
                 {
                     MessageBox.Show("Phiếu bảo hành đã tồn tại");
                 }
                 else
                 {
-                    BaoHanh ncc = new BaoHanh(txtCode.Text, txtCheckCode.Text, dtStartDate.Value.Date,
+                    BaoHanh ncc = new BaoHanh(code, txtCheckCode.Text, dtStartDate.Value.Date,
                     dtEndDate.Value.Date, Int32.Parse(txtNumber.Text), dtAppointmentDate.Value.Date);
                     baoHanhRepo.create(ncc);
                     FormThongTinBaoHanh_Load(sender, e);

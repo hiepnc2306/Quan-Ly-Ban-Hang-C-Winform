@@ -27,7 +27,7 @@ namespace quanlybanhang
         }
         private void FormThongTinNCC_Load(object sender, EventArgs e)
         {
-            tbArr = new TextBox[] { txbID, txbName, txbAddress, txbPhoneNumber };
+            tbArr = new TextBox[] { txbName, txbAddress, txbPhoneNumber };
             listNCC = NCCRepo.getAll();
             dataGridView1.Columns["id"].DataPropertyName = "id";
             dataGridView1.Columns["Code"].DataPropertyName= "Code";
@@ -69,14 +69,16 @@ namespace quanlybanhang
             }
             if (valid)
             {
-                NhaCungCap check = NCCRepo.getByCode(txbID.Text);
+                int MaxId = NCCRepo.getMaxId() + 1;
+                string code = "NCC" + MaxId.ToString();
+                NhaCungCap check = NCCRepo.getByCode(code);
                 if (check != null)
                 {
                     MessageBox.Show("Nhà cung cấp đã tồn tại");
                 }
                 else
                 {
-                    NhaCungCap ncc = new NhaCungCap(txbID.Text, txbName.Text, txbAddress.Text, txbPhoneNumber.Text);
+                    NhaCungCap ncc = new NhaCungCap(code, txbName.Text, txbAddress.Text, txbPhoneNumber.Text);
                     NCCRepo.create(ncc);
                     FormThongTinNCC_Load(sender, e);
                     btnCancel_Click(sender, e);
@@ -165,6 +167,16 @@ namespace quanlybanhang
             {
                 e.Handled = true; // Hủy bỏ thao tác nhập
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

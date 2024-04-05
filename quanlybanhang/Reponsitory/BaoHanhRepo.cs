@@ -12,6 +12,25 @@ namespace quanlybanhang.Reponsitory
     {
         Connection connection = new Connection();
 
+        public int getMaxId()
+        {
+            try
+            {
+                OleDbConnection conn = connection.conn();
+                conn.Open();
+                String query = "select max(id) from thong_tin_bao_hanh";
+                OleDbCommand command = new OleDbCommand(query, conn);
+                OleDbDataReader reader = command.ExecuteReader();
+                reader.Read();
+                int mh = Int32.Parse(reader[0].ToString());
+                conn.Close();
+                return mh;
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+        }
 
         public void create(BaoHanh bh)
         {

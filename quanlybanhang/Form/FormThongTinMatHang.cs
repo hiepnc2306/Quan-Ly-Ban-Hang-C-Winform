@@ -45,7 +45,7 @@ namespace quanlybanhang
 
         private void FormThongTinMatHang_Load(object sender, EventArgs e)
         {
-            tbArr = new TextBox[] { txbID, txbName, txbGiaBan, txbGiaNhap, txtQuantity };
+            tbArr = new TextBox[] { txbName, txbGiaBan, txbGiaNhap, txtQuantity };
             list = repo.getAll(); // lấy danh sách mặt hàng
             // gán dữ liệu vào datagridview
             dataGridView1.Columns["Id"].DataPropertyName = "Id";
@@ -90,14 +90,16 @@ namespace quanlybanhang
             }
             if (valid) // cho phép nhập khi đủ điều kiện
             {
-                MatHang check = repo.getByCode(txbID.Text); // kiểm tra xem mặt hàng có tồn tại với mã đã nhập không
+                int MaxId = repo.getMaxId() + 1; // lấy id của sản phẩm cuối cùng 
+                string code = "MH" + MaxId.ToString(); // tạo mã mặt hàng
+                MatHang check = repo.getByCode(code); // kiểm tra xem mặt hàng có tồn tại với mã đã tạo không
                 if (check != null)
                 {
                     MessageBox.Show("Mặt hàng đã tồn tại");
                 }
                 else
                 {
-                    MatHang mh = new MatHang(txbID.Text, txbName.Text, Int64.Parse(txbGiaBan.Text), Int64.Parse(txbGiaNhap.Text), Int32.Parse(txtQuantity.Text));
+                    MatHang mh = new MatHang(code, txbName.Text, Int64.Parse(txbGiaBan.Text), Int64.Parse(txbGiaNhap.Text), Int32.Parse(txtQuantity.Text));
                     repo.create(mh);
                     btnCancel_Click(sender, e);
                     MessageBox.Show("Lưu thành công");
@@ -157,6 +159,11 @@ namespace quanlybanhang
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -44,7 +44,7 @@ namespace quanlybanhang
 
         private void FormThongTinKhachHang_Load(object sender, EventArgs e)
         {
-            tbArr = new TextBox[] { txbID, txbname, txbAddress, txbPhoneNumber };
+            tbArr = new TextBox[] { txbname, txbAddress, txbPhoneNumber };
             list = repo.getAll();
             dataGridView1.Columns["Id"].DataPropertyName = "Id";
             dataGridView1.Columns["Code"].DataPropertyName = "Code";
@@ -90,14 +90,16 @@ namespace quanlybanhang
             }
             if (valid)
             {
-                KhachHang check = repo.getByCode(txbID.Text);
+                int MaxId = repo.getMaxId() + 1;
+                string code = "KH" + MaxId.ToString();
+                KhachHang check = repo.getByCode(code);
                 if (check != null)
                 {
                     MessageBox.Show("Khách hàng đã tồn tại");
                 }
                 else
                 {
-                    KhachHang ncc = new KhachHang(txbID.Text, txbname.Text, txbAddress.Text, txbPhoneNumber.Text);
+                    KhachHang ncc = new KhachHang(code, txbname.Text, txbAddress.Text, txbPhoneNumber.Text);
                     repo.create(ncc);
                     FormThongTinKhachHang_Load(sender, e);
                     btnCancel_Click(sender, e);

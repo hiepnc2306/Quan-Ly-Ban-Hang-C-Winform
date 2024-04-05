@@ -66,7 +66,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(360, 20);
+            this.label1.Location = new System.Drawing.Point(326, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(306, 27);
             this.label1.TabIndex = 0;
@@ -340,7 +340,7 @@
             this.panel2.Controls.Add(this.btnCancel);
             this.panel2.Controls.Add(this.btnInput);
             this.panel2.Controls.Add(this.panel1);
-            this.panel2.Location = new System.Drawing.Point(58, 71);
+            this.panel2.Location = new System.Drawing.Point(24, 68);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(845, 415);
             this.panel2.TabIndex = 9;

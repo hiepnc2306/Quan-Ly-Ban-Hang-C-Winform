@@ -63,7 +63,8 @@ namespace quanlybanhang
 
         public void getListHoaDon()
         {
-            if (cbbNCC.Text != null && !cbbNCC.Text.Equals("") && cbbProd.Text != null && !cbbProd.Text.Equals("")) {
+            if (cbbNCC.Text != null && !cbbNCC.Text.Equals("") && cbbProd.Text != null && !cbbProd.Text.Equals(""))
+            {
                 list = repo.getByTypeAndProdCodeAndLinkCode(constant.purchase(), cbbProd.Text, cbbNCC.Text);
             }
             else if (cbbNCC.Text != null && !cbbNCC.Text.Equals(""))
@@ -73,7 +74,8 @@ namespace quanlybanhang
             else if (cbbProd.Text != null && !cbbProd.Text.Equals(""))
             {
                 list = repo.getByTypeAndProdCode(constant.purchase(), cbbProd.Text);
-            } else
+            }
+            else
             {
                 list = repo.getByType(constant.purchase());
             }
@@ -249,33 +251,24 @@ namespace quanlybanhang
                 }
                 else
                 {
-                    HoaDon hd = repo.getByCode(txtInvoiceCode.Text);
-                    if (hd == null)
+                    int number = Int32.Parse(txtNumber.Text);
+                    long price = matHang.PurchasePrice * number;
+                    HoaDon hoaDon = new HoaDon(txtInvoiceCode.Text, cbbNCC.Text, cbbProd.Text, number,
+                    price, dtpDate.Value, constant.purchase());
+                    int quantity = matHang.Quantity + number;
+                    try
                     {
-                        int number = Int32.Parse(txtNumber.Text);
-                        long price = matHang.PurchasePrice * number;
-                        HoaDon hoaDon = new HoaDon(txtInvoiceCode.Text, cbbNCC.Text, cbbProd.Text, number,
-                        price, dtpDate.Value, constant.purchase());
-                        int quantity = matHang.Quantity + number;
-                        try
-                        {
-                            MatHang mh1 = new MatHang(matHang.Id, matHang.Code, matHang.Name, matHang.SalePrice, matHang.PurchasePrice, quantity);
-                            mhRepo.update(mh1);
-                            repo.create(hoaDon);
-                            MessageBox.Show("Lưu thành công!");
-                            FromCapNhatHoaDonNhap_Load(sender, e);
-                            btnCancel_Click(sender, e);
-                        }
-                        catch (Exception)
-                        {
-                            MessageBox.Show("Có lỗi xảy ra khi thêm mới hóa đơn nhập!");
-                        }
+                        MatHang mh1 = new MatHang(matHang.Id, matHang.Code, matHang.Name, matHang.SalePrice, matHang.PurchasePrice, quantity);
+                        mhRepo.update(mh1);
+                        repo.create(hoaDon);
+                        MessageBox.Show("Lưu thành công!");
+                        FromCapNhatHoaDonNhap_Load(sender, e);
+                        btnCancel_Click(sender, e);
                     }
-                    else
+                    catch (Exception)
                     {
-                        MessageBox.Show("Hóa đơn nhập đã tồn tại với mã được nhập!");
+                        MessageBox.Show("Có lỗi xảy ra khi thêm mới hóa đơn nhập!");
                     }
-
                 }
             }
         }
@@ -335,7 +328,7 @@ namespace quanlybanhang
                         price, dtpDate.Value, constant.purchase());
                         try
                         {
-                            MatHang mh1 = new MatHang(matHang.Id, matHang.Code, matHang.Name, matHang.SalePrice, 
+                            MatHang mh1 = new MatHang(matHang.Id, matHang.Code, matHang.Name, matHang.SalePrice,
                                 matHang.PurchasePrice, quantity);
                             mhRepo.update(mh1);
                             repo.update(hoaDon);
@@ -358,6 +351,11 @@ namespace quanlybanhang
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbbProd_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

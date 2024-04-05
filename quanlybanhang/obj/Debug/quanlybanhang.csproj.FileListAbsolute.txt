@@ -152,7 +152,6 @@ C:\Users\Admin\Desktop\DotNetProject\Quan-Ly-Ban-Hang-C-Winform\quanlybanhang\ob
 C:\Users\Admin\Desktop\DotNetProject\Quan-Ly-Ban-Hang-C-Winform\quanlybanhang\obj\Debug\quanlybanhang.exe
 C:\Users\Admin\Desktop\DotNetProject\Quan-Ly-Ban-Hang-C-Winform\quanlybanhang\obj\Debug\quanlybanhang.pdb
 C:\Users\Administrator\Desktop\Quan-Ly-Ban-Hang-C-Winform\quanlybanhang\obj\Debug\quanlybanhang.csproj.AssemblyReference.cache
-C:\Users\Administrator\Desktop\Quan-Ly-Ban-Hang-C-Winform\quanlybanhang\obj\Debug\quanlybanhang.csproj.SuggestedBindingRedirects.cache
 C:\Users\Administrator\Desktop\Quan-Ly-Ban-Hang-C-Winform\quanlybanhang\obj\Debug\quanlybanhang.LoginForm.resources
 C:\Users\Administrator\Desktop\Quan-Ly-Ban-Hang-C-Winform\quanlybanhang\obj\Debug\quanlybanhang.FormMain.resources
 C:\Users\Administrator\Desktop\Quan-Ly-Ban-Hang-C-Winform\quanlybanhang\obj\Debug\quanlybanhang.FormTimKiemKhachHang.resources
@@ -205,4 +204,4 @@ C:\Users\Administrator\Desktop\Quan-Ly-Ban-Hang-C-Winform\quanlybanhang\bin\Debu
 C:\Users\Administrator\Desktop\Quan-Ly-Ban-Hang-C-Winform\quanlybanhang\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\Administrator\Desktop\Quan-Ly-Ban-Hang-C-Winform\quanlybanhang\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Administrator\Desktop\Quan-Ly-Ban-Hang-C-Winform\quanlybanhang\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\Administrator\Desktop\Quan-Ly-Ban-Hang-C-Winform\quanlybanhang\obj\Debug\quanlybanhang.csproj.CopyComplete
+C:\Users\Administrator\Desktop\Quan-Ly-Ban-Hang-C-Winform\quanlybanhang\obj\Debug\quanlyba.AD8A0C66.Up2Date
