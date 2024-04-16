@@ -31,33 +31,27 @@ namespace quanlybanhang
             if (rdbID.Checked)
             {
                 filter = searchByCode(txbID.Text);
-                dgvNCC.Columns["id"].DataPropertyName = "id";
-                dgvNCC.Columns["Code"].DataPropertyName = "Code";
-                dgvNCC.Columns["NCCName"].DataPropertyName = "Name";
-                dgvNCC.Columns["Address"].DataPropertyName = "Address";
-                dgvNCC.Columns["Sdt"].DataPropertyName = "Sdt";
-                dgvNCC.DataSource = filter;
-                txbNumber.Text = filter.Count.ToString();
             }
             else if (rdbName.Checked)
             {
                 filter = searchByName(txbName.Text);
-                dgvNCC.Columns["id"].DataPropertyName = "id";
-                dgvNCC.Columns["Code"].DataPropertyName = "Code";
-                dgvNCC.Columns["NCCName"].DataPropertyName = "Name";
-                dgvNCC.Columns["Address"].DataPropertyName = "Address";
-                dgvNCC.Columns["Sdt"].DataPropertyName = "Sdt";
-                dgvNCC.DataSource = filter;
-                txbNumber.Text = filter.Count.ToString();
             }
             else
             {
-                FormTimKiemNCC_Load(sender, e);
+                filter = listResult;
             }
+            dgvNCC.Columns["id"].DataPropertyName = "id";
+            dgvNCC.Columns["Code"].DataPropertyName = "Code";
+            dgvNCC.Columns["NCCName"].DataPropertyName = "Name";
+            dgvNCC.Columns["Address"].DataPropertyName = "Address";
+            dgvNCC.Columns["Sdt"].DataPropertyName = "Sdt";
+            dgvNCC.DataSource = filter;
+            txbNumber.Text = filter.Count.ToString();
         }
 
         private void FormTimKiemNCC_Load(object sender, EventArgs e)
         {
+            listResult = new List<FilterSuplier>();
             List<HoaDon> hoaDons = hoaDonRepo.getByType(constant.purchase());
             hoaDons.ForEach(x=> {
                 NhaCungCap nhaCungCap = NCCRepo.getByCode(x.linkCode);

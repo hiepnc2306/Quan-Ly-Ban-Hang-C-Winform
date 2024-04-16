@@ -105,12 +105,6 @@
     <Compile Include="Form\MenuForm.Designer.cs">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FormTimKiemKhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\FormTimKiemKhachHang.Designer.cs">
-      <DependentUpon>FormTimKiemKhachHang.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\FormThongKeSoLuongHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +173,7 @@
     </Compile>
     <Compile Include="Model\BaoHanh.cs" />
     <Compile Include="Model\Constant.cs" />
+    <Compile Include="Model\FilterProd.cs" />
     <Compile Include="Model\FilterSuplier.cs" />
     <Compile Include="Model\HoaDon.cs" />
     <Compile Include="Model\HoaDonKhachHang.cs" />
@@ -204,9 +199,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\FormTimKiemKhachHang.resx">
-      <DependentUpon>FormTimKiemKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormThongKeSoLuongHang.resx">
       <DependentUpon>FormThongKeSoLuongHang.cs</DependentUpon>

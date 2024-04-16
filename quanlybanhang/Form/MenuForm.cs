@@ -24,7 +24,6 @@ namespace quanlybanhang
            new FormThongTinBaoHanh(),
            new FormTimKiemHangHoa(),
            new FormTimKiemNCC(),
-           new FormTimKiemKhachHang(),
            new FormThongKeSoLuongHang(),
            new FormBaoCaoDoanhThu(),
         };

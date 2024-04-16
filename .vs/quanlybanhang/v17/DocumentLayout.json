@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\DotNetProject\\Quan-Ly-Ban-Hang-C-Winform\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|c:\\users\\admin\\desktop\\dotnetproject\\quan-ly-ban-hang-c-winform\\quanlybanhang\\form\\formtimkiemkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|solutionrelative:quanlybanhang\\form\\formtimkiemkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|c:\\users\\admin\\desktop\\dotnetproject\\quan-ly-ban-hang-c-winform\\quanlybanhang\\form\\formthongkesoluonghang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|solutionrelative:quanlybanhang\\form\\formthongkesoluonghang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|c:\\users\\admin\\desktop\\dotnetproject\\quan-ly-ban-hang-c-winform\\quanlybanhang\\model\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|solutionrelative:quanlybanhang\\model\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|c:\\users\\admin\\desktop\\dotnetproject\\quan-ly-ban-hang-c-winform\\quanlybanhang\\form\\formthongkesoluonghang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|solutionrelative:quanlybanhang\\form\\formthongkesoluonghang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|c:\\users\\admin\\desktop\\dotnetproject\\quan-ly-ban-hang-c-winform\\quanlybanhang\\form\\formtimkiemkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|solutionrelative:quanlybanhang\\form\\formtimkiemkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|C:\\Users\\Admin\\Desktop\\DotNetProject\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\form\\formtimkiemhanghoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|solutionrelative:quanlybanhang\\form\\formtimkiemhanghoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|C:\\Users\\Admin\\Desktop\\DotNetProject\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\form\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|solutionrelative:quanlybanhang\\form\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|C:\\Users\\Admin\\Desktop\\DotNetProject\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\form\\formtimkiemhanghoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|solutionrelative:quanlybanhang\\form\\formtimkiemhanghoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 312,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,41 +50,63 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HoaDon.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\DotNetProject\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Model\\HoaDon.cs",
-              "RelativeDocumentMoniker": "quanlybanhang\\Model\\HoaDon.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\DotNetProject\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Model\\HoaDon.cs",
-              "RelativeToolTip": "quanlybanhang\\Model\\HoaDon.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "FormThongKeSoLuongHang.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\DotNetProject\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Form\\FormThongKeSoLuongHang.cs",
+              "RelativeDocumentMoniker": "quanlybanhang\\Form\\FormThongKeSoLuongHang.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\DotNetProject\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Form\\FormThongKeSoLuongHang.cs",
+              "RelativeToolTip": "quanlybanhang\\Form\\FormThongKeSoLuongHang.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAMwA4AAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T03:36:12.716Z",
+              "WhenOpened": "2024-04-16T07:14:18.007Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormThongKeSoLuongHang.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\DotNetProject\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Form\\FormThongKeSoLuongHang.cs",
+              "RelativeDocumentMoniker": "quanlybanhang\\Form\\FormThongKeSoLuongHang.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\DotNetProject\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Form\\FormThongKeSoLuongHang.cs [Design]",
+              "RelativeToolTip": "quanlybanhang\\Form\\FormThongKeSoLuongHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T07:13:22.996Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MenuForm.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\DotNetProject\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Form\\MenuForm.cs",
+              "RelativeDocumentMoniker": "quanlybanhang\\Form\\MenuForm.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\DotNetProject\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Form\\MenuForm.cs",
+              "RelativeToolTip": "quanlybanhang\\Form\\MenuForm.cs",
+              "ViewState": "AQIAAG0AAAAAAAAAAAAowHwAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T07:12:37.061Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FormTimKiemKhachHang.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\DotNetProject\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Form\\FormTimKiemKhachHang.cs",
-              "RelativeDocumentMoniker": "quanlybanhang\\Form\\FormTimKiemKhachHang.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\DotNetProject\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Form\\FormTimKiemKhachHang.cs",
-              "RelativeToolTip": "quanlybanhang\\Form\\FormTimKiemKhachHang.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Title": "FormTimKiemHangHoa.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\DotNetProject\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Form\\FormTimKiemHangHoa.cs",
+              "RelativeDocumentMoniker": "quanlybanhang\\Form\\FormTimKiemHangHoa.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\DotNetProject\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Form\\FormTimKiemHangHoa.cs",
+              "RelativeToolTip": "quanlybanhang\\Form\\FormTimKiemHangHoa.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAIwC8AAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T03:29:57.524Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T07:12:13.964Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormTimKiemKhachHang.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\DotNetProject\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Form\\FormTimKiemKhachHang.cs",
-              "RelativeDocumentMoniker": "quanlybanhang\\Form\\FormTimKiemKhachHang.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\DotNetProject\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Form\\FormTimKiemKhachHang.cs [Design]",
-              "RelativeToolTip": "quanlybanhang\\Form\\FormTimKiemKhachHang.cs [Design]",
+              "DocumentIndex": 4,
+              "Title": "FormTimKiemHangHoa.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\DotNetProject\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Form\\FormTimKiemHangHoa.cs",
+              "RelativeDocumentMoniker": "quanlybanhang\\Form\\FormTimKiemHangHoa.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\DotNetProject\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Form\\FormTimKiemHangHoa.cs [Design]",
+              "RelativeToolTip": "quanlybanhang\\Form\\FormTimKiemHangHoa.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T03:29:20.881Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-16T07:12:12.102Z"
             }
           ]
         }

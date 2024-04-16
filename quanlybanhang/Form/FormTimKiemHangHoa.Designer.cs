@@ -30,21 +30,20 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Warranty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProdName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txbName = new System.Windows.Forms.TextBox();
             this.txbID = new System.Windows.Forms.TextBox();
             this.rdbName = new System.Windows.Forms.RadioButton();
             this.rdbID = new System.Windows.Forms.RadioButton();
-            this.txb = new System.Windows.Forms.TextBox();
+            this.txbNumber = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
-            this.btnContinue = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -68,55 +67,56 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7});
+            this.Warranty,
+            this.CusName,
+            this.ProdName,
+            this.StartDate,
+            this.EndDate,
+            this.Number,
+            this.Date});
             this.dataGridView1.Location = new System.Drawing.Point(6, 130);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(836, 174);
+            this.dataGridView1.Size = new System.Drawing.Size(848, 174);
             this.dataGridView1.TabIndex = 4;
             // 
-            // Column1
+            // Warranty
             // 
-            this.Column1.HeaderText = "SoPhieu";
-            this.Column1.Name = "Column1";
+            this.Warranty.HeaderText = "Số Phiếu";
+            this.Warranty.Name = "Warranty";
             // 
-            // Column2
+            // CusName
             // 
-            this.Column2.HeaderText = "MaKH";
-            this.Column2.Name = "Column2";
+            this.CusName.HeaderText = "Tên Khách Hàng";
+            this.CusName.Name = "CusName";
             // 
-            // Column3
+            // ProdName
             // 
-            this.Column3.HeaderText = "MaMH";
-            this.Column3.Name = "Column3";
+            this.ProdName.HeaderText = "Tên Mặt Hàng";
+            this.ProdName.Name = "ProdName";
             // 
-            // Column4
+            // StartDate
             // 
-            this.Column4.HeaderText = "NgayBatDau";
-            this.Column4.Name = "Column4";
+            this.StartDate.HeaderText = "Từ Ngày";
+            this.StartDate.Name = "StartDate";
             // 
-            // Column5
+            // EndDate
             // 
-            this.Column5.HeaderText = "NgayKetThuc";
-            this.Column5.Name = "Column5";
+            this.EndDate.HeaderText = "Đến Ngày";
+            this.EndDate.Name = "EndDate";
             // 
-            // Column6
+            // Number
             // 
-            this.Column6.HeaderText = "SoLan";
-            this.Column6.Name = "Column6";
+            this.Number.HeaderText = "Số Lần";
+            this.Number.Name = "Number";
             // 
-            // Column7
+            // Date
             // 
-            this.Column7.HeaderText = "NgayHen";
-            this.Column7.Name = "Column7";
+            this.Date.HeaderText = "Ngày Hẹn";
+            this.Date.Name = "Date";
             // 
             // txbName
             // 
+            this.txbName.Enabled = false;
             this.txbName.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbName.Location = new System.Drawing.Point(311, 69);
             this.txbName.Name = "txbName";
@@ -125,6 +125,7 @@
             // 
             // txbID
             // 
+            this.txbID.Enabled = false;
             this.txbID.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbID.Location = new System.Drawing.Point(311, 28);
             this.txbID.Name = "txbID";
@@ -137,11 +138,12 @@
             this.rdbName.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbName.Location = new System.Drawing.Point(150, 70);
             this.rdbName.Name = "rdbName";
-            this.rdbName.Size = new System.Drawing.Size(81, 21);
+            this.rdbName.Size = new System.Drawing.Size(120, 21);
             this.rdbName.TabIndex = 1;
             this.rdbName.TabStop = true;
-            this.rdbName.Text = "Tên hàng";
+            this.rdbName.Text = "Tên khách hàng";
             this.rdbName.UseVisualStyleBackColor = true;
+            this.rdbName.CheckedChanged += new System.EventHandler(this.rdbName_CheckedChanged);
             // 
             // rdbID
             // 
@@ -149,19 +151,21 @@
             this.rdbID.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbID.Location = new System.Drawing.Point(150, 33);
             this.rdbID.Name = "rdbID";
-            this.rdbID.Size = new System.Drawing.Size(78, 21);
+            this.rdbID.Size = new System.Drawing.Size(107, 21);
             this.rdbID.TabIndex = 0;
             this.rdbID.TabStop = true;
-            this.rdbID.Text = "Mã hàng";
+            this.rdbID.Text = "Tên mặt hàng";
             this.rdbID.UseVisualStyleBackColor = true;
+            this.rdbID.CheckedChanged += new System.EventHandler(this.rdbID_CheckedChanged);
             // 
-            // txb
+            // txbNumber
             // 
-            this.txb.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb.Location = new System.Drawing.Point(715, 401);
-            this.txb.Name = "txb";
-            this.txb.Size = new System.Drawing.Size(126, 25);
-            this.txb.TabIndex = 12;
+            this.txbNumber.Enabled = false;
+            this.txbNumber.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbNumber.Location = new System.Drawing.Point(715, 401);
+            this.txbNumber.Name = "txbNumber";
+            this.txbNumber.Size = new System.Drawing.Size(126, 25);
+            this.txbNumber.TabIndex = 12;
             // 
             // label3
             // 
@@ -176,32 +180,24 @@
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(416, 401);
+            this.btnExit.Location = new System.Drawing.Point(371, 401);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(104, 38);
             this.btnExit.TabIndex = 10;
             this.btnExit.Text = "THOÁT";
             this.btnExit.UseVisualStyleBackColor = true;
-            // 
-            // btnContinue
-            // 
-            this.btnContinue.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContinue.Location = new System.Drawing.Point(278, 401);
-            this.btnContinue.Name = "btnContinue";
-            this.btnContinue.Size = new System.Drawing.Size(104, 38);
-            this.btnContinue.TabIndex = 9;
-            this.btnContinue.Text = "TIẾP TỤC";
-            this.btnContinue.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(144, 401);
+            this.btnSearch.Location = new System.Drawing.Point(197, 401);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(104, 38);
             this.btnSearch.TabIndex = 8;
             this.btnSearch.Text = "TÌM KIẾM";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // groupBox1
             // 
@@ -217,24 +213,25 @@
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm theo";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // FormTimKiemHangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(901, 521);
+            this.ClientSize = new System.Drawing.Size(951, 521);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.txb);
+            this.Controls.Add(this.txbNumber);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnContinue);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormTimKiemHangHoa";
             this.Text = "Tìm kiếm thông tin";
+            this.Load += new System.EventHandler(this.FormTimKiemHangHoa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -251,18 +248,17 @@
         private System.Windows.Forms.TextBox txbID;
         private System.Windows.Forms.RadioButton rdbName;
         private System.Windows.Forms.RadioButton rdbID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.TextBox txb;
+        private System.Windows.Forms.TextBox txbNumber;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnContinue;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Warranty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CusName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProdName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StartDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EndDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
     }
 }
