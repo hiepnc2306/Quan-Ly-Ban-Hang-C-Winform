@@ -16,5 +16,10 @@ namespace quanlybanhang
         {
             InitializeComponent();
         }
+
+        private void FormTimKiemKhachHang_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

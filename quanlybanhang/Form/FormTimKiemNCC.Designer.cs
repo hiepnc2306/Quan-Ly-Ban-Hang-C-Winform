@@ -39,12 +39,11 @@
             this.txbName = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvNCC = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NCCCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NCCName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProdName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNCC)).BeginInit();
             this.SuspendLayout();
@@ -165,12 +164,11 @@
             this.dgvNCC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvNCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNCC.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.Code,
+            this.NCCCode,
             this.NCCName,
-            this.Column1,
-            this.Column2,
-            this.Column3});
+            this.ProdName,
+            this.Number,
+            this.Date});
             this.dgvNCC.Location = new System.Drawing.Point(52, 125);
             this.dgvNCC.MultiSelect = false;
             this.dgvNCC.Name = "dgvNCC";
@@ -179,18 +177,11 @@
             this.dgvNCC.Size = new System.Drawing.Size(734, 176);
             this.dgvNCC.TabIndex = 10;
             // 
-            // id
+            // NCCCode
             // 
-            this.id.HeaderText = "Id";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            // 
-            // Code
-            // 
-            this.Code.HeaderText = "Mã Nhà Cung Cấp";
-            this.Code.Name = "Code";
-            this.Code.ReadOnly = true;
+            this.NCCCode.HeaderText = "Mã Nhà Cung Cấp";
+            this.NCCCode.Name = "NCCCode";
+            this.NCCCode.ReadOnly = true;
             // 
             // NCCName
             // 
@@ -198,23 +189,23 @@
             this.NCCName.Name = "NCCName";
             this.NCCName.ReadOnly = true;
             // 
-            // Column1
+            // ProdName
             // 
-            this.Column1.HeaderText = "Tên mặt hàng";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.ProdName.HeaderText = "Tên mặt hàng";
+            this.ProdName.Name = "ProdName";
+            this.ProdName.ReadOnly = true;
             // 
-            // Column2
+            // Number
             // 
-            this.Column2.HeaderText = "Số lượng";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
+            this.Number.HeaderText = "Số lượng";
+            this.Number.Name = "Number";
+            this.Number.ReadOnly = true;
             // 
-            // Column3
+            // Date
             // 
-            this.Column3.HeaderText = "Ngày nhập";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            this.Date.HeaderText = "Ngày nhập";
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
             // 
             // FormTimKiemNCC
             // 
@@ -256,11 +247,10 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvNCC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NCCCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn NCCName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProdName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
     }
 }

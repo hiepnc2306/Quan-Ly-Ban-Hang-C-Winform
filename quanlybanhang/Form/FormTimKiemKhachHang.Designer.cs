@@ -30,13 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txbAddress = new System.Windows.Forms.TextBox();
             this.txbName = new System.Windows.Forms.TextBox();
             this.txbID = new System.Windows.Forms.TextBox();
@@ -49,6 +42,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txb = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CusCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProdCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -69,52 +69,17 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7});
-            this.dataGridView1.Location = new System.Drawing.Point(24, 141);
+            this.Code,
+            this.CusCode,
+            this.ProdCode,
+            this.StartDate,
+            this.EndDate,
+            this.Number,
+            this.Date});
+            this.dataGridView1.Location = new System.Drawing.Point(23, 141);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(805, 186);
             this.dataGridView1.TabIndex = 6;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "SoPhieu";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "MaKH";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "MaMH";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "NgayBatDau";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "NgayKetThuc";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "SoLan";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "NgayHen";
-            this.Column7.Name = "Column7";
             // 
             // txbAddress
             // 
@@ -241,12 +206,47 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm theo";
             // 
+            // Code
+            // 
+            this.Code.HeaderText = "SoPhieu";
+            this.Code.Name = "Code";
+            // 
+            // CusCode
+            // 
+            this.CusCode.HeaderText = "MaKH";
+            this.CusCode.Name = "CusCode";
+            // 
+            // ProdCode
+            // 
+            this.ProdCode.HeaderText = "MaMH";
+            this.ProdCode.Name = "ProdCode";
+            // 
+            // StartDate
+            // 
+            this.StartDate.HeaderText = "NgayBatDau";
+            this.StartDate.Name = "StartDate";
+            // 
+            // EndDate
+            // 
+            this.EndDate.HeaderText = "NgayKetThuc";
+            this.EndDate.Name = "EndDate";
+            // 
+            // Number
+            // 
+            this.Number.HeaderText = "SoLan";
+            this.Number.Name = "Number";
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "NgayHen";
+            this.Date.Name = "Date";
+            // 
             // FormTimKiemKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(876, 485);
+            this.ClientSize = new System.Drawing.Size(934, 485);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txb);
             this.Controls.Add(this.label3);
@@ -258,6 +258,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormTimKiemKhachHang";
             this.Text = "Tìm kiếm thông tin về khách hàng";
+            this.Load += new System.EventHandler(this.FormTimKiemKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -276,18 +277,18 @@
         private System.Windows.Forms.RadioButton rdbAddress;
         private System.Windows.Forms.RadioButton rdbName;
         private System.Windows.Forms.RadioButton rdbID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnContinue;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txb;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CusCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProdCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StartDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EndDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
     }
 }

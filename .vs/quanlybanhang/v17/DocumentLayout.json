@@ -1,26 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Administrator\\Desktop\\Quan-Ly-Ban-Hang-C-Winform\\",
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\DotNetProject\\Quan-Ly-Ban-Hang-C-Winform\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|C:\\Users\\Administrator\\Desktop\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\form\\formtimkiemhanghoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|solutionrelative:quanlybanhang\\form\\formtimkiemhanghoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|c:\\users\\administrator\\desktop\\quan-ly-ban-hang-c-winform\\quanlybanhang\\form\\formtimkiemkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|c:\\users\\admin\\desktop\\dotnetproject\\quan-ly-ban-hang-c-winform\\quanlybanhang\\form\\formtimkiemkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|solutionrelative:quanlybanhang\\form\\formtimkiemkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|c:\\users\\administrator\\desktop\\quan-ly-ban-hang-c-winform\\quanlybanhang\\form\\formtimkiemncc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|solutionrelative:quanlybanhang\\form\\formtimkiemncc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|c:\\users\\admin\\desktop\\dotnetproject\\quan-ly-ban-hang-c-winform\\quanlybanhang\\model\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|solutionrelative:quanlybanhang\\model\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|C:\\Users\\Administrator\\Desktop\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\reponsitory\\inhacungcaprepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|solutionrelative:quanlybanhang\\reponsitory\\inhacungcaprepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|C:\\Users\\Administrator\\Desktop\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\form\\formtimkiemncc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|solutionrelative:quanlybanhang\\form\\formtimkiemncc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|c:\\users\\admin\\desktop\\dotnetproject\\quan-ly-ban-hang-c-winform\\quanlybanhang\\form\\formtimkiemkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74155D21-4637-403C-B662-5124D3F791DA}|quanlybanhang\\quanlybanhang.csproj|solutionrelative:quanlybanhang\\form\\formtimkiemkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,11 +26,11 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Bookmark",
@@ -46,67 +38,45 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FormTimKiemKhachHang.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Form\\FormTimKiemKhachHang.cs",
-              "RelativeDocumentMoniker": "quanlybanhang\\Form\\FormTimKiemKhachHang.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Form\\FormTimKiemKhachHang.cs [Design]",
-              "RelativeToolTip": "quanlybanhang\\Form\\FormTimKiemKhachHang.cs [Design]",
+              "Title": "HoaDon.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\DotNetProject\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Model\\HoaDon.cs",
+              "RelativeDocumentMoniker": "quanlybanhang\\Model\\HoaDon.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\DotNetProject\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Model\\HoaDon.cs",
+              "RelativeToolTip": "quanlybanhang\\Model\\HoaDon.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T14:05:38.218Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-16T03:36:12.716Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FormTimKiemNCC.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Form\\FormTimKiemNCC.cs",
-              "RelativeDocumentMoniker": "quanlybanhang\\Form\\FormTimKiemNCC.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Form\\FormTimKiemNCC.cs [Design]",
-              "RelativeToolTip": "quanlybanhang\\Form\\FormTimKiemNCC.cs [Design]",
+              "Title": "FormTimKiemKhachHang.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\DotNetProject\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Form\\FormTimKiemKhachHang.cs",
+              "RelativeDocumentMoniker": "quanlybanhang\\Form\\FormTimKiemKhachHang.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\DotNetProject\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Form\\FormTimKiemKhachHang.cs",
+              "RelativeToolTip": "quanlybanhang\\Form\\FormTimKiemKhachHang.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T08:56:36.43Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-16T03:29:57.524Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FormTimKiemHangHoa.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Form\\FormTimKiemHangHoa.cs",
-              "RelativeDocumentMoniker": "quanlybanhang\\Form\\FormTimKiemHangHoa.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Form\\FormTimKiemHangHoa.cs [Design]",
-              "RelativeToolTip": "quanlybanhang\\Form\\FormTimKiemHangHoa.cs [Design]",
+              "Title": "FormTimKiemKhachHang.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\DotNetProject\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Form\\FormTimKiemKhachHang.cs",
+              "RelativeDocumentMoniker": "quanlybanhang\\Form\\FormTimKiemKhachHang.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\DotNetProject\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Form\\FormTimKiemKhachHang.cs [Design]",
+              "RelativeToolTip": "quanlybanhang\\Form\\FormTimKiemKhachHang.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-05T01:29:28.324Z",
+              "WhenOpened": "2024-04-16T03:29:20.881Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "INhaCungCapRepo.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Reponsitory\\INhaCungCapRepo.cs",
-              "RelativeDocumentMoniker": "quanlybanhang\\Reponsitory\\INhaCungCapRepo.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Reponsitory\\INhaCungCapRepo.cs",
-              "RelativeToolTip": "quanlybanhang\\Reponsitory\\INhaCungCapRepo.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAApwEgAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T15:07:54.615Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormTimKiemNCC.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Form\\FormTimKiemNCC.cs",
-              "RelativeDocumentMoniker": "quanlybanhang\\Form\\FormTimKiemNCC.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Quan-Ly-Ban-Hang-C-Winform\\quanlybanhang\\Form\\FormTimKiemNCC.cs",
-              "RelativeToolTip": "quanlybanhang\\Form\\FormTimKiemNCC.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEcAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T14:46:08.619Z"
             }
           ]
         }
