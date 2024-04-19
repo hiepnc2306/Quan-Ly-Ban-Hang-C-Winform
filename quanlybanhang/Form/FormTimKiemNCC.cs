@@ -40,11 +40,11 @@ namespace quanlybanhang
             {
                 filter = listResult;
             }
-            dgvNCC.Columns["id"].DataPropertyName = "id";
-            dgvNCC.Columns["Code"].DataPropertyName = "Code";
-            dgvNCC.Columns["NCCName"].DataPropertyName = "Name";
-            dgvNCC.Columns["Address"].DataPropertyName = "Address";
-            dgvNCC.Columns["Sdt"].DataPropertyName = "Sdt";
+            dgvNCC.Columns["NCCCode"].DataPropertyName = "NCCCode";
+            dgvNCC.Columns["NCCName"].DataPropertyName = "NCCName";
+            dgvNCC.Columns["ProdName"].DataPropertyName = "ProdName";
+            dgvNCC.Columns["Number"].DataPropertyName = "Number";
+            dgvNCC.Columns["Date"].DataPropertyName = "Date";
             dgvNCC.DataSource = filter;
             txbNumber.Text = filter.Count.ToString();
         }
@@ -56,8 +56,11 @@ namespace quanlybanhang
             hoaDons.ForEach(x=> {
                 NhaCungCap nhaCungCap = NCCRepo.getByCode(x.linkCode);
                 MatHang matHang = matHangRepo.getByCode(x.prodCode);
-                FilterSuplier filterSuplier = new FilterSuplier(nhaCungCap.Code, nhaCungCap.Name, matHang.Name, x.number, x.date);
-                listResult.Add(filterSuplier);
+                if (nhaCungCap != null && matHang != null)
+                {
+                    FilterSuplier filterSuplier = new FilterSuplier(nhaCungCap.Code, nhaCungCap.Name, matHang.Name, x.number, x.date);
+                    listResult.Add(filterSuplier);
+                }
             });
             List<FilterSuplier> load = new List<FilterSuplier>(listResult);
             dgvNCC.Columns["NCCCode"].DataPropertyName = "NCCCode";
@@ -73,12 +76,14 @@ namespace quanlybanhang
         {
             txbID.Enabled = true;
             txbName.Enabled = false;
+            txbName.ResetText();
         }
 
         private void rdbName_CheckedChanged(object sender, EventArgs e)
         {
             txbName.Enabled = true;
             txbID.Enabled = false;
+            txbID.ResetText();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -91,7 +96,7 @@ namespace quanlybanhang
             List<FilterSuplier> searched = new List<FilterSuplier>();
             listResult.ForEach(x =>
             {
-                if (checker(x.NCCCode.ToLower().Trim(' '), code.ToLower())) searched.Add(x);
+                if (checker(x.NCCCode.ToLower().Replace(" ", ""), code.ToLower().Replace(" ", ""))) searched.Add(x);
             });
             return searched;
         }
@@ -101,16 +106,16 @@ namespace quanlybanhang
             List<FilterSuplier> searched = new List<FilterSuplier>();
             listResult.ForEach(x =>
             {
-                if (checker(x.NCCName.ToLower().Trim(' '), name.ToLower().Trim(' '))) searched.Add(x);
+                if (checker(x.NCCName.ToLower().Replace(" ", ""), name.ToLower().Replace(" ", ""))) searched.Add(x);
             });
             return searched;
         }
 
         private bool checker(string str, string check)
         {
-            for (int i = 0; i < str.Length - check.Length; i++)
+            for (int i = 0; i < str.Length - check.Length + 1; i++)
             {
-                string c = str.Substring(i, check.Length + i - 1);
+                string c = str.Substring(i, check.Length);
                 if (c.Equals(check)) return true;
             }
             return false;

@@ -59,6 +59,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -116,7 +117,7 @@
             this.SaleDate});
             this.dataGridView1.Location = new System.Drawing.Point(365, 20);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(469, 137);
+            this.dataGridView1.Size = new System.Drawing.Size(469, 148);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cellClick);
             // 
@@ -175,6 +176,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.cbbProdSale);
             this.panel2.Controls.Add(this.dataGridView2);
             this.panel2.Controls.Add(this.txtPrice);
@@ -183,7 +185,7 @@
             this.panel2.Controls.Add(this.label8);
             this.panel2.Location = new System.Drawing.Point(60, 280);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(843, 382);
+            this.panel2.Size = new System.Drawing.Size(843, 311);
             this.panel2.TabIndex = 2;
             // 
             // cbbProdSale
@@ -204,9 +206,9 @@
             this.ProdCode,
             this.Number,
             this.Price});
-            this.dataGridView2.Location = new System.Drawing.Point(20, 231);
+            this.dataGridView2.Location = new System.Drawing.Point(14, 111);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(816, 148);
+            this.dataGridView2.Size = new System.Drawing.Size(816, 197);
             this.dataGridView2.TabIndex = 7;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mhCellClick);
             // 
@@ -234,7 +236,7 @@
             // 
             this.txtPrice.Enabled = false;
             this.txtPrice.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrice.Location = new System.Drawing.Point(630, 80);
+            this.txtPrice.Location = new System.Drawing.Point(630, 58);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(130, 25);
             this.txtPrice.TabIndex = 6;
@@ -243,7 +245,7 @@
             // 
             this.txtNumber.Enabled = false;
             this.txtNumber.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumber.Location = new System.Drawing.Point(630, 29);
+            this.txtNumber.Location = new System.Drawing.Point(630, 16);
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Size = new System.Drawing.Size(130, 25);
             this.txtNumber.TabIndex = 5;
@@ -252,7 +254,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(558, 88);
+            this.label9.Location = new System.Drawing.Point(558, 66);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(55, 17);
             this.label9.TabIndex = 3;
@@ -262,7 +264,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(553, 37);
+            this.label8.Location = new System.Drawing.Point(553, 24);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(60, 17);
             this.label8.TabIndex = 2;
@@ -271,15 +273,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(78, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 21);
+            this.label2.Size = new System.Drawing.Size(187, 23);
             this.label2.TabIndex = 3;
             this.label2.Text = "Thông tin khách hàng";
             // 
             // btnInput
             // 
-            this.btnInput.Location = new System.Drawing.Point(89, 668);
+            this.btnInput.Location = new System.Drawing.Point(87, 606);
             this.btnInput.Name = "btnInput";
             this.btnInput.Size = new System.Drawing.Size(87, 34);
             this.btnInput.TabIndex = 4;
@@ -289,7 +292,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(360, 668);
+            this.btnCancel.Location = new System.Drawing.Point(358, 606);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(87, 34);
             this.btnCancel.TabIndex = 5;
@@ -299,7 +302,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(234, 668);
+            this.btnSave.Location = new System.Drawing.Point(232, 606);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(87, 34);
             this.btnSave.TabIndex = 6;
@@ -309,7 +312,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(496, 668);
+            this.btnEdit.Location = new System.Drawing.Point(494, 606);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(120, 34);
             this.btnEdit.TabIndex = 7;
@@ -319,7 +322,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(656, 668);
+            this.btnDelete.Location = new System.Drawing.Point(654, 606);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(87, 34);
             this.btnDelete.TabIndex = 8;
@@ -329,7 +332,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(787, 668);
+            this.btnExit.Location = new System.Drawing.Point(785, 606);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(87, 34);
             this.btnExit.TabIndex = 9;
@@ -340,18 +343,29 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(76, 273);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(154, 21);
+            this.label6.Size = new System.Drawing.Size(170, 23);
             this.label6.TabIndex = 10;
             this.label6.Text = "Thông tin mặt hàng";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(41, 43);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(64, 17);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Mặt hàng";
             // 
             // FormThongTinHoaDonBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1333, 727);
+            this.ClientSize = new System.Drawing.Size(992, 662);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnDelete);
@@ -413,5 +427,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn SaleDate;
         private System.Windows.Forms.ComboBox cbbProdSale;
+        private System.Windows.Forms.Label label7;
     }
 }

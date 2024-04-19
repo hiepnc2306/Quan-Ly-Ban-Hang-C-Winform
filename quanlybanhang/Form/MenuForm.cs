@@ -138,7 +138,7 @@ namespace quanlybanhang
             listForm[7].Show();
         }
 
-        private void tìmKiếmTheoThôngTinKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        private void thốngKêSốLượngHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < listForm.Count; i++)
             {
@@ -151,7 +151,7 @@ namespace quanlybanhang
             listForm[8].Show();
         }
 
-        private void thốngKêSốLượngHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        private void báoCáoDoanhThuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < listForm.Count; i++)
             {
@@ -162,19 +162,6 @@ namespace quanlybanhang
             listForm[9].Dock = DockStyle.Fill;
             pnlMainDisplay.Controls.Add(listForm[9]);
             listForm[9].Show();
-        }
-
-        private void báoCáoDoanhThuToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < listForm.Count; i++)
-            {
-                listForm[i].Hide();
-            }
-            listForm[10].TopLevel = false;
-            listForm[10].BringToFront();
-            listForm[10].Dock = DockStyle.Fill;
-            pnlMainDisplay.Controls.Add(listForm[10]);
-            listForm[10].Show();
         }
 
         private void FormMain_Load(object sender, EventArgs e)

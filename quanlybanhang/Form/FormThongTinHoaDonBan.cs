@@ -1,4 +1,4 @@
-﻿using quanlybanhang.Model;
+﻿ using quanlybanhang.Model;
 using quanlybanhang.Reponsitory;
 using System;
 using System.Collections.Generic;
@@ -111,10 +111,6 @@ namespace quanlybanhang
             dataGridView1.Columns["CustomerCode"].DataPropertyName = "cusCode";
             dataGridView1.Columns["SaleDate"].DataPropertyName = "saleDate";
             dataGridView1.DataSource = hoaDonKhachHangs;
-            foreach (DataGridViewRow Column in dataGridView1.Columns)
-            {
-                Column.Cells["SaleDate"].Value = ((DateTime)Column.Cells["SaleDate"].Value).ToShortDateString();
-            }
 
             foreach (string code in itemsCus) { cbbCus.Items.Add(code); }
 
@@ -132,10 +128,6 @@ namespace quanlybanhang
             dataGridView2.Columns["Number"].DataPropertyName = "number";
             dataGridView2.Columns["Price"].DataPropertyName = "price";
             dataGridView2.DataSource = hoaDonMatHangs;
-            foreach (DataGridViewRow column in dataGridView2.Columns)
-            {
-                column.Cells["SaleDate"].Value = ((DateTime)column.Cells["SaleDate"].Value).ToShortDateString();
-            }
 
             foreach (string code in itemsProd) { cbbProdSale.Items.Add(code); }
         }

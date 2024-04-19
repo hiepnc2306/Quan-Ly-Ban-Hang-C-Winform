@@ -96,12 +96,14 @@ namespace quanlybanhang
         {
             txbID.Enabled = true;
             txbName.Enabled = false;
+            txbName.ResetText();
         }
 
         private void rdbName_CheckedChanged(object sender, EventArgs e)
         {
             txbID.Enabled = false;
             txbName.Enabled = true;
+            txbID.ResetText();
         }
 
         private List<FilterProd> searchByCode(string name)
@@ -109,7 +111,7 @@ namespace quanlybanhang
             List<FilterProd> searched = new List<FilterProd>();
             filterProds.ForEach(x =>
             {
-                if (checker(x.ProdName.ToLower().Trim(' '), name.ToLower())) searched.Add(x);
+                if (checker(x.ProdName.ToLower().Replace(" ", ""), name.ToLower().Replace(" ", ""))) searched.Add(x);
             });
             return searched;
         }
@@ -119,16 +121,16 @@ namespace quanlybanhang
             List<FilterProd> searched = new List<FilterProd>();
             filterProds.ForEach(x =>
             {
-                if (checker(x.CusName.ToLower().Trim(' '), name.ToLower())) searched.Add(x);
+                if (checker(x.CusName.ToLower().Replace(" ", ""), name.ToLower().Replace(" ", ""))) searched.Add(x);
             });
             return searched;
         }
 
         private bool checker(string str, string check)
         {
-            for (int i = 0; i < str.Length - check.Length; i++)
+            for (int i = 0; i < str.Length - check.Length + 1; i++)
             {
-                string c = str.Substring(i, check.Length + i - 1);
+                string c = str.Substring(i, check.Length);
                 if (c.Equals(check)) return true;
             }
             return false;

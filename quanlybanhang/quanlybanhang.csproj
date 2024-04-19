@@ -182,6 +182,7 @@
     <Compile Include="Model\KhachHang.cs" />
     <Compile Include="Model\MatHang.cs" />
     <Compile Include="Model\NhaCungCap.cs" />
+    <Compile Include="Model\Statistics.cs" />
     <Compile Include="Model\ThongKe.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\UserInfo.cs" />
